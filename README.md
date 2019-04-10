@@ -4,6 +4,11 @@
 
 # To Do
 
+## CSS Notes
+- Description is one column
+- Header banner can be shorter
+- With smaller graphs, 2 columns with masonry
+
 ## High Priority
 - [ ] Finish general section 
 - [ ] Work on CSS for basic website
