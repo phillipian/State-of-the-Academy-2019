@@ -31,3 +31,11 @@ header #img {
   background-position: center center;
   background-repeat: no-repeat
 }
+
+header #logo {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 50px;
+  z-index: 100
+}
