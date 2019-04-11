@@ -8,10 +8,11 @@
 - Description is one column
 - Header banner can be shorter
 - With smaller graphs, 2 columns with masonry
+- Mobile responsive
 
 ## High Priority
-- [ ] Finish general section 
-- [ ] Work on CSS for basic website
+- [ ] General section d3
+- [ ] Base website CSS
 
 ## Low Priority
 - [ ] Get background photo for header section
