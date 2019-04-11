@@ -1,23 +1,18 @@
 @font-face {
-  font-family: "gotham_bold";
-  src: url("assets/fonts/Gotham Bold/Gotham Bold.otf")
+  font-family: "Gotham";
+  src: url("assets/fonts/Gotham/GothamBold.ttf");
+  font-weight: 700;
 }
 
 @font-face {
-  font-family: "source_sans_pro";
-  src: url("assets/fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf")
+  font-family: "Gotham";
+  src: url("assets/fonts/Gotham/GothamBook.ttf");
+  font-weight: 400;
 }
 
-@font-face {
-  font-family: "source_sans_pro";
-  font-style: italic;
-  src: url("assets/fonts/Source_Sans_Pro/SourceSansPro-Italic.ttf")
-}
-
-@font-face {
-  font-family: "source_sans_pro";
-  font-weight: bold;
-  src: url("assets/fonts/Source_Sans_Pro/SourceSansPro-Bold.ttf")
+body{
+  margin: 0;
+  font-family: 'Gotham';
 }
 
 header #img {
@@ -26,7 +21,7 @@ header #img {
   left: 0;
   width: 100%;
   height: 100%;
-  /* background-image: url("../../assets/graphics/samphil-saturation.jpg");  change to actual background image */
+  background-image: url("assets/samphil-saturation.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat
