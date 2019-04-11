@@ -19,6 +19,6 @@
 - Mobile responsive
 
 ## Future Ideas
-- [ ] Redesign of website format
-- [ ] Templatize website for future SOTA projects
-- [ ] Find correlation with past data
+- Redesign of website format
+- Templatize website for future SOTA projects
+- Find correlation with past data
