@@ -1,16 +1,44 @@
+
+
+
 @font-face {
   font-family: "Gotham";
+  font-weight: bold;
   src: url("assets/fonts/Gotham/GothamBold.ttf");
-  font-weight: 700;
 }
 
 @font-face {
   font-family: "Gotham";
   src: url("assets/fonts/Gotham/GothamBook.ttf");
-  font-weight: 400;
 }
 
-body{
+@font-face {
+  font-family: "Gotham";
+  font-weight: light;
+  src: url("assets\fonts\Gotham\GothamLight.ttf")
+}
+
+@font-face {
+  font-family: "Gotham";
+  font-style: italic;
+  src: url("assets\fonts\Gotham\GothamBookItalic.ttf")
+}
+
+strong {
+  font-weight: bold
+}
+
+i {
+  font-style: italic
+}
+
+a {
+  text-decoration: none
+}
+
+
+
+/* body{
   margin: 0;
   font-family: 'Gotham';
 }
@@ -34,3 +62,4 @@ header #logo {
   width: 50px;
   z-index: 100
 }
+ */
