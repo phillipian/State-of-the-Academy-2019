@@ -17,6 +17,7 @@
 - Header banner can be shorter
 - With smaller graphs, 2 columns with masonry
 - Mobile responsive
+- Top navbar transitions: color fade, State of the Academy 2019 --> SOTA 2019
 
 ## Future Ideas
 - Redesign of website format
