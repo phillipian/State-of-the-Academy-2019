@@ -1,19 +1,90 @@
+body{
+  margin: 0;
+  font-family: 'Gotham';
+}
+
 #topbar {
-  overflow: hidden;
   position: fixed;
   top: 0;
+  background-color: #222;
+}
+
+footer, #topbar{
+  padding: 0 24px;
   width: 100%;
-  transition: background-color 0.5s;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  height: 64px;
+}
+
+footer{
+  background-color: #eee;
+}
+
+.phillipian-name{
+  font-size: 12px;
+  color: #fff;
+  padding: 12px;
+  border: 1px solid #fff;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 700;
+}
+
+#logo, #logo img{
+  height: 100%;
+}
+
+.nav{
+  margin-left: auto;
+  display: flex;
 }
 
 .section-nav {
-  display: inline-block;
-  float: left;
-  padding: 14px 16px;
-  text-align: center;
+  margin-left: 20px;
+}
+
+.section-nav a{
+  color: #fff;
   text-decoration: none;
-  font-size: 1.5em;
-  transition: 0.2s;
+}
+
+.section-nav a:hover{
+  color: #eee;
+}
+
+header{
+  margin-top: 64px;
+}
+
+.page-container{
+  padding: 0 24px;
+}
+
+.page-container p{
+  font-family: 'Mercury Text G1';
+  max-width: 760px;
+  margin: 0 auto;
+  line-height: 1.5;
+  font-size: 20px;
+}
+
+.img-head{
+  width: 100%;
+  height: 480px;
+  background-image: url("http://sota.phillipian.net/assets/graphics/samphil-saturation.jpg");
+  background-size: cover;
+  background-position: center center;
+  margin-bottom: 24px;
+}
+
+.img-credit{
+  text-align: right;
+}
+
+footer .right{
+  margin-left: auto;
 }
 
 @font-face {
@@ -38,43 +109,3 @@
   font-style: italic;
   src: url("assets\fonts\Gotham\GothamBookItalic.ttf")
 }
-
-strong {
-  font-weight: bold
-}
-
-i {
-  font-style: italic
-}
-
-a {
-  text-decoration: none
-}
-
-
-
-/* body{
-  margin: 0;
-  font-family: 'Gotham';
-}
-
-header #img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("assets/graphics/samphil-saturation.jpg");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat
-}
-
-header #logo {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  width: 50px;
-  z-index: 100
-}
- */
