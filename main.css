@@ -9,6 +9,12 @@ body{
   background-color: #222;
 }
 
+#topbar img {
+  width: 30px;
+  height: auto;
+  margin-right: 20px;
+}
+
 footer, #topbar{
   padding: 0 24px;
   width: 100%;
@@ -23,17 +29,12 @@ footer{
 }
 
 .phillipian-name{
-  font-size: 12px;
+  font-size: 20px;
   color: #fff;
   padding: 12px;
-  border: 1px solid #fff;
   text-transform: uppercase;
   letter-spacing: 4px;
   font-weight: 700;
-}
-
-#logo, #logo img{
-  height: 100%;
 }
 
 .nav{
@@ -64,27 +65,38 @@ header{
 
 .page-container p{
   font-family: 'Mercury Text G1';
-  max-width: 760px;
+  max-width: 1000px;
   margin: 0 auto;
   line-height: 1.5;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .img-head{
   width: 100%;
   height: 480px;
+  background: rgb(149, 165, 166, 0.5);
   background-image: url("http://sota.phillipian.net/assets/graphics/samphil-saturation.jpg");
   background-size: cover;
   background-position: center center;
-  margin-bottom: 24px;
+  margin-bottom: 5px;
 }
 
 .img-credit{
   text-align: right;
+  margin-bottom: 15px;
+  font-family: georgia;
 }
 
 footer .right{
   margin-left: auto;
+}
+
+footer .button {
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  padding: 6px;
+  border: 2.5px solid black;
 }
 
 @font-face {
@@ -101,11 +113,11 @@ footer .right{
 @font-face {
   font-family: "Gotham";
   font-weight: light;
-  src: url("assets\fonts\Gotham\GothamLight.ttf")
+  src: url("assets/fonts/Gotham/GothamLight.ttf")
 }
 
 @font-face {
   font-family: "Gotham";
   font-style: italic;
-  src: url("assets\fonts\Gotham\GothamBookItalic.ttf")
+  src: url("assets/fonts/Gotham/GothamBookItalic.ttf")
 }
