@@ -6,14 +6,14 @@
 
 ## High Priority
 - [ ] General section d3
-- [ ] Base website CSS
+- [x] Base website CSS
 
 ## Low Priority
 - [ ] Get background photo for header section
 - [ ] Get description of SOTA for header section
 
 ## CSS Notes
-- Description is one column
+- [x] Description is one column
 - Header banner can be shorter
 - With smaller graphs, 2 columns with masonry
 - Mobile responsive
