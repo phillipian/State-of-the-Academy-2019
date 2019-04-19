@@ -114,22 +114,22 @@ footer .button {
 @font-face {
   font-family: "Gotham";
   font-weight: bold;
-  src: url("assets/fonts/Gotham/GothamBold.ttf");
+  src: url("../../assets/fonts/Gotham/GothamBold.ttf");
 }
 
 @font-face {
   font-family: "Gotham";
-  src: url("assets/fonts/Gotham/GothamBook.ttf");
+  src: url("../../assets/fonts/Gotham/GothamBook.ttf");
 }
 
 @font-face {
   font-family: "Gotham";
   font-weight: light;
-  src: url("assets/fonts/Gotham/GothamLight.ttf")
+  src: url("../../assets/fonts/Gotham/GothamLight.ttf")
 }
 
 @font-face {
   font-family: "Gotham";
   font-style: italic;
-  src: url("assets/fonts/Gotham/GothamBookItalic.ttf")
+  src: url("../../assets/fonts/Gotham/GothamBookItalic.ttf")
 }
