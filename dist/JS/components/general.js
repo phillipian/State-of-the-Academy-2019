@@ -38,10 +38,10 @@ d3.csv("../../assets/data/general/class.csv", function(error, data) {
       .data(data)
     .enter().append("rect")
       .attr("class", "bar")
-      .attr("x", function(d) { return x(d.number); })
-      .attr("width", x.bandwidth())
+      .attr("x", 0)
+      .attr("width", function(d) { return x(d.number); })
       .attr("y", function(d) { return y(d.class); })
-      .attr("height", function(d) { return height - y(d.class); });
+      .attr("height", y.bandwidth());
 
   // add the x Axis
   svg.append("g")
