@@ -15,7 +15,7 @@ var svg = d3.select("#general").append("svg")
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
 
-d3.csv("../../assets/data/general/class.csv", function(error, data) {
+d3.csv("../../../assets/data/general/class.csv", function(error, data) {
   if (error) throw error;
   data.forEach(function(d) {
     d.class = +d.class;
