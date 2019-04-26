@@ -1,7 +1,7 @@
-var chart = Highcharts.chart('class', {
+var chart = Highcharts.chart('q-class', {
     chart: {
         style: {
-            fontFamily: 'sans-serif', fontSize: '15px'
+            fontFamily: 'Gotham', fontSize: '15px'
         }
     },
     title: {
