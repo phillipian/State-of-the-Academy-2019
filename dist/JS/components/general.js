@@ -7,6 +7,7 @@ var chart = Highcharts.chart('class', {
     title: {
         text: 'What class are you in?'
     },
+    colors: ['#1f3a93'],
     xAxis: {
          categories: ['Junior', 'Lower', 'Upper', 'Senior'],
          title: {
@@ -22,6 +23,9 @@ var chart = Highcharts.chart('class', {
          labels: {
             overflow: 'justify'
          }
+    },
+    legend: {
+      enabled: false
     },
     series: [{
         data: [214, 275, 271, 286],

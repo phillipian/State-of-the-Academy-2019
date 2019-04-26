@@ -111,6 +111,10 @@ footer .button {
   border: 2.5px solid black;
 }
 
+.highcharts-credits {
+  display: none;
+}
+
 @font-face {
   font-family: "Gotham";
   font-weight: bold;
