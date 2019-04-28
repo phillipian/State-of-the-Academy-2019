@@ -66,13 +66,14 @@ header{
 }
 
 .page-container{
-  padding: 0 24px;
+  padding: 0;
 }
 
 .page-container p{
   font-family: 'Mercury Text G1';
   max-width: 800px;
   margin: 0 auto;
+  margin-bottom: 10px;
   line-height: 1.5;
   font-size: 20px;
 }
@@ -101,6 +102,7 @@ header{
 .img-credit{
   text-align: right;
   margin-bottom: 15px;
+  padding-right: 24px;
   font-family: georgia;
 }
 
@@ -114,6 +116,31 @@ footer .button {
   color: black;
   padding: 6px;
   border: 2.5px solid black;
+}
+
+hr {
+  width: 1200px;
+}
+
+.dotted {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-top: 1px dotted #2c3e50
+}
+
+#data {
+  padding-top: 20px;
+  background-color: #ECF0F1;
+}
+
+#sections {
+  padding: 0;
+}
+
+.section-title {
+  font-size: 28px;
+  padding: 20px 0 0 175px;
+  margin-bottom: 0;
 }
 
 .highcharts-credits {
