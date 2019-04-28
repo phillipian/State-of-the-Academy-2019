@@ -9,9 +9,9 @@
   - [ ] Percent respondents
   - [x] Class numbers
   - [ ] Regions (map)
-  - [ ] Ethnicity (note about selecting more than one)
+  - [x] Ethnicity (note about selecting more than one)
   - [x] Boarding vs day
-  - [ ] Financial aid
+  - [x] Financial aid
   - [ ] Parents in college
 - [x] Base website CSS
 
