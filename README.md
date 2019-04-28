@@ -17,7 +17,9 @@
 - Header banner can be shorter
 - With smaller graphs, 2 columns with masonry
 - Mobile responsive
-- [x] Top navbar transitions: color fade
+- Top navbar transitions: 
+  - [x] color fade
+  - [ ] "State of the Academy" &rarr; "SOTA" for mobile screens
 
 ## Future Ideas
 - Redesign of website format
