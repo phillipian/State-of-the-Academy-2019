@@ -6,6 +6,13 @@
 
 ## High Priority
 - [ ] General section d3
+  - [ ] Percent respondents
+  - [x] Class numbers
+  - [ ] Regions (map)
+  - [ ] Ethnicity (note about selecting more than one)
+  - [x] Boarding vs day
+  - [ ] Financial aid
+  - [ ] Parents in college
 - [x] Base website CSS
 
 ## Low Priority
