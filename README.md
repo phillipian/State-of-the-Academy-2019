@@ -6,7 +6,7 @@
 
 ## High Priority
 - [x] General section d3
-  - [ ] Percent respondents
+  - [ ] Percent respondents (add in description blurb)
   - [x] Class numbers
   - [x] Regions (bar/map)
   - [x] Ethnicity (note about selecting more than one)
