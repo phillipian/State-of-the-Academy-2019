@@ -5,14 +5,15 @@
 # To Do
 
 ## High Priority
-- [x] General section d3
-  - [ ] Percent respondents (add in description blurb)
+- [x] General section graphs
+  - [x] Percent respondents (add in description blurb)
   - [x] Class numbers
   - [x] Regions (bar/map)
   - [x] Ethnicity (note about selecting more than one)
   - [x] Boarding vs day
   - [x] Financial aid
   - [x] Parents in college
+- [ ] School section graphs
 - [x] Base website CSS
 
 ## Low Priority
