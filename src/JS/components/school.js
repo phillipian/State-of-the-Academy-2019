@@ -14,7 +14,7 @@ Highcharts.chart('q-gpa', {
         }
     },
     subtitle: {
-      text: '<i>Note: If respondents were between two numbers, they were instructed to round up to the next closest decimal — a 5.3 G.P.A. would round to a 5.4</i>'
+      text: '<i>Note: If respondents were between two numbers, they were instructed to round up</i><br><i>to the next closest decimal — a 5.3 G.P.A. would round to a 5.4</i>'
     },
     legend: {
         enabled: false
@@ -269,7 +269,7 @@ var chart = Highcharts.chart('q-gpaVsPref', {
 
 var chart = Highcharts.chart('q-fourVsPref', {
     chart: {
-        type: 'column',
+        type: 'bar',
         style: {
           fontFamily: 'Gotham',
           fontSize: '15px'
@@ -287,7 +287,14 @@ var chart = Highcharts.chart('q-fourVsPref', {
     },
     colors: ['#14195c'],
     xAxis: {
-        categories: ['Yes', 'No']
+        categories: ['STEM', 'Humanities', 'No Preference'],
+        title: {
+          text: 'Course Preference',
+          style: {
+            color: 'black',
+            fontWeight: 'bold'
+          }
+        }
     },
     yAxis: {
         allowDecimals: false,
@@ -302,18 +309,15 @@ var chart = Highcharts.chart('q-fourVsPref', {
     },
     tooltip: {
         formatter: function () {
-            return '<b>' + this.x + '</b><br/>' +
-                this.series.name + ': ' + this.y + '<br/>';
+            return '<b>' + this.series.name + '</b><br/>' +
+                this.x + ': ' + this.y + '<br/>';
         }
     },
     series: [{
-        name: 'STEM',
-        data: [78, 364],
+        name: 'Yes',
+        data: [78, 81, 54],
     }, {
-        name: 'Humanities',
-        data: [81, 278],
-    }, {
-        name: 'No Preference',
-        data: [54, 160],
+        name: 'No',
+        data: [364, 278, 160],
     }]
 });
