@@ -20,7 +20,7 @@ Highcharts.chart('q-gpa', {
         enabled: false
     },
     xAxis: {
-        categories: ['6.0', '5.8', '5.6', '5.4', '5.2', '5.0', '4.8', '4.6', '4.4', '4.2', '4.0', '3.8', '3.6', '3.4', '3.2', '3.0', '2,8', '2.6', '2.4', '2.2', '2.0'],
+        categories: ['6.0', '5.8', '5.6', '5.4', '5.2', '5.0', '4.8', '4.6', '4.4', '4.2', '4.0', '3.8', '3.6', '3.4', '3.2', '3.0', '2,8', '2.6', '2.4', '2.2', '<=2.0'],
     },
     yAxis: {
         title: {
@@ -33,7 +33,7 @@ Highcharts.chart('q-gpa', {
     plotOptions: {
         area: {
             fillOpacity: 0.5,
-            color: "#663399"
+            color: "#14195c"
         },
         dataLabels: {
           enabled: true,
@@ -46,5 +46,274 @@ Highcharts.chart('q-gpa', {
     series: [{
         name: 'Responses',
         data: [29, 42, 69, 72, 71, 57, 46, 36, 12, 8, 11, 5, 1, 3, 0, 0, 0, 0, 0, 0, 2]
+    }]
+});
+
+var pieColors = (function() {
+  var colors = [],
+    base = '#14195c',
+    i;
+
+  for (i = 0; i < 10; i += 1) {
+    colors.push(Highcharts.Color(base).brighten((i) / 4).get());
+  }
+  return colors;
+}());
+
+var chart = Highcharts.chart('q-four', {
+  chart: {
+    type: 'pie',
+    style: {
+      fontFamily: 'Gotham',
+      fontSize: '15px'
+    },
+    backgroundColor: "#ECF0F1"
+  },
+  title: {
+    text: 'Do you think a "4" is a good grade?',
+    style: {
+      fontWeight: 'bold'
+    }
+  },
+  subtitle: {
+    text: '<i>According to the Blue Book...</i>'
+  },
+  tooltip: {
+    pointFormat: '{series.name}: <b>{point.y}</b>'
+  },
+  plotOptions: {
+    pie: {
+      colors: pieColors,
+      borderWidth: 0,
+      borderColors: null,
+      dataLabels: {
+        enabled: true,
+        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+        style: {
+          color: 'black',
+          fontWeight: 'bold'
+        }
+      }
+    }
+  },
+  series: [{
+    name: 'Responses',
+    colorByPoint: true,
+    data: [{
+        name: 'Yes',
+        y: 214,
+      },
+      {
+        name: 'No',
+        y: 803,
+      }
+    ]
+  }]
+});
+
+Highcharts.chart('q-avghrs', {
+    chart: {
+        type: 'column',
+        style: {
+          fontFamily: 'Gotham',
+          fontSize: '15px'
+        },
+        backgroundColor: "#ECF0F1"
+    },
+    title: {
+        text: 'How many hours do you spend on coursework outside of class each day?',
+        style: {
+          fontWeight: 'bold'
+        }
+    },
+    colors: ['#14195c'],
+    xAxis: {
+        categories: ['>=10', '9', '8', '7', '6', '5', '4', '3', '2', '<=1'],
+        title: {
+          text: 'Time spent in hours',
+          style: {
+            color: 'black',
+            fontWeight: 'bold'
+          }
+        }
+    },
+    yAxis: {
+      min: 0,
+      title: {
+        text: 'Responses',
+        verticalAlign: 'center',
+        style: {
+          color: 'black',
+          fontWeight: 'bold'
+        }
+      },
+      labels: {
+        overflow: 'justify'
+      }
+    },
+    legend: {
+      enabled: false
+    },
+    series: [{
+      data: [7, 5, 10, 25, 74, 193, 305, 258, 114, 29],
+      dataLabels: {
+        enabled: true
+      },
+      name: 'Responses'
+    }]
+});
+
+var chart = Highcharts.chart('q-pref', {
+  chart: {
+    type: 'pie',
+    style: {
+      fontFamily: 'Gotham',
+      fontSize: '15px'
+    },
+    backgroundColor: "#ECF0F1"
+  },
+  title: {
+    text: 'Do you typically prefer STEM courses or humanities courses?',
+    style: {
+      fontWeight: 'bold'
+    }
+  },
+  tooltip: {
+    pointFormat: '{series.name}: <b>{point.y}</b>'
+  },
+  plotOptions: {
+    pie: {
+      colors: pieColors,
+      borderWidth: 0,
+      borderColors: null,
+      dataLabels: {
+        enabled: true,
+        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+        style: {
+          color: 'black',
+          fontWeight: 'bold'
+        }
+      }
+    }
+  },
+  series: [{
+    name: 'Responses',
+    colorByPoint: true,
+    data: [{
+        name: 'STEM',
+        y: 444,
+      },
+      {
+        name: 'Humanities',
+        y: 360,
+      },
+      {
+        name: 'No Preference',
+        y: 214,
+      }
+    ]
+  }]
+});
+
+var chart = Highcharts.chart('q-gpaVsPref', {
+  chart: {
+    style: {
+      fontFamily: 'Gotham',
+      fontSize: '15px'
+    },
+    backgroundColor: "#ECF0F1"
+  },
+  title: {
+    text: 'Average GPA by Course preference',
+    style: {
+      fontWeight: 'bold'
+    }
+  },
+  colors: ['#14195c'],
+  xAxis: {
+    categories: ['STEM', 'Humanities', 'No Preference'],
+    title: {
+      text: 'Course Preference',
+      style: {
+        color: 'black',
+        fontWeight: 'bold'
+      }
+    }
+  },
+  yAxis: {
+    min: 0,
+    title: {
+      text: 'GPA',
+      verticalAlign: 'center',
+      style: {
+        color: 'black',
+        fontWeight: 'bold'
+      }
+    },
+    labels: {
+      overflow: 'justify'
+    }
+  },
+  legend: {
+    enabled: false
+  },
+  series: [{
+    data: [5.26, 5.18, 5.26],
+    type: 'bar',
+    dataLabels: {
+      enabled: true
+    },
+    name: 'Average'
+  }]
+});
+
+var chart = Highcharts.chart('q-fourVsPref', {
+    chart: {
+        type: 'column',
+        style: {
+          fontFamily: 'Gotham',
+          fontSize: '15px'
+        },
+        backgroundColor: "#ECF0F1"
+    },
+    title: {
+        text: '"4" as a good grade by Course preference',
+        style: {
+          fontWeight: 'bold'
+        }
+    },
+    legend: {
+        enabled: false
+    },
+    colors: ['#14195c'],
+    xAxis: {
+        categories: ['Yes', 'No']
+    },
+    yAxis: {
+        allowDecimals: false,
+        min: 0,
+        title: {
+          text: 'Responses',
+          style: {
+            color: 'black',
+            fontWeight: 'bold'
+          }
+        }
+    },
+    tooltip: {
+        formatter: function () {
+            return '<b>' + this.x + '</b><br/>' +
+                this.series.name + ': ' + this.y + '<br/>';
+        }
+    },
+    series: [{
+        name: 'STEM',
+        data: [78, 364],
+    }, {
+        name: 'Humanities',
+        data: [81, 278],
+    }, {
+        name: 'No Preference',
+        data: [54, 160],
     }]
 });
