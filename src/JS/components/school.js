@@ -24,11 +24,12 @@ Highcharts.chart('q-gpa', {
     },
     yAxis: {
         title: {
-            text: 'Respondents'
+            text: 'Respondents',
+            style: {
+              color: 'black',
+              fontWeight: 'bold'
+            }
         }
-    },
-    credits: {
-        enabled: false
     },
     plotOptions: {
         area: {
@@ -160,6 +161,62 @@ Highcharts.chart('q-avghrs', {
         enabled: true
       },
       name: 'Responses'
+    }]
+});
+
+Highcharts.chart('q-gpaVsHrs', {
+    chart: {
+        type: 'area',
+        style: {
+          fontFamily: 'Gotham',
+          fontSize: '15px'
+        },
+        backgroundColor: "#ECF0F1"
+    },
+    title: {
+        text: 'Average GPA by Hours spent on coursework',
+        style: {
+          fontWeight: 'bold'
+        }
+    },
+    legend: {
+        enabled: false
+    },
+    xAxis: {
+        categories: ['>=10', '9', '8', '7', '6', '5', '4', '3', '2', '<=1'],
+        title: {
+            text: 'Time spent on coursework in hours',
+            style: {
+              color: 'black',
+              fontWeight: 'bold'
+            }
+        }
+    },
+    yAxis: {
+        title: {
+            text: 'Average GPA',
+            style: {
+              color: 'black',
+              fontWeight: 'bold'
+            }
+        }
+    },
+    plotOptions: {
+        area: {
+            fillOpacity: 0.5,
+            color: "#14195c"
+        },
+        dataLabels: {
+          enabled: true,
+          style: {
+            color: 'black',
+            fontWeight: 'bold'
+          }
+        }
+    },
+    series: [{
+        name: 'Responses',
+        data: [4.56, 5.24, 5.25, 5.20, 5.21, 5.26, 5.22, 5.12, 4.95, 5.12]  // TODO: add real data
     }]
 });
 
@@ -300,7 +357,7 @@ var chart = Highcharts.chart('q-fourVsPref', {
         allowDecimals: false,
         min: 0,
         title: {
-          text: 'Responses',
+          text: 'Responses in percent',
           style: {
             color: 'black',
             fontWeight: 'bold'
@@ -309,15 +366,15 @@ var chart = Highcharts.chart('q-fourVsPref', {
     },
     tooltip: {
         formatter: function () {
-            return '<b>' + this.series.name + '</b><br/>' +
-                this.x + ': ' + this.y + '<br/>';
+            return '<b>' + this.series.name + '</b><br>' +
+                this.x + ': ' + this.y + '%<br>';
         }
     },
     series: [{
         name: 'Yes',
-        data: [78, 81, 54],
+        data: [17.65, 22.56, 25.23],
     }, {
         name: 'No',
-        data: [364, 278, 160],
+        data: [82.35, 77.44, 74.77],
     }]
 });

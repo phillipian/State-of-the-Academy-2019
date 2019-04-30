@@ -172,6 +172,33 @@ hr {
   display: none;
 }
 
+.tab {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.tab button {
+  font-family: "Gotham";
+  font-weight: bold;
+  font-size: 17px;
+  background: white;
+  border: 1px solid #2c3e50;
+  padding: 5px 10px;
+  margin: 0;
+  cursor: pointer;
+  transition: 0.2s all
+}
+
+.tab button:hover {
+  background: #ecf0f1;
+}
+
+.tab button.active {
+  background: #ecf0f1;
+}
+
 @font-face {
   font-family: "Gotham";
   font-weight: bold;

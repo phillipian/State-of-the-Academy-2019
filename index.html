@@ -60,7 +60,7 @@
           <h2 class="section-title">General</h2><br>
           <div class="text_fact">
             <h5>1053</h5>
-            <p>was the total number of respondents in this year's survey</p><br>
+            <p>was the total number of respondents in this year's survey</p>
             <h5>93.6%</h5>
             <p>of the student body participated anonymously</p>
           </div><br><br>
@@ -89,6 +89,8 @@
           <hr class="dotted">
           <div id="q-avghrs" class="section-graph"></div>
           <hr class="dotted">
+          <div id="q-gpaVsHrs" class="section-graph"></div> <!-- TODO: add graph -->
+          <hr class="dotted">
           <div id="q-pref" class="section-graph"></div>
           <hr class="dotted">
           <div id="q-gpaVsPref" class="section-graph"></div>
@@ -107,6 +109,17 @@
         </div>
         <div class="section" id="sex">
           <h2 class="section-title">Sex</h2><br>
+          <div class="tab">
+            <button class="tablinks" onclick="openGraph(event, 'q-sex-senior')" id="defaultOpen">Senior</button>
+            <button class="tablinks" onclick="openGraph(event, 'q-sex-upper')">Upper</button>
+            <button class="tablinks" onclick="openGraph(event, 'q-sex-lower')">Lower</button>
+            <button class="tablinks" onclick="openGraph(event, 'q-sex-junior')">Junior</button>
+          </div>
+          <div id="q-sex-senior" class="section-graph tabcontent"></div>
+          <div id="q-sex-upper" class="section-graph tabcontent"></div>
+          <div id="q-sex-lower" class="section-graph tabcontent"></div>
+          <div id="q-sex-junior" class="section-graph tabcontent"></div>
+          <hr class="dotted">
           <hr>
         </div>
         <div class="section" id="drugs">
