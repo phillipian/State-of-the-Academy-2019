@@ -43,7 +43,7 @@ Highcharts.chart('q-gpa', {
             color: "#14195c"
         },
         dataLabels: {
-          enabled: true,
+          enabled: false,
           style: {
             color: 'black',
             fontWeight: 'bold'
@@ -170,7 +170,7 @@ Highcharts.chart('q-avghrs', {
     series: [{
       data: [7, 5, 10, 25, 74, 193, 305, 258, 114, 29],
       dataLabels: {
-        enabled: true
+        enabled: false
       },
       name: 'Responses'
     }]

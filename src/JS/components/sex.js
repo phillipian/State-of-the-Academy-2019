@@ -26,6 +26,7 @@ Highcharts.chart('q-sex-senior', {
     },
     yAxis: {
       min: 0,
+      max: 200,
       title: {
         text: 'Responses',
         verticalAlign: 'center',
@@ -81,6 +82,7 @@ Highcharts.chart('q-sex-upper', {
     },
     yAxis: {
       min: 0,
+      max: 200,
       title: {
         text: 'Responses',
         verticalAlign: 'center',
@@ -136,6 +138,7 @@ Highcharts.chart('q-sex-lower', {
     },
     yAxis: {
       min: 0,
+      max: 200,
       title: {
         text: 'Responses',
         verticalAlign: 'center',
@@ -191,6 +194,7 @@ Highcharts.chart('q-sex-junior', {
     },
     yAxis: {
       min: 0,
+      max: 200,
       title: {
         text: 'Responses',
         verticalAlign: 'center',
