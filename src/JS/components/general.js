@@ -40,11 +40,17 @@ var chart = Highcharts.chart('q-class', {
   legend: {
     enabled: false
   },
+  tooltip: {
+      formatter: function () {
+          return '<b>' + this.x + '</b><br>' +
+              this.series.name + ': <b>' + this.y + '</b><br>';
+      }
+  },
   series: [{
     data: [214, 275, 271, 286],
     type: 'bar',
     dataLabels: {
-      enabled: true
+      enabled: false
     },
     name: 'Responses'
   }]
@@ -82,8 +88,8 @@ var chart = Highcharts.chart('q-boarding', {
   plotOptions: {
     pie: {
       colors: pieColors,
-      borderWidth: 0,
-      borderColors: null,
+      borderWidth: 1,
+      borderColors: 'white',
       dataLabels: {
         enabled: true,
         format: '<b>{point.name}</b>: {point.percentage:.1f} %',
@@ -152,10 +158,16 @@ Highcharts.chart('q-origin', {
     legend: {
       enabled: false
     },
+    tooltip: {
+        formatter: function () {
+            return '<b>' + this.x + '</b><br>' +
+                this.series.name + ': <b>' + this.y + '</b><br>';
+        }
+    },
     series: [{
       data: [639, 165, 96, 105, 42, 2],
       dataLabels: {
-        enabled: true
+        enabled: false
       },
       name: 'Responses'
     }]
@@ -247,11 +259,17 @@ var chart = Highcharts.chart('q-ethnicity', {
   legend: {
     enabled: false
   },
+  tooltip: {
+      formatter: function () {
+          return '<b>' + this.x + '</b><br>' +
+              this.series.name + ': <b>' + this.y + '</b><br>';
+      }
+  },
   series: [{
     data: [25, 67, 292, 143, 58, 53, 56, 33, 14, 6, 53, 53, 20, 551, 34, 12],
     type: 'bar',
     dataLabels: {
-      enabled: true
+      enabled: false
     },
     name: 'Responses'
   }]
@@ -278,8 +296,8 @@ var chart = Highcharts.chart('q-financial', {
   plotOptions: {
     pie: {
       colors: pieColors,
-      borderWidth: 0,
-      borderColors: null,
+      borderWidth: 1,
+      borderColors: 'white',
       dataLabels: {
         enabled: true,
         format: '<b>{point.name}</b>: {point.percentage:.1f} %',
@@ -330,8 +348,8 @@ var chart = Highcharts.chart('q-parentsCollege', {
   plotOptions: {
     pie: {
       colors: pieColors,
-      borderWidth: 0,
-      borderColors: null,
+      borderWidth: 1,
+      borderColors: 'white',
       dataLabels: {
         enabled: true,
         format: '<b>{point.name}</b>: {point.percentage:.1f} %',

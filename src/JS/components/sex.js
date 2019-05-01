@@ -217,3 +217,117 @@ Highcharts.chart('q-sex-junior', {
         }
     }
 });
+
+var chart = Highcharts.chart('q-masturbation-frequency', {
+    chart: {
+        type: 'bar',
+        style: {
+          fontFamily: 'Gotham',
+          fontSize: '15px'
+        },
+        backgroundColor: "#ECF0F1"
+    },
+    title: {
+        text: 'If you masturbate, how frequently, on average, do you do so?',
+        style: {
+          fontWeight: 'bold'
+        }
+    },
+    legend: {
+        enabled: false
+    },
+    colors: ['#dc308a'],
+    xAxis: {
+        categories: ['Man', 'Woman']
+    },
+    yAxis: {
+        allowDecimals: false,
+        min: 0,
+        title: {
+          text: 'Responses',
+          style: {
+            color: 'black',
+            fontWeight: 'bold'
+          }
+        }
+    },
+    tooltip: {
+        formatter: function () {
+            return '<b>' + this.x + ': ' + this.series.name + '</b><br>' + 'Responses: <b>' + this.y + '</b><br>';
+        }
+    },
+    series: [{
+        name: 'Daily',
+        data: [193, 34],
+    }, {
+        name: 'Weekly',
+        data: [210, 141],
+    }, {
+        name: 'About once per month',
+        data: [22, 76],
+    }, {
+        name: 'Several times a year',
+        data: [10, 32],
+    }, {
+        name: 'Once a year or less',
+        data: [5, 27],
+    }, {
+        name: 'Not applicable, I have never masturbated',
+        data: [24, 231],
+    }]
+});
+
+var chart = Highcharts.chart('q-masturbation-comfortable', {
+  chart: {
+      type: 'bar',
+      style: {
+        fontFamily: 'Gotham',
+        fontSize: '15px'
+      },
+      backgroundColor: "#ECF0F1"
+  },
+  title: {
+    text: 'Would you feel comfortable telling your friends that you masturbate?',
+    style: {
+      fontWeight: 'bold'
+    }
+  },
+  colors: ['#dc308a'],
+  xAxis: {
+      categories: ['Man', 'Woman']
+  },
+  yAxis: {
+      min: 0,
+      title: {
+        text: 'Responses',
+        verticalAlign: 'center',
+        style: {
+          color: 'black',
+          fontWeight: 'bold'
+        }
+      },
+      labels: {
+        overflow: 'justify'
+      }
+  },
+  legend: {
+      enabled: false
+  },
+  tooltip: {
+      formatter: function () {
+          return '<b>' + this.x + ': ' + this.series.name + '</b><br>' + 'Responses: <b>' + this.y + '</b><br>';
+      }
+  },
+  plotOptions: {
+      series: {
+          stacking: 'normal'
+      }
+  },
+  series: [{
+      name: 'No',
+      data: [106, 363]
+  }, {
+      name: 'Yes',
+      data: [359, 178]
+  }]
+});

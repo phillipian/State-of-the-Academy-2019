@@ -19,6 +19,12 @@ Highcharts.chart('q-gpa', {
     legend: {
         enabled: false
     },
+    tooltip: {
+        formatter: function () {
+            return '<b>' + this.x + '</b><br>' +
+                this.series.name + ': <b>' + this.y + '</b><br>';
+        }
+    },
     xAxis: {
         categories: ['6.0', '5.8', '5.6', '5.4', '5.2', '5.0', '4.8', '4.6', '4.4', '4.2', '4.0', '3.8', '3.6', '3.4', '3.2', '3.0', '2,8', '2.6', '2.4', '2.2', '<=2.0'],
     },
@@ -85,8 +91,8 @@ var chart = Highcharts.chart('q-four', {
   plotOptions: {
     pie: {
       colors: pieColors,
-      borderWidth: 0,
-      borderColors: null,
+      borderWidth: 1,
+      borderColors: 'white',
       dataLabels: {
         enabled: true,
         format: '<b>{point.name}</b>: {point.percentage:.1f} %',
@@ -128,6 +134,12 @@ Highcharts.chart('q-avghrs', {
         }
     },
     colors: ['#14195c'],
+    tooltip: {
+        formatter: function () {
+            return '<b>' + this.x + '</b><br>' +
+                this.series.name + ': <b>' + this.y + '</b><br>';
+        }
+    },
     xAxis: {
         categories: ['>=10', '9', '8', '7', '6', '5', '4', '3', '2', '<=1'],
         title: {
@@ -182,6 +194,12 @@ Highcharts.chart('q-gpaVsHrs', {
     legend: {
         enabled: false
     },
+    tooltip: {
+        formatter: function () {
+            return '<b>' + this.x + '</b><br>' +
+                this.series.name + ': <b>' + this.y + '</b><br>';
+        }
+    },
     xAxis: {
         categories: ['>=10', '9', '8', '7', '6', '5', '4', '3', '2', '<=1'],
         title: {
@@ -207,11 +225,7 @@ Highcharts.chart('q-gpaVsHrs', {
             color: "#14195c"
         },
         dataLabels: {
-          enabled: true,
-          style: {
-            color: 'black',
-            fontWeight: 'bold'
-          }
+          enabled: false
         }
     },
     series: [{
@@ -241,8 +255,8 @@ var chart = Highcharts.chart('q-pref', {
   plotOptions: {
     pie: {
       colors: pieColors,
-      borderWidth: 0,
-      borderColors: null,
+      borderWidth: 1,
+      borderColors: 'white',
       dataLabels: {
         enabled: true,
         format: '<b>{point.name}</b>: {point.percentage:.1f} %',
@@ -314,11 +328,17 @@ var chart = Highcharts.chart('q-gpaVsPref', {
   legend: {
     enabled: false
   },
+  tooltip: {
+      formatter: function () {
+          return '<b>' + this.x + '</b><br>' +
+              this.series.name + ': <b>' + this.y + '</b><br>';
+      }
+  },
   series: [{
     data: [5.26, 5.18, 5.26],
     type: 'bar',
     dataLabels: {
-      enabled: true
+      enabled: false
     },
     name: 'Average'
   }]
@@ -367,7 +387,7 @@ var chart = Highcharts.chart('q-fourVsPref', {
     tooltip: {
         formatter: function () {
             return '<b>' + this.series.name + '</b><br>' +
-                this.x + ': ' + this.y + '%<br>';
+                this.x + ': <b>' + this.y + '%</b><br>';
         }
     },
     series: [{
