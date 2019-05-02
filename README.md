@@ -19,6 +19,7 @@
 - [x] Base website CSS
 - [ ] For grouped graphs, change color of each sub-group
 - [ ] Add back legends as necessary
+- [ ] Format tooltips
 
 ## Low Priority
 - [ ] Get background photo for header section
