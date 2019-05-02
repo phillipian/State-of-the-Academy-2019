@@ -14,7 +14,11 @@
   - [x] Financial aid
   - [x] Parents in college
 - [ ] School section graphs
+- [x] Sex section graphs
+  - [ ] get stats for previous years sex-ed
 - [x] Base website CSS
+- [ ] For grouped graphs, change color of each sub-group
+- [ ] Add back legends as necessary
 
 ## Low Priority
 - [ ] Get background photo for header section
