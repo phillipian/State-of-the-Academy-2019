@@ -126,6 +126,35 @@ hr {
   width: 1200px;
 }
 
+.multipane-labels {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center
+}
+
+.multipane-labels a {
+  font-family: "Gotham";
+  font-weight: bold;
+  background: white;
+  border: 1px solid #2c3e50;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: 0.2s all
+}
+
+.multipane-labels a:hover {
+  background: #ecf0f1
+}
+
+.multipane-labels .selected {
+  background: #ecf0f1
+}
+
+.multipane-labels .selected:hover {
+  background: #ecf0f1
+}
+
 .dotted {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -138,7 +167,7 @@ hr {
 }
 
 .text_fact h5 {
-  font-family: "gotham";
+  font-family: "Gotham";
   font-weight: bold;
   font-size: 3.5em;
   margin: 0;
@@ -146,7 +175,7 @@ hr {
 
 .text_fact p {
   margin: 0;
-  font-family: "gotham";
+  font-family: "Gotham";
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1.1em

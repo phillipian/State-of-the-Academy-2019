@@ -22,3 +22,4 @@ function openGraph(evt, tabName) {
 }
 
 document.getElementById("defaultOpen").click();
+// document.getElementById("defaultOpen").click(); overrides the first one/fix

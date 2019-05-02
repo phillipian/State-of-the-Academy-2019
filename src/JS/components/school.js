@@ -93,6 +93,7 @@ var chart = Highcharts.chart('q-four', {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
+      size: 320,
       dataLabels: {
         enabled: true,
         format: '<b>{point.name}</b>: {point.percentage:.1f} %',
@@ -257,6 +258,7 @@ var chart = Highcharts.chart('q-pref', {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
+      size: 320,
       dataLabels: {
         enabled: true,
         format: '<b>{point.name}</b>: {point.percentage:.1f} %',
