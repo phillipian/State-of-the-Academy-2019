@@ -107,22 +107,24 @@
           <hr class="dotted">
           <div id="q-affiliation-gender" class="section-graph"></div>
           <hr class="dotted">
-          <div class="tab">
-            <button class="tablinks" onclick="openGraph(event, 'q-censor-overall')" id="defaultOpen">Overall</button>
-            <button class="tablinks" onclick="openGraph(event, 'q-censor-conservative')">Conservative</button>
-            <button class="tablinks" onclick="openGraph(event, 'q-censor-independent')">Independent</button>
-            <button class="tablinks" onclick="openGraph(event, 'q-censor-liberal')">Liberal</button>
-            <button class="tablinks" onclick="openGraph(event, 'q-censor-libertarian')">Libertarian</button>
-            <button class="tablinks" onclick="openGraph(event, 'q-censor-other')">Other</button>
-            <button class="tablinks" onclick="openGraph(event, 'q-censor-unsure')">Unsure</button>
+          <div id = "censor-graph">
+            <div class="tab">
+              <button class="tablinks defaultOpen" onclick="openGraph(event, 'q-censor-overall', 'censor-graph')">Overall</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-censor-conservative', 'censor-graph')">Conservative</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-censor-independent', 'censor-graph')">Independent</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-censor-liberal', 'censor-graph')">Liberal</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-censor-libertarian', 'censor-graph')">Libertarian</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-censor-other', 'censor-graph')">Other</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-censor-unsure', 'censor-graph')">Unsure</button>
+            </div>
+            <div id="q-censor-overall" class="section-graph tabcontent"></div>
+            <div id="q-censor-conservative" class="section-graph tabcontent"></div>
+            <div id="q-censor-independent" class="section-graph tabcontent"></div>
+            <div id="q-censor-liberal" class="section-graph tabcontent"></div>
+            <div id="q-censor-libertarian" class="section-graph tabcontent"></div>
+            <div id="q-censor-other" class="section-graph tabcontent"></div>
+            <div id="q-censor-unsure" class="section-graph tabcontent"></div>
           </div>
-          <div id="q-censor-overall" class="section-graph tabcontent"></div>
-          <div id="q-censor-conservative" class="section-graph tabcontent"></div>
-          <div id="q-censor-independent" class="section-graph tabcontent"></div>
-          <div id="q-censor-liberal" class="section-graph tabcontent"></div>
-          <div id="q-censor-libertarian" class="section-graph tabcontent"></div>
-          <div id="q-censor-other" class="section-graph tabcontent"></div>
-          <div id="q-censor-unsure" class="section-graph tabcontent"></div>
           <hr class="dotted">
           <div id="q-informed" class="section-graph"></div>
           <hr class="dotted">
@@ -142,31 +144,35 @@
         </div>
         <div class="section" id="sex">
           <h2 class="section-title">Sex</h2><br>
-          <div class="tab">
-            <button class="tablinks" onclick="openGraph(event, 'q-sex-senior')" id="defaultOpen1">Senior</button>
-            <button class="tablinks" onclick="openGraph(event, 'q-sex-upper')">Upper</button>
-            <button class="tablinks" onclick="openGraph(event, 'q-sex-lower')">Lower</button>
-            <button class="tablinks" onclick="openGraph(event, 'q-sex-junior')">Junior</button>
+          <div id="sex-graph">
+            <div class="tab">
+              <button class="tablinks defaultOpen" onclick="openGraph(event, 'q-sex-senior', 'sex-graph')">Senior</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-sex-upper', 'sex-graph')">Upper</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-sex-lower', 'sex-graph')">Lower</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-sex-junior', 'sex-graph')">Junior</button>
+            </div>
+            <div id="q-sex-senior" class="section-graph tabcontent"></div>
+            <div id="q-sex-upper" class="section-graph tabcontent"></div>
+            <div id="q-sex-lower" class="section-graph tabcontent"></div>
+            <div id="q-sex-junior" class="section-graph tabcontent"></div>
           </div>
-          <div id="q-sex-senior" class="section-graph tabcontent"></div>
-          <div id="q-sex-upper" class="section-graph tabcontent"></div>
-          <div id="q-sex-lower" class="section-graph tabcontent"></div>
-          <div id="q-sex-junior" class="section-graph tabcontent"></div>
           <hr class="dotted">
           <div id="q-masturbation-frequency" class="section-graph"></div>
           <hr class="dotted">
           <div id="q-masturbation-comfortable" class="section-graph"></div>
           <hr class="dotted">
-          <div class="tab">
-            <button class="tablinks" onclick="openGraph(event, 'q-relationship-senior')" id="defaultOpen2">Senior</button>
-            <button class="tablinks" onclick="openGraph(event, 'q-relationship-upper')">Upper</button>
-            <button class="tablinks" onclick="openGraph(event, 'q-relationship-lower')">Lower</button>
-            <button class="tablinks" onclick="openGraph(event, 'q-relationship-junior')">Junior</button>
+          <div id="relationship-graph">
+            <div class="tab">
+              <button class="tablinks defaultOpen" onclick="openGraph(event, 'q-relationship-senior', 'relationship-graph')">Senior</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-relationship-upper', 'relationship-graph')">Upper</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-relationship-lower', 'relationship-graph')">Lower</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-relationship-junior', 'relationship-graph')">Junior</button>
+            </div>
+            <div id="q-relationship-senior" class="section-graph tabcontent"></div>
+            <div id="q-relationship-upper" class="section-graph tabcontent"></div>
+            <div id="q-relationship-lower" class="section-graph tabcontent"></div>
+            <div id="q-relationship-junior" class="section-graph tabcontent"></div>
           </div>
-          <div id="q-relationship-senior" class="section-graph tabcontent"></div>
-          <div id="q-relationship-upper" class="section-graph tabcontent"></div>
-          <div id="q-relationship-lower" class="section-graph tabcontent"></div>
-          <div id="q-relationship-junior" class="section-graph tabcontent"></div>
           <hr class="dotted">
           <div id="q-sex-pressure" class="section-graph"></div>
           <hr class="dotted">
