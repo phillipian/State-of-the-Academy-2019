@@ -49,7 +49,7 @@ var chart = Highcharts.chart('q-sex-senior', {
     tooltip: {
         formatter: function () {
             return '<b>' + this.x + '</b><br>' + this.series.name + ': <b>' + this.y + '</b><br>' +
-            'Percentage: ' + '<b>' + ((this.y)/2.86).toFixed(2) + '%</b><br>';
+            'Percentage: ' + '<b>' + ((this.y)/2.86).toFixed(1) + '%</b><br>';
         }
     }
 });
@@ -105,7 +105,7 @@ Highcharts.chart('q-sex-upper', {
     tooltip: {
         formatter: function () {
             return '<b>' + this.x + '</b><br>' + this.series.name + ': <b>' + this.y + '</b><br>' +
-            'Percentage: ' + '<b>' + ((this.y)/2.71).toFixed(2) + '%</b><br>';
+            'Percentage: ' + '<b>' + ((this.y)/2.71).toFixed(1) + '%</b><br>';
         }
     }
 });
@@ -161,7 +161,7 @@ Highcharts.chart('q-sex-lower', {
     tooltip: {
         formatter: function () {
             return '<b>' + this.x + '</b><br>' + this.series.name + ': <b>' + this.y + '</b><br>' +
-            'Percentage: ' + '<b>' + ((this.y)/2.75).toFixed(2) + '%</b><br>';
+            'Percentage: ' + '<b>' + ((this.y)/2.75).toFixed(1) + '%</b><br>';
         }
     }
 });
@@ -217,7 +217,7 @@ Highcharts.chart('q-sex-junior', {
     tooltip: {
         formatter: function () {
             return '<b>' + this.x + '</b><br>' + this.series.name + ': <b>' + this.y + '</b><br>' +
-            'Percentage: ' + '<b>' + ((this.y)/2.14).toFixed(2) + '%</b><br>';
+            'Percentage: ' + '<b>' + ((this.y)/2.14).toFixed(1) + '%</b><br>';
         }
     }
 });
@@ -701,7 +701,7 @@ Highcharts.chart('q-protection', {
     tooltip: {
         formatter: function () {
             return '<b>' + this.x + '</b><br>' +
-                this.series.name + ': <b>' + this.y + '</b><br>' + 'Percentage: <b>' + (this.y/10.23).toFixed(2) + '%</b>';
+                this.series.name + ': <b>' + this.y + '</b><br>' + 'Percentage: <b>' + (this.y/10.23).toFixed(1) + '%</b>';
         }
     },
     series: [{
@@ -901,8 +901,9 @@ var chart = Highcharts.chart('q-sexEd', {
     },
     yAxis: {
         min: 0,
+        max: 100,
         title: {
-          text: 'Responses',
+          text: 'Percentage by category',
           style: {
             color: 'black',
             fontWeight: 'bold'
@@ -911,14 +912,14 @@ var chart = Highcharts.chart('q-sexEd', {
     },
     tooltip: {
         formatter: function () {
-            return '<b>' + this.x + ': ' + this.series.name + '</b><br>' + 'Responses: <b>' + this.y + '</b><br>';
+            return '<b>' + this.x + ': ' + this.series.name + '</b><br>' + 'Percentage: <b>' + this.y + '%</b><br>';
         }
     },
     series: [{
         name: 'Yes',
-        data: [753, 697, 0, 0],
+        data: [73.75, 66, 62, 53],
     }, {
         name: 'No',
-        data: [268, 352, 0, 0],
+        data: [26.25, 34, 38, 47],
     }]
 });

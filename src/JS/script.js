@@ -7,7 +7,7 @@ $(window).scroll(function () {
   }
 });
 
-function openGraph(evt, tabName) {
+function openGraph(evt, tabName) {  //function overrides - DOM with the div - nthChild
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
@@ -22,4 +22,4 @@ function openGraph(evt, tabName) {
 }
 
 document.getElementById("defaultOpen").click();
-// document.getElementById("defaultOpen").click(); overrides the first one/fix
+// document.getElementById("defaultOpen2").click();

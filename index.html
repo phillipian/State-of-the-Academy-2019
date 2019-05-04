@@ -39,6 +39,9 @@
       <div class="section-nav" id="discipline-nav">
         <a href="#discipline">Discipline</a>
       </div>
+      <div class="section-nav" id="community-nav">
+        <a href="#community">Community &amp; Diversity</a>
+      </div>
     </div>
   </div>
   <header>
@@ -96,11 +99,41 @@
           <div id="q-gpaVsPref" class="section-graph"></div>
           <hr class="dotted">
           <div id="q-fourVsPref" class="section-graph"></div>
-          <hr class="dotted">
           <hr>
         </div>
         <div class="section" id="politics">
-          <h2 class="section-title">Politics & Worldview</h2><br>
+          <h2 class="section-title">Politics &amp; Worldview</h2><br>
+          <div id="q-affiliation" class="section-graph"></div>
+          <hr class="dotted">
+          <div id="q-affiliation-gender" class="section-graph"></div>
+          <hr class="dotted">
+          <div class="tab">
+            <button class="tablinks" onclick="openGraph(event, 'q-censor-overall')" id="defaultOpen">Overall</button>
+            <button class="tablinks" onclick="openGraph(event, 'q-censor-conservative')">Conservative</button>
+            <button class="tablinks" onclick="openGraph(event, 'q-censor-independent')">Independent</button>
+            <button class="tablinks" onclick="openGraph(event, 'q-censor-liberal')">Liberal</button>
+            <button class="tablinks" onclick="openGraph(event, 'q-censor-libertarian')">Libertarian</button>
+            <button class="tablinks" onclick="openGraph(event, 'q-censor-other')">Other</button>
+            <button class="tablinks" onclick="openGraph(event, 'q-censor-unsure')">Unsure</button>
+          </div>
+          <div id="q-censor-overall" class="section-graph tabcontent"></div>
+          <div id="q-censor-conservative" class="section-graph tabcontent"></div>
+          <div id="q-censor-independent" class="section-graph tabcontent"></div>
+          <div id="q-censor-liberal" class="section-graph tabcontent"></div>
+          <div id="q-censor-libertarian" class="section-graph tabcontent"></div>
+          <div id="q-censor-other" class="section-graph tabcontent"></div>
+          <div id="q-censor-unsure" class="section-graph tabcontent"></div>
+          <hr class="dotted">
+          <div id="q-informed" class="section-graph"></div>
+          <hr class="dotted">
+          <div id="q-affirmative-action" class="section-graph"></div>
+          <hr class="dotted">
+          <div id="q-reverse-racism" class="section-graph"></div>
+          <hr class="dotted">
+          <div id="q-reverse-racism-gender" class="section-graph"></div>
+          <hr class="dotted">
+          <div id="q-reverse-racism-class" class="section-graph"></div>
+          <hr class="dotted">
           <hr>
         </div>
         <div class="section" id="wellness">
@@ -110,7 +143,7 @@
         <div class="section" id="sex">
           <h2 class="section-title">Sex</h2><br>
           <div class="tab">
-            <button class="tablinks" onclick="openGraph(event, 'q-sex-senior')" id="defaultOpen">Senior</button>
+            <button class="tablinks" onclick="openGraph(event, 'q-sex-senior')" id="defaultOpen1">Senior</button>
             <button class="tablinks" onclick="openGraph(event, 'q-sex-upper')">Upper</button>
             <button class="tablinks" onclick="openGraph(event, 'q-sex-lower')">Lower</button>
             <button class="tablinks" onclick="openGraph(event, 'q-sex-junior')">Junior</button>
@@ -157,6 +190,10 @@
         </div>
         <div class="section" id="discipline">
           <h2 class="section-title">Discipline</h2><br>
+          <hr>
+        </div>
+        <div class="section" id="community">
+          <h2 class="section-title">Community &amp; Diversity</h2><br>
           <hr>
         </div>
       </div>

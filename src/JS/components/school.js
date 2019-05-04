@@ -187,7 +187,7 @@ Highcharts.chart('q-gpaVsHrs', {
         backgroundColor: "#ECF0F1"
     },
     title: {
-        text: 'Average GPA by Hours spent on coursework',
+        text: 'Average GPA by hours spent on coursework',
         style: {
           fontWeight: 'bold'
         }
@@ -297,7 +297,7 @@ var chart = Highcharts.chart('q-gpaVsPref', {
     backgroundColor: "#ECF0F1"
   },
   title: {
-    text: 'Average GPA by Course preference',
+    text: 'Average GPA by course preference',
     style: {
       fontWeight: 'bold'
     }
@@ -356,7 +356,7 @@ var chart = Highcharts.chart('q-fourVsPref', {
         backgroundColor: "#ECF0F1"
     },
     title: {
-        text: '"4" as a good grade by Course preference',
+        text: '"4" as a good grade by course preference',
         style: {
           fontWeight: 'bold'
         }
@@ -378,8 +378,9 @@ var chart = Highcharts.chart('q-fourVsPref', {
     yAxis: {
         allowDecimals: false,
         min: 0,
+        max: 100,
         title: {
-          text: 'Responses in percent',
+          text: 'Percentage by category',
           style: {
             color: 'black',
             fontWeight: 'bold'
@@ -388,8 +389,8 @@ var chart = Highcharts.chart('q-fourVsPref', {
     },
     tooltip: {
         formatter: function () {
-            return '<b>' + this.series.name + '</b><br>' +
-                this.x + ': <b>' + this.y + '%</b><br>';
+            return '<b>' + this.x + ": " + this.series.name + '</b><br>' +
+                'Percentage: <b>' + this.y + '%</b><br>';
         }
     },
     series: [{
