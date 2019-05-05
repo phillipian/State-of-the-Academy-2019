@@ -231,7 +231,7 @@ Highcharts.chart('q-gpaVsHrs', {
     },
     series: [{
         name: 'Responses',
-        data: [4.56, 5.24, 5.25, 5.20, 5.21, 5.26, 5.22, 5.12, 4.95, 5.12]  // TODO: add real data
+        data: [5.54, 4.96, 5.34, 5.30, 5.35, 5.29, 5.27, 5.17, 5.14, 4.93]
     }]
 });
 
@@ -400,4 +400,378 @@ var chart = Highcharts.chart('q-fourVsPref', {
         name: 'No',
         data: [82.35, 77.44, 74.77],
     }]
+});
+
+var chart = Highcharts.chart('q-grading-disparity', {
+  chart: {
+    style: {
+      fontFamily: 'Gotham',
+      fontSize: '15px'
+    },
+    backgroundColor: "#ECF0F1"
+  },
+  title: {
+    text: 'In which department(s), if any, is/are there an unreasonable grading disparity between teachers?',
+    style: {
+      fontWeight: 'bold'
+    }
+  },
+  colors: ['#14195c'],
+  xAxis: {
+    categories: ['Art', 'Computer Science', 'English', 'History and Social Science', 'Mathematics', 'Music', 'Natural Sciences', 'Philosophy and Religious Studies', 'Physical Education', 'Statistics', 'Theatre and Dance', 'World Languages', 'Not Applicable']
+  },
+  yAxis: {
+    min: 0,
+    title: {
+      text: 'Responses',
+      verticalAlign: 'center',
+      style: {
+        color: 'black',
+        fontWeight: 'bold'
+      }
+    },
+    labels: {
+      overflow: 'justify'
+    }
+  },
+  legend: {
+    enabled: false
+  },
+  tooltip: {
+      formatter: function () {
+          return '<b>' + this.x + '</b><br>' +
+              this.series.name + ': <b>' + this.y + '</b><br>' + 'Percentage: <b>' + (this.y/10.18).toFixed(1) + "%</b>";
+      }
+  },
+  series: [{
+    data: [331, 40, 855, 634, 166, 127, 208, 271, 31, 33, 59, 277, 72],
+    type: 'bar',
+    dataLabels: {
+      enabled: false
+    },
+    name: 'Responses'
+  }]
+});
+
+var chart = Highcharts.chart('q-switch-teacher', {
+  chart: {
+      type: 'bar',
+      height: 200,
+      style: {
+        fontFamily: 'Gotham',
+        fontSize: '15px'
+      },
+      backgroundColor: "#ECF0F1"
+  },
+  title: {
+    text: 'Have you ever switched or attempted to switch teachers within the same course <br>in order to attain a better grade?',
+    style: {
+      fontWeight: 'bold'
+    }
+  },
+  xAxis: {
+      visible: false
+  },
+  yAxis: {
+      visible: false,
+      reversedStacks: false
+  },
+  legend: {
+      enabled: true
+  },
+  tooltip: {
+      formatter: function () {
+          return '<b>' + this.series.name + '</b><br>' + 'Responses: <b>' + (this.y/100*1020).toFixed(0) + '</b><br>' + 'Percentage: <b>' + this.y + '%</b>';
+      }
+  },
+  plotOptions: {
+      series: {
+          stacking: 'percent'
+      }
+  },
+  series: [{
+      name: 'Yes',
+      data: [42.55],
+      color: '#14195c'
+  }, {
+      name: 'No',
+      data: [57.45],
+      color: '#53589b'
+  }]
+});
+
+var chart = Highcharts.chart('q-extracurricular', {
+  chart: {
+    type: 'pie',
+    style: {
+      fontFamily: 'Gotham',
+      fontSize: '15px'
+    },
+    backgroundColor: "#ECF0F1"
+  },
+  title: {
+    text: 'Do you participate in any extracurriculars because you think <br>they will increase your chances of getting into a selective college?',
+    style: {
+      fontWeight: 'bold'
+    }
+  },
+  tooltip: {
+    pointFormat: '{series.name}: <b>{point.y}</b>'
+  },
+  plotOptions: {
+    pie: {
+      colors: pieColors,
+      borderWidth: 1,
+      borderColors: 'white',
+      size: 320,
+      dataLabels: {
+        enabled: true,
+        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+        style: {
+          color: 'black',
+          fontWeight: 'bold'
+        }
+      }
+    }
+  },
+  series: [{
+    name: 'Responses',
+    colorByPoint: true,
+    data: [{
+        name: 'Yes, solely',
+        y: 42,
+      },
+      {
+        name: 'Yes, mostly',
+        y: 140,
+      },
+      {
+        name: 'Yes, partly',
+        y: 536,
+      },
+      {
+        name: 'No',
+        y: 297,
+      }
+    ]
+  }]
+});
+
+var chart = Highcharts.chart('q-andover-college-senior', {
+  chart: {
+      type: 'bar',
+      height: 150,
+      style: {
+        fontFamily: 'Gotham',
+        fontSize: '15px'
+      },
+      backgroundColor: "#ECF0F1"
+  },
+  title: {
+    text: 'Do you think attending Andover affects your chances of attending a selective college?',
+    style: {
+      fontWeight: 'bold'
+    }
+  },
+  subtitle: {
+    text: 'Senior',
+    style: {
+      fontWeight: 'bold'
+    }
+  },
+  xAxis: {
+      visible: false
+  },
+  yAxis: {
+      visible: false,
+      reversedStacks: false
+  },
+  legend: {
+      enabled: false
+  },
+  tooltip: {
+      formatter: function () {
+          return '<b>Senior: ' + this.series.name + '</b><br>' + 'Responses: <b>' + (this.y/100*276).toFixed(0) + '</b><br>' + 'Percentage: <b>' + this.y + '%</b>';
+      }
+  },
+  plotOptions: {
+      series: {
+          stacking: 'percent'
+      }
+  },
+  series: [{
+      name: 'Yes, positively',
+      data: [50.72],
+      color: '#14195c'
+  }, {
+      name: 'Yes, negatively',
+      data: [43.84],
+      color: '#53589b'
+  }, {
+      name: 'No',
+      data: [5.43],
+      color: '#9398db'
+  }]
+});
+
+var chart = Highcharts.chart('q-andover-college-upper', {
+  chart: {
+      type: 'bar',
+      height: 150,
+      style: {
+        fontFamily: 'Gotham',
+        fontSize: '15px'
+      },
+      backgroundColor: "#ECF0F1"
+  },
+  title: {
+    text: null
+  },
+  subtitle: {
+    text: 'Upper',
+    style: {
+      fontWeight: 'bold'
+    }
+  },
+  xAxis: {
+      visible: false
+  },
+  yAxis: {
+      visible: false,
+      reversedStacks: false
+  },
+  legend: {
+      enabled: false
+  },
+  tooltip: {
+      formatter: function () {
+          return '<b>Upper: ' + this.series.name + '</b><br>' + 'Responses: <b>' + (this.y/100*276).toFixed(0) + '</b><br>' + 'Percentage: <b>' + this.y + '%</b>';
+      }
+  },
+  plotOptions: {
+      series: {
+          stacking: 'percent'
+      }
+  },
+  series: [{
+      name: 'Yes, positively',
+      data: [45.32],
+      color: '#14195c'
+  }, {
+      name: 'Yes, negatively',
+      data: [48.31],
+      color: '#53589b'
+  }, {
+      name: 'No',
+      data: [6.37],
+      color: '#9398db'
+  }]
+});
+
+var chart = Highcharts.chart('q-andover-college-lower', {
+  chart: {
+      type: 'bar',
+      height: 150,
+      style: {
+        fontFamily: 'Gotham',
+        fontSize: '15px'
+      },
+      backgroundColor: "#ECF0F1"
+  },
+  title: {
+    text: null
+  },
+  subtitle: {
+    text: 'Lower',
+    style: {
+      fontWeight: 'bold'
+    }
+  },
+  xAxis: {
+      visible: false
+  },
+  yAxis: {
+      visible: false,
+      reversedStacks: false
+  },
+  legend: {
+      enabled: false
+  },
+  tooltip: {
+      formatter: function () {
+          return '<b>Lower: ' + this.series.name + '</b><br>' + 'Responses: <b>' + (this.y/100*276).toFixed(0) + '</b><br>' + 'Percentage: <b>' + this.y + '%</b>';
+      }
+  },
+  plotOptions: {
+      series: {
+          stacking: 'percent'
+      }
+  },
+  series: [{
+      name: 'Yes, positively',
+      data: [61.36],
+      color: '#14195c'
+  }, {
+      name: 'Yes, negatively',
+      data: [32.2],
+      color: '#53589b'
+  }, {
+      name: 'No',
+      data: [6.44],
+      color: '#9398db'
+  }]
+});
+
+var chart = Highcharts.chart('q-andover-college-junior', {
+  chart: {
+      type: 'bar',
+      height: 200,
+      style: {
+        fontFamily: 'Gotham',
+        fontSize: '15px'
+      },
+      backgroundColor: "#ECF0F1"
+  },
+  title: {
+    text: null
+  },
+  subtitle: {
+    text: 'Junior',
+    style: {
+      fontWeight: 'bold'
+    }
+  },
+  xAxis: {
+      visible: false
+  },
+  yAxis: {
+      visible: false,
+      reversedStacks: false
+  },
+  legend: {
+      enabled: true
+  },
+  tooltip: {
+      formatter: function () {
+          return '<b>Junior: ' + this.series.name + '</b><br>' + 'Responses: <b>' + (this.y/100*276).toFixed(0) + '</b><br>' + 'Percentage: <b>' + this.y + '%</b>';
+      }
+  },
+  plotOptions: {
+      series: {
+          stacking: 'percent'
+      }
+  },
+  series: [{
+      name: 'Yes, positively',
+      data: [64.36],
+      color: '#14195c'
+  }, {
+      name: 'Yes, negatively',
+      data: [28.71],
+      color: '#53589b'
+  }, {
+      name: 'No',
+      data: [6.93],
+      color: '#9398db'
+  }]
 });
