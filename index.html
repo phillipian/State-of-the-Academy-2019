@@ -130,11 +130,37 @@
           <hr class="dotted">
           <div id="q-affirmative-action" class="section-graph"></div>
           <hr class="dotted">
-          <div id="q-reverse-racism" class="section-graph"></div>
+          <div id="reverse-racism-graph">
+            <div class="tab">
+              <button class="tablinks defaultOpen" onclick="openGraph(event, 'q-reverse-racism-overall', 'reverse-racism-graph')">Overall</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-reverse-racism-gender', 'reverse-racism-graph')">Gender</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-reverse-racism-class', 'reverse-racism-graph')">Class</button>
+            </div>
+            <div id="q-reverse-racism-overall" class="section-graph tabcontent"></div>
+            <div id="q-reverse-racism-gender" class="section-graph tabcontent"></div>
+            <div id="q-reverse-racism-class" class="section-graph tabcontent"></div>
+          </div>
           <hr class="dotted">
-          <div id="q-reverse-racism-gender" class="section-graph"></div>
+          <div id="rape-culture-graph">
+            <div class="tab">
+              <button class="tablinks defaultOpen" onclick="openGraph(event, 'q-rape-culture-overall', 'rape-culture-graph')">Overall</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-rape-culture-gender', 'rape-culture-graph')">Gender</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-rape-culture-class', 'rape-culture-graph')">Class</button>
+            </div>
+            <div id="q-rape-culture-overall" class="section-graph tabcontent"></div>
+            <div id="q-rape-culture-gender" class="section-graph tabcontent"></div>
+            <div id="q-rape-culture-class" class="section-graph tabcontent"></div>
+          </div>
           <hr class="dotted">
-          <div id="q-reverse-racism-class" class="section-graph"></div>
+          <div id="q-all-gender" class="section-graph"></div>
+          <hr class="dotted">
+          <div id="q-feminism" class="section-graph"></div>
+          <hr class="dotted">
+          <div id="q-feminism-class" class="section-graph"></div>
+          <hr class="dotted">
+          <div id="q-black-lives" class="section-graph"></div>
+          <hr class="dotted">
+          <div id="q-black-lives-feminism" class="section-graph"></div>
           <hr class="dotted">
           <hr>
         </div>
@@ -146,11 +172,13 @@
           <h2 class="section-title">Sex</h2><br>
           <div id="sex-graph">
             <div class="tab">
-              <button class="tablinks defaultOpen" onclick="openGraph(event, 'q-sex-senior', 'sex-graph')">Senior</button>
+              <button class="tablinks defaultOpen" onclick="openGraph(event, 'q-sex-overall', 'sex-graph')">Overall</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-sex-senior', 'sex-graph')">Senior</button>
               <button class="tablinks" onclick="openGraph(event, 'q-sex-upper', 'sex-graph')">Upper</button>
               <button class="tablinks" onclick="openGraph(event, 'q-sex-lower', 'sex-graph')">Lower</button>
               <button class="tablinks" onclick="openGraph(event, 'q-sex-junior', 'sex-graph')">Junior</button>
             </div>
+            <div id="q-sex-overall" class="section-graph tabcontent"></div>
             <div id="q-sex-senior" class="section-graph tabcontent"></div>
             <div id="q-sex-upper" class="section-graph tabcontent"></div>
             <div id="q-sex-lower" class="section-graph tabcontent"></div>
@@ -163,11 +191,13 @@
           <hr class="dotted">
           <div id="relationship-graph">
             <div class="tab">
-              <button class="tablinks defaultOpen" onclick="openGraph(event, 'q-relationship-senior', 'relationship-graph')">Senior</button>
+              <button class="tablinks defaultOpen" onclick="openGraph(event, 'q-relationship-overall', 'relationship-graph')">Overall</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-relationship-senior', 'relationship-graph')">Senior</button>
               <button class="tablinks" onclick="openGraph(event, 'q-relationship-upper', 'relationship-graph')">Upper</button>
               <button class="tablinks" onclick="openGraph(event, 'q-relationship-lower', 'relationship-graph')">Lower</button>
               <button class="tablinks" onclick="openGraph(event, 'q-relationship-junior', 'relationship-graph')">Junior</button>
             </div>
+            <div id="q-relationship-overall" class="section-graph tabcontent"></div>
             <div id="q-relationship-senior" class="section-graph tabcontent"></div>
             <div id="q-relationship-upper" class="section-graph tabcontent"></div>
             <div id="q-relationship-lower" class="section-graph tabcontent"></div>

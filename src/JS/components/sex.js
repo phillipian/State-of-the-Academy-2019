@@ -1,3 +1,59 @@
+var chart = Highcharts.chart('q-sex-overall', {
+    chart: {
+        type: 'column',
+        style: {
+          fontFamily: 'Gotham',
+          fontSize: '15px'
+        },
+        backgroundColor: "#ECF0F1"
+    },
+    title: {
+        text: 'Have you ever engaged in sexual activity?',
+        style: {
+          fontWeight: 'bold'
+        }
+    },
+    colors: ['#dc308a'],
+    xAxis: {
+        categories: ['Anal', 'Digital','Oral','Vaginal','Not Applicable'],
+        title: {
+          text: 'Sexual Act',
+          style: {
+            color: 'black',
+            fontWeight: 'bold'
+          }
+        }
+    },
+    yAxis: {
+      min: 0,
+      max: 600,
+      title: {
+        text: 'Responses',
+        verticalAlign: 'center',
+        style: {
+          color: 'black',
+          fontWeight: 'bold'
+        }
+      },
+      labels: {
+        overflow: 'justify'
+      }
+    },
+    legend: {
+      enabled: false
+    },
+    series: [{
+      name: 'Responses',
+      data: [58, 363, 377, 252, 586]
+    }],
+    tooltip: {
+        formatter: function () {
+            return '<b>' + this.x + '</b><br>' + this.series.name + ': <b>' + this.y + '</b><br>' +
+            'Percentage: ' + '<b>' + ((this.y)/16.36).toFixed(1) + '%</b><br>';
+        }
+    }
+});
+
 var chart = Highcharts.chart('q-sex-senior', {
     chart: {
         type: 'column',
@@ -26,7 +82,7 @@ var chart = Highcharts.chart('q-sex-senior', {
     },
     yAxis: {
       min: 0,
-      max: 200,
+      max: 600,
       title: {
         text: 'Responses',
         verticalAlign: 'center',
@@ -49,7 +105,7 @@ var chart = Highcharts.chart('q-sex-senior', {
     tooltip: {
         formatter: function () {
             return '<b>' + this.x + '</b><br>' + this.series.name + ': <b>' + this.y + '</b><br>' +
-            'Percentage: ' + '<b>' + ((this.y)/2.86).toFixed(1) + '%</b><br>';
+            'Percentage: ' + '<b>' + ((this.y)/5.64).toFixed(1) + '%</b><br>';
         }
     }
 });
@@ -82,7 +138,7 @@ Highcharts.chart('q-sex-upper', {
     },
     yAxis: {
       min: 0,
-      max: 200,
+      max: 600,
       title: {
         text: 'Responses',
         verticalAlign: 'center',
@@ -105,7 +161,7 @@ Highcharts.chart('q-sex-upper', {
     tooltip: {
         formatter: function () {
             return '<b>' + this.x + '</b><br>' + this.series.name + ': <b>' + this.y + '</b><br>' +
-            'Percentage: ' + '<b>' + ((this.y)/2.71).toFixed(1) + '%</b><br>';
+            'Percentage: ' + '<b>' + ((this.y)/4.70).toFixed(1) + '%</b><br>';
         }
     }
 });
@@ -138,7 +194,7 @@ Highcharts.chart('q-sex-lower', {
     },
     yAxis: {
       min: 0,
-      max: 200,
+      max: 600,
       title: {
         text: 'Responses',
         verticalAlign: 'center',
@@ -161,7 +217,7 @@ Highcharts.chart('q-sex-lower', {
     tooltip: {
         formatter: function () {
             return '<b>' + this.x + '</b><br>' + this.series.name + ': <b>' + this.y + '</b><br>' +
-            'Percentage: ' + '<b>' + ((this.y)/2.75).toFixed(1) + '%</b><br>';
+            'Percentage: ' + '<b>' + ((this.y)/3.61).toFixed(1) + '%</b><br>';
         }
     }
 });
@@ -194,7 +250,7 @@ Highcharts.chart('q-sex-junior', {
     },
     yAxis: {
       min: 0,
-      max: 200,
+      max: 600,
       title: {
         text: 'Responses',
         verticalAlign: 'center',
@@ -217,7 +273,7 @@ Highcharts.chart('q-sex-junior', {
     tooltip: {
         formatter: function () {
             return '<b>' + this.x + '</b><br>' + this.series.name + ': <b>' + this.y + '</b><br>' +
-            'Percentage: ' + '<b>' + ((this.y)/2.14).toFixed(1) + '%</b><br>';
+            'Percentage: ' + '<b>' + ((this.y)/2.41).toFixed(1) + '%</b><br>';
         }
     }
 });
@@ -347,6 +403,59 @@ var pieColors = (function() {
   return colors;
 }());
 
+var chart = Highcharts.chart('q-relationship-overall', {
+  chart: {
+    type: 'pie',
+    style: {
+      fontFamily: 'Gotham',
+      fontSize: '15px'
+    },
+    backgroundColor: "#ECF0F1"
+  },
+  title: {
+    text: 'Have you ever been in a committed relationship?',
+    style: {
+      fontWeight: 'bold'
+    }
+  },
+  tooltip: {
+    pointFormat: '{series.name}: <b>{point.y}</b>'
+  },
+  plotOptions: {
+    pie: {
+      colors: pieColors,
+      borderWidth: 1,
+      borderColors: 'white',
+      size: 320,
+      dataLabels: {
+        enabled: true,
+        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+        style: {
+          color: 'black',
+          fontWeight: 'bold'
+        }
+      }
+    }
+  },
+  series: [{
+    name: 'Responses',
+    colorByPoint: true,
+    data: [{
+        name: 'Yes, but I am not currently in a committed relationship',
+        y: 328
+      },
+      {
+        name: 'Yes, I am currently in a committed relationship',
+        y: 145
+      },
+      {
+        name: 'No, I have never been in a committed relationship',
+        y: 544
+      }
+    ]
+  }]
+});
+
 var chart = Highcharts.chart('q-relationship-senior', {
   chart: {
     type: 'pie',
@@ -386,7 +495,7 @@ var chart = Highcharts.chart('q-relationship-senior', {
     colorByPoint: true,
     data: [{
         name: 'Yes, but I am not currently in a committed relationship',
-        y: 89,
+        y: 89
       },
       {
         name: 'Yes, I am currently in a committed relationship',
@@ -439,7 +548,7 @@ var chart = Highcharts.chart('q-relationship-upper', {
     colorByPoint: true,
     data: [{
         name: 'Yes, but I am not currently in a committed relationship',
-        y: 86,
+        y: 86
       },
       {
         name: 'Yes, I am currently in a committed relationship',
@@ -492,7 +601,7 @@ var chart = Highcharts.chart('q-relationship-lower', {
     colorByPoint: true,
     data: [{
         name: 'Yes, but I am not currently in a committed relationship',
-        y: 97,
+        y: 97
       },
       {
         name: 'Yes, I am currently in a committed relationship',
@@ -545,7 +654,7 @@ var chart = Highcharts.chart('q-relationship-junior', {
     colorByPoint: true,
     data: [{
         name: 'Yes, but I am not currently in a committed relationship',
-        y: 56,
+        y: 56
       },
       {
         name: 'Yes, I am currently in a committed relationship',

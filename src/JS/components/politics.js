@@ -112,7 +112,7 @@ var pieColors = (function() {
     i;
 
   for (i = 0; i < 10; i += 1) {
-    colors.push(Highcharts.Color(base).brighten((i) / 3).get());
+    colors.push(Highcharts.Color(base).brighten((i) / 5).get());
   }
   return colors;
 }());
@@ -560,9 +560,8 @@ var chart = Highcharts.chart('q-affirmative-action', {
   }]
 });
 
-var chart = Highcharts.chart('q-reverse-racism', {
+var chart = Highcharts.chart('q-reverse-racism-overall', {
   chart: {
-    type: 'pie',
     style: {
       fontFamily: 'Gotham',
       fontSize: '15px'
@@ -570,42 +569,43 @@ var chart = Highcharts.chart('q-reverse-racism', {
     backgroundColor: "#ECF0F1"
   },
   title: {
-    text: 'Do you believe that reverse racism – “prejudice, discrimination, or antagonism on the basis of race directed against a member of a dominant or privileged racial group” – (Oxford Dictionaries) – exists? ',
+    text: 'Do you believe that reverse racism – “prejudice, discrimination, or antagonism on the basis of race directed against a member of a dominant or privileged racial group” (Oxford Dictionaries) – exists?',
     style: {
       fontWeight: 'bold'
     }
   },
-  tooltip: {
-    pointFormat: '{series.name}: <b>{point.y}</b>'
+  colors: ['#521a7e'],
+  xAxis: {
+    categories: ['Yes', 'No']
   },
-  plotOptions: {
-    pie: {
-      colors: pieColors,
-      borderWidth: 1,
-      borderColors: 'white',
-      size: 320,
-      dataLabels: {
-        enabled: true,
-        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-        style: {
-          color: 'black',
-          fontWeight: 'bold'
-        }
+  yAxis: {
+    min: 0,
+    title: {
+      text: 'Responses',
+      verticalAlign: 'center',
+      style: {
+        color: 'black',
+        fontWeight: 'bold'
       }
+    },
+    labels: {
+      overflow: 'justify'
+    }
+  },
+  legend: {
+    enabled: false
+  },
+  tooltip: {
+    formatter: function () {
+        return '<b>' + this.x + '<br>Response: <b>' + this.y + '</b><br>';
     }
   },
   series: [{
-    name: 'Responses',
-    colorByPoint: true,
-    data: [{
-        name: 'Yes',
-        y: 426,
-      },
-      {
-        name: 'No',
-        y: 606
-      }
-    ]
+    data: [426, 606],
+    type: 'bar',
+    dataLabels: {
+      enabled: false
+    }
   }]
 });
 
@@ -712,4 +712,352 @@ var chart = Highcharts.chart('q-reverse-racism-class', {
         name: 'No',
         data: [181, 178, 155, 90],
     }]
+});
+
+var chart = Highcharts.chart('q-rape-culture-overall', {
+  chart: {
+    style: {
+      fontFamily: 'Gotham',
+      fontSize: '15px'
+    },
+    backgroundColor: "#ECF0F1"
+  },
+  title: {
+    text: 'Do you believe there is rape culture –  “a society or environment <br>whose prevailing social attitudes have the effect of normalizing or trivializing <br>sexual assault and abuse” (Oxford Dictionaries) – at Andover?',
+    style: {
+      fontWeight: 'bold'
+    }
+  },
+  colors: ['#521a7e'],
+  xAxis: {
+    categories: ['Yes', 'No']
+  },
+  yAxis: {
+    min: 0,
+    title: {
+      text: 'Responses',
+      verticalAlign: 'center',
+      style: {
+        color: 'black',
+        fontWeight: 'bold'
+      }
+    },
+    labels: {
+      overflow: 'justify'
+    }
+  },
+  legend: {
+    enabled: false
+  },
+  tooltip: {
+    formatter: function () {
+        return '<b>' + this.x + '<br>Response: <b>' + this.y + '</b><br>';
+    }
+  },
+  series: [{
+    data: [473, 562],
+    type: 'bar',
+    dataLabels: {
+      enabled: false
+    }
+  }]
+});
+
+var chart = Highcharts.chart('q-rape-culture-gender', {
+    chart: {
+        type: 'bar',
+        style: {
+          fontFamily: 'Gotham',
+          fontSize: '15px'
+        },
+        marginBottom: 90,
+        backgroundColor: "#ECF0F1"
+    },
+    title: {
+        text: 'Belief in rape culture by gender',
+        style: {
+          fontWeight: 'bold'
+        }
+    },
+    subtitle: {
+      text: '*Editor\'s note: Correlated statistics from respondents who identify as agender, genderfluid, genderqueer, and nonbinary <br>have been removed in an effort to protect the complete anynomity of these respondents.',
+      verticalAlign: 'bottom',
+      y: -10
+    },
+    legend: {
+        enabled: false
+    },
+    colors: ['#521a7e'],
+    xAxis: {
+        categories: ['Man', 'Woman', 'Other*']
+    },
+    yAxis: {
+        min: 0,
+        title: {
+          text: 'Responses',
+          style: {
+            color: 'black',
+            fontWeight: 'bold'
+          }
+        }
+    },
+    tooltip: {
+        formatter: function () {
+            return '<b>' + this.x + ': ' + this.series.name + '</b><br>' + 'Response: <b>' + this.y + '</b><br>';
+        }
+    },
+    series: [{
+        name: 'Yes',
+        data: [143, 320, null],
+    }, {
+        name: 'No',
+        data: [336, 226, null],
+    }]
+});
+
+var chart = Highcharts.chart('q-rape-culture-class', {
+    chart: {
+        type: 'bar',
+        style: {
+          fontFamily: 'Gotham',
+          fontSize: '15px'
+        },
+        backgroundColor: "#ECF0F1"
+    },
+    title: {
+        text: 'Rape culture by class',
+        style: {
+          fontWeight: 'bold'
+        }
+    },
+    legend: {
+        enabled: false
+    },
+    colors: ['#521a7e'],
+    xAxis: {
+        categories: ['2019', '2020', '2021', '2022'],
+        title: {
+          text: 'Class',
+          style: {
+            color: 'black',
+            fontWeight: 'bold'
+          }
+        }
+    },
+    yAxis: {
+        min: 0,
+        title: {
+          text: 'Responses',
+          style: {
+            color: 'black',
+            fontWeight: 'bold'
+          }
+        }
+    },
+    tooltip: {
+        formatter: function () {
+            return '<b>' + this.x + ': ' + this.series.name + '</b><br>' + 'Response: <b>' + this.y + '</b><br>';
+        }
+    },
+    series: [{
+        name: 'Yes',
+        data: [133, 124, 139, 77],
+    }, {
+        name: 'No',
+        data: [150, 145, 133, 134],
+    }]
+});
+
+var chart = Highcharts.chart('q-all-gender', {
+  chart: {
+    type: 'pie',
+    style: {
+      fontFamily: 'Gotham',
+      fontSize: '15px'
+    },
+    backgroundColor: "#ECF0F1"
+  },
+  title: {
+    text: 'Do you support All-Gender Housing at Andover?',
+    style: {
+      fontWeight: 'bold'
+    }
+  },
+  tooltip: {
+    pointFormat: '{series.name}: <b>{point.y}</b>'
+  },
+  plotOptions: {
+    pie: {
+      colors: pieColors,
+      borderWidth: 1,
+      borderColors: 'white',
+      size: 320,
+      dataLabels: {
+        enabled: true,
+        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+        style: {
+          color: 'black',
+          fontWeight: 'bold'
+        }
+      }
+    }
+  },
+  series: [{
+    name: 'Responses',
+    colorByPoint: true,
+    data: [{
+        name: 'Yes, as it exists now',
+        y: 558
+      },
+      {
+        name: 'Yes, it should be expanded',
+        y: 403
+      },
+      {
+        name: 'No',
+        y: 79
+      }
+    ]
+  }]
+});
+
+var chart = Highcharts.chart('q-feminism', {
+    chart: {
+        type: 'column',
+        style: {
+          fontFamily: 'Gotham',
+          fontSize: '15px'
+        },
+        backgroundColor: "#ECF0F1"
+    },
+    title: {
+        text: 'Do you support “the advocacy of women’s rights on the ground of the equality of the sexes?” <br>(Oxford Dictionaries) <br>vs <br>Do you consider yourself a feminist?',
+        style: {
+          fontWeight: 'bold'
+        }
+    },
+    legend: {
+        enabled: false
+    },
+    colors: ['#521a7e'],
+    xAxis: {
+        categories: ['In support', 'Feminist'],
+    },
+    yAxis: {
+        min: 0,
+        title: {
+          text: 'Responses',
+          style: {
+            color: 'black',
+            fontWeight: 'bold'
+          }
+        }
+    },
+    tooltip: {
+        formatter: function () {
+            return '<b>' + this.x + ': ' + this.series.name + '</b><br>' + 'Response: <b>' + this.y + '</b><br>';
+        }
+    },
+    series: [{
+        name: 'Yes',
+        data: [1003, 704],
+    }, {
+        name: 'No',
+        data: [38, 335],
+    }]
+});
+
+var chart = Highcharts.chart('q-feminism-class', {
+    chart: {
+        type: 'column',
+        style: {
+          fontFamily: 'Gotham',
+          fontSize: '15px'
+        },
+        backgroundColor: "#ECF0F1"
+    },
+    title: {
+        text: 'Feminism by class',
+        style: {
+          fontWeight: 'bold'
+        }
+    },
+    legend: {
+        enabled: false
+    },
+    colors: ['#521a7e'],
+    xAxis: {
+        categories: ['2019', '2020', '2021', '2022'],
+    },
+    yAxis: {
+        min: 0,
+        title: {
+          text: 'Responses',
+          style: {
+            color: 'black',
+            fontWeight: 'bold'
+          }
+        }
+    },
+    tooltip: {
+        formatter: function () {
+            return '<b>' + this.x + ': ' + this.series.name + '</b><br>' + 'Response: <b>' + this.y + '</b><br>';
+        }
+    },
+    series: [{
+        name: 'Yes',
+        data: [210, 198, 172, 121],
+    }, {
+        name: 'No',
+        data: [72, 71, 101, 89],
+    }]
+});
+
+var chart = Highcharts.chart('q-black-lives', {
+  chart: {
+    type: 'pie',
+    style: {
+      fontFamily: 'Gotham',
+      fontSize: '15px'
+    },
+    backgroundColor: "#ECF0F1"
+  },
+  title: {
+    text: 'Do you support the Black Lives Matter movement?',
+    style: {
+      fontWeight: 'bold'
+    }
+  },
+  tooltip: {
+    pointFormat: '{series.name}: <b>{point.y}</b>'
+  },
+  plotOptions: {
+    pie: {
+      colors: pieColors,
+      borderWidth: 1,
+      borderColors: 'white',
+      size: 320,
+      dataLabels: {
+        enabled: true,
+        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+        style: {
+          color: 'black',
+          fontWeight: 'bold'
+        }
+      }
+    }
+  },
+  series: [{
+    name: 'Responses',
+    colorByPoint: true,
+    data: [{
+        name: 'Yes',
+        y: 893
+      },
+      {
+        name: 'No',
+        y: 145
+      }
+    ]
+  }]
 });
