@@ -13,7 +13,7 @@
   - [x] Boarding vs day
   - [x] Financial aid
   - [x] Parents in college
-- [ ] School section graphs
+- [x] School section graphs
 - [x] Sex section graphs
   - [x] get stats for previous years sex-ed
 - [x] Base website CSS
