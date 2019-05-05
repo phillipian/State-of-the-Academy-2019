@@ -15,8 +15,9 @@
   - [x] Parents in college
 - [ ] School section graphs
 - [x] Sex section graphs
-  - [ ] get stats for previous years sex-ed
+  - [x] get stats for previous years sex-ed
 - [x] Base website CSS
+- [ ] For categorized graphs (by gender, class, preference), make out of 100 and display percentage
 - [ ] For grouped graphs, change color of each sub-group
 - [ ] Add back legends as necessary
 - [ ] Format tooltips
