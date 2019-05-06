@@ -14,19 +14,24 @@
   - [x] Financial aid
   - [x] Parents in college
 - [x] School section graphs
+- [x] Politics & Worldview graphs
+- [ ] Wellness graphs
 - [x] Sex section graphs
   - [x] get stats for previous years sex-ed
+- [ ] Drug graphs
+- [ ] Discipline graphs
+- [ ] Community & Diversity graphs
 - [x] Base website CSS
-- [ ] For categorized graphs (by gender, class, preference), make out of 100 and display percentage
+- [ ] For categorized graphs (by gender, class, preference,etc.), make out of 100 and display percentage
 - [ ] For grouped graphs, change color of each sub-group
 - [ ] Add back legends as necessary
-- [ ] Format tooltips
 
 ## Low Priority
 - [ ] Get background photo for header section
 - [ ] Get description of SOTA for header section
+- [ ] Format tooltips
 
-## CSS Notes
+## CSS/JS Notes
 - [x] Description is one column
 - Header banner can be shorter
 - With smaller graphs, 2 columns with masonry
@@ -36,6 +41,5 @@
   - [ ] "State of the Academy" &rarr; "SOTA" for mobile screens
 
 ## Future Ideas
-- Redesign of website format
-- Templatize website for future SOTA projects
+- [x] Templatize website for future SOTA projects
 - Find correlation with past data
