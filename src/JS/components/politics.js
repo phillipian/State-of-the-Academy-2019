@@ -1061,3 +1061,265 @@ var chart = Highcharts.chart('q-black-lives', {
     ]
   }]
 });
+
+var chart = Highcharts.chart('q-black-lives-feminist', {
+  chart: {
+      type: 'bar',
+      height: 200,
+      style: {
+        fontFamily: 'Gotham',
+        fontSize: '15px'
+      },
+      backgroundColor: "#ECF0F1"
+  },
+  title: {
+    text: 'Support of the Black Lives Matter movement by feminism',
+    style: {
+      fontWeight: 'bold'
+    }
+  },
+  subtitle: {
+    text: 'Feminist',
+    style: {
+      fontWeight: 'bold'
+    }
+  },
+  xAxis: {
+      visible: false
+  },
+  yAxis: {
+      visible: false,
+      reversedStacks: false
+  },
+  legend: {
+      enabled: false
+  },
+  tooltip: {
+      formatter: function () {
+          return '<b>Feminist: ' + this.series.name + '</b><br>' + 'Responses: <b>' + (this.y/100*703).toFixed(0) + '</b><br>' + 'Percentage: <b>' + this.y + '%</b>';
+      }
+  },
+  plotOptions: {
+      series: {
+          stacking: 'percent',
+          pointWidth: 50
+      }
+  },
+  series: [{
+      name: 'Yes',
+      data: [96.16],
+      color: '#521a7e'
+  }, {
+      name: 'No',
+      data: [3.84],
+      color: '#854db1'
+  }]
+});
+
+var chart = Highcharts.chart('q-black-lives-not-feminist', {
+  chart: {
+      type: 'bar',
+      height: 200,
+      style: {
+        fontFamily: 'Gotham',
+        fontSize: '15px'
+      },
+      backgroundColor: "#ECF0F1"
+  },
+  title: {
+    text: null
+  },
+  subtitle: {
+    text: 'Not Feminist',
+    style: {
+      fontWeight: 'bold'
+    }
+  },
+  xAxis: {
+      visible: false
+  },
+  yAxis: {
+      visible: false,
+      reversedStacks: false
+  },
+  legend: {
+      enabled: true
+  },
+  tooltip: {
+      formatter: function () {
+          return '<b>Not Feminist: ' + this.series.name + '</b><br>' + 'Responses: <b>' + (this.y/100*333).toFixed(0) + '</b><br>' + 'Percentage: <b>' + this.y + '%</b>';
+      }
+  },
+  plotOptions: {
+      series: {
+          stacking: 'percent',
+          pointWidth: 50
+      }
+  },
+  series: [{
+      name: 'Yes',
+      data: [64.56],
+      color: '#521a7e'
+  }, {
+      name: 'No',
+      data: [35.44],
+      color: '#854db1'
+  }]
+});
+
+var chart = Highcharts.chart('q-gun-control', {
+  chart: {
+    type: 'pie',
+    style: {
+      fontFamily: 'Gotham',
+      fontSize: '15px'
+    },
+    backgroundColor: "#ECF0F1"
+  },
+  title: {
+    text: 'Do you think that gun control laws in the United States should change?',
+    style: {
+      fontWeight: 'bold'
+    }
+  },
+  tooltip: {
+    pointFormat: '{series.name}: <b>{point.y}</b>'
+  },
+  plotOptions: {
+    pie: {
+      colors: pieColors,
+      borderWidth: 1,
+      borderColors: 'white',
+      size: 320,
+      dataLabels: {
+        enabled: true,
+        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+        style: {
+          color: 'black',
+          fontWeight: 'bold'
+        }
+      }
+    }
+  },
+  series: [{
+    name: 'Responses',
+    colorByPoint: true,
+    data: [{
+        name: 'Yes, they should be stricter',
+        y: 869
+      },
+      {
+        name: 'Yes, they should be more lenient',
+        y: 43
+      },
+      {
+        name: 'No, they should remain the same',
+        y: 127
+      }
+    ]
+  }]
+});
+
+var chart = Highcharts.chart('q-legal-immigration', {
+  chart: {
+      type: 'bar',
+      height: 200,
+      style: {
+        fontFamily: 'Gotham',
+        fontSize: '15px'
+      },
+      backgroundColor: "#ECF0F1"
+  },
+  title: {
+    text: 'Do you believe that it should be easier to legally immigrate to the United States?',
+    style: {
+      fontWeight: 'bold'
+    }
+  },
+  xAxis: {
+      visible: false
+  },
+  yAxis: {
+      visible: false,
+      reversedStacks: false
+  },
+  legend: {
+      enabled: true
+  },
+  tooltip: {
+      formatter: function () {
+          return '<b>' + this.series.name + '</b><br>' + 'Responses: <b>' + (this.y/100*1040).toFixed(0) + '</b><br>' + 'Percentage: <b>' + this.y + '%</b>';
+      }
+  },
+  plotOptions: {
+      series: {
+          stacking: 'percent',
+          pointWidth: 50
+      }
+  },
+  series: [{
+      name: 'Yes, it should be easier',
+      data: [67.60],
+      color: '#521a7e'
+  }, {
+      name: 'No, it should remain the same',
+      data: [27.88],
+      color: '#854db1'
+  }, {
+      name: 'No, it should be more difficult',
+      data: [4.52],
+      color: '#b880e4'
+  }]
+});
+
+var chart = Highcharts.chart('q-border-security', {
+  chart: {
+      type: 'bar',
+      height: 200,
+      style: {
+        fontFamily: 'Gotham',
+        fontSize: '15px'
+      },
+      backgroundColor: "#ECF0F1"
+  },
+  title: {
+    text: 'Do you believe that the United States should increase border security?',
+    style: {
+      fontWeight: 'bold'
+    }
+  },
+  xAxis: {
+      visible: false
+  },
+  yAxis: {
+      visible: false,
+      reversedStacks: false
+  },
+  legend: {
+      enabled: true
+  },
+  tooltip: {
+      formatter: function () {
+          return '<b>' + this.series.name + '</b><br>' + 'Responses: <b>' + (this.y/100*1036).toFixed(0) + '</b><br>' + 'Percentage: <b>' + this.y + '%</b>';
+      }
+  },
+  plotOptions: {
+      series: {
+          stacking: 'percent',
+          pointWidth: 50
+      }
+  },
+  series: [{
+      name: 'Yes, it should increase',
+      data: [33.01],
+      color: '#521a7e'
+  }, {
+      name: 'No, it should remain the same',
+      data: [48.46],
+      color: '#854db1'
+  }, {
+      name: 'No, it should decrease',
+      data: [18.53],
+      color: '#b880e4'
+  }]
+});

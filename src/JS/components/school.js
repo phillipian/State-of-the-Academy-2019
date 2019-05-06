@@ -230,7 +230,7 @@ Highcharts.chart('q-gpaVsHrs', {
         }
     },
     series: [{
-        name: 'Responses',
+        name: 'Average',
         data: [5.54, 4.96, 5.34, 5.30, 5.35, 5.29, 5.27, 5.17, 5.14, 4.93]
     }]
 });
@@ -486,7 +486,8 @@ var chart = Highcharts.chart('q-switch-teacher', {
   },
   plotOptions: {
       series: {
-          stacking: 'percent'
+          stacking: 'percent',
+          pointWidth: 50
       }
   },
   series: [{
@@ -596,7 +597,8 @@ var chart = Highcharts.chart('q-andover-college-senior', {
   },
   plotOptions: {
       series: {
-          stacking: 'percent'
+          stacking: 'percent',
+          pointWidth: 50
       }
   },
   series: [{
@@ -650,7 +652,8 @@ var chart = Highcharts.chart('q-andover-college-upper', {
   },
   plotOptions: {
       series: {
-          stacking: 'percent'
+          stacking: 'percent',
+          pointWidth: 50
       }
   },
   series: [{
@@ -704,7 +707,8 @@ var chart = Highcharts.chart('q-andover-college-lower', {
   },
   plotOptions: {
       series: {
-          stacking: 'percent'
+          stacking: 'percent',
+          pointWidth: 50
       }
   },
   series: [{
@@ -758,7 +762,8 @@ var chart = Highcharts.chart('q-andover-college-junior', {
   },
   plotOptions: {
       series: {
-          stacking: 'percent'
+          stacking: 'percent',
+          pointWidth: 50
       }
   },
   series: [{
