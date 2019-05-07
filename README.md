@@ -19,7 +19,7 @@
 - [x] Sex section graphs
   - [x] get stats for previous years sex-ed
 - [ ] Drug graphs
-- [ ] Discipline graphs
+- [x] Discipline graphs
 - [ ] Community & Diversity graphs
 - [x] Base website CSS
 - [ ] For categorized graphs (by gender, class, preference,etc.), make out of 100 and display percentage
