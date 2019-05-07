@@ -246,6 +246,44 @@
         </div>
         <div class="section" id="discipline">
           <h2 class="section-title">Discipline</h2><br>
+          <div id="q-dc" class="section-graph"></div>
+          <div id="q-censure-warning" class="section-graph"></div>
+          <div id="q-probation" class="section-graph"></div>
+          <hr class="dotted">
+          <div id="q-major-offense" class="section-graph"></div>
+          <hr class="dotted">
+          <div id="q-cheating" class="section-graph"></div>
+          <div id="q-plagiarism" class="section-graph"></div>
+          <hr class="dotted">
+          <div id="q-parietal" class="section-graph"></div>
+          <hr class="dotted">
+          <div id="dc-effective-graph">
+            <div class="tab">
+              <button class="tablinks defaultOpen" onclick="openGraph(event, 'q-dc-overall', 'dc-effective-graph')">Overall</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-dc-censure', 'dc-effective-graph')">Censure or Warning</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-dc-probation', 'dc-effective-graph')">Probation</button>
+            </div>
+            <div id="q-dc-overall" class="section-graph tabcontent"></div>
+            <div id="q-dc-censure" class="section-graph tabcontent"></div>
+            <div id="q-dc-probation" class="section-graph tabcontent"></div>
+          </div>
+          <hr class="dotted">
+          <div id="q-dc-privilege" class="section-graph"></div>
+          <hr class="dotted">
+          <div id="q-search-dorm" class="section-graph"></div>
+          <hr class="dotted">
+          <div id="room-visit">
+            <div class="tab">
+              <button class="tablinks defaultOpen" onclick="openGraph(event, 'q-room-visit-overall', 'room-visit')">Overall</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-room-visit-no-sexual', 'room-visit')">No sexual activity</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-room-visit-yes-sexual', 'room-visit')">Sexual activity</button>
+            </div>
+            <div id="q-room-visit-overall" class="section-graph tabcontent"></div>
+            <div id="q-room-visit-no-sexual" class="section-graph tabcontent"></div>
+            <div id="q-room-visit-yes-sexual" class="section-graph tabcontent"></div>
+          </div>
+          <hr class="dotted">
+          <div id="q-dc-overtime" class="section-graph"></div>
           <hr>
         </div>
         <div class="section" id="community">

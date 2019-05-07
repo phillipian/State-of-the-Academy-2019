@@ -8,7 +8,7 @@ Highcharts.chart('q-gpa', {
         backgroundColor: "#ECF0F1"
     },
     title: {
-        text: 'What was your rounded Winter 2017-2018 (unweighted) G.P.A.?',
+        text: 'What was your rounded Winter 2018-2019 (unweighted) G.P.A.?',
         style: {
           fontWeight: 'bold'
         }
