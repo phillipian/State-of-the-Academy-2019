@@ -1134,3 +1134,952 @@ var chart = Highcharts.chart('q-hard-drug', {
     name: 'Responses'
   }]
 });
+
+Highcharts.chart('q-how-often', {
+    chart: {
+        type: 'column',
+        height: 300,
+        style: {
+          fontFamily: 'Gotham',
+          fontSize: '15px'
+        },
+        backgroundColor: "#ECF0F1"
+    },
+    title: {
+        text: 'How often do you consume recreational drugs or alcohol on campus?',
+        style: {
+          fontWeight: 'bold'
+        }
+    },
+    colors: ['#ee601b'],
+    tooltip: {
+        formatter: function () {
+            return '<b>' + this.x + '</b><br>' +
+                this.series.name + ': <b>' + this.y + '</b><br>';
+        }
+    },
+    xAxis: {
+        categories: ['Daily', 'Weekly', 'About once per month', 'About once a term', 'Not applicable']
+    },
+    yAxis: {
+      min: 0,
+      title: {
+        text: 'Responses',
+        verticalAlign: 'center',
+        style: {
+          color: 'black',
+          fontWeight: 'bold'
+        }
+      },
+      labels: {
+        overflow: 'justify'
+      }
+    },
+    legend: {
+      enabled: false
+    },
+    series: [{
+      data: [74, 94, 51, 125, 679],
+      dataLabels: {
+        enabled: false
+      },
+      name: 'Responses'
+    }]
+});
+
+Highcharts.chart('q-study-drugs-overall', {
+    chart: {
+        type: 'column',
+        height: 300,
+        style: {
+          fontFamily: 'Gotham',
+          fontSize: '15px'
+        },
+        backgroundColor: "#ECF0F1"
+    },
+    title: {
+        text: 'Have you ever used pharmaceutical drugs in the hopes of enhancing academic performance <br>(i.e. “study drugs”) at Andover?',
+        style: {
+          fontWeight: 'bold'
+        }
+    },
+    colors: ['#ee601b'],
+    tooltip: {
+        formatter: function () {
+            return '<b>' + this.x + '</b><br>' +
+                this.series.name + ': <b>' + this.y + '</b><br>' + 'Percentage: <b>' + (this.y/10.23).toFixed(1) + '%</b>';
+        }
+    },
+    xAxis: {
+        categories: ['Yes', 'No']
+    },
+    yAxis: {
+      min: 0,
+      max: 1000,
+      title: {
+        text: 'Responses',
+        verticalAlign: 'center',
+        style: {
+          color: 'black',
+          fontWeight: 'bold'
+        }
+      },
+      labels: {
+        overflow: 'justify'
+      }
+    },
+    legend: {
+      enabled: false
+    },
+    series: [{
+      data: [87, 936],
+      dataLabels: {
+        enabled: false
+      },
+      name: 'Responses'
+    }]
+});
+
+Highcharts.chart('q-study-drugs-no-drug', {
+    chart: {
+        type: 'column',
+        height: 300,
+        style: {
+          fontFamily: 'Gotham',
+          fontSize: '15px'
+        },
+        backgroundColor: "#ECF0F1"
+    },
+    title: {
+        text: 'Have you ever used pharmaceutical drugs in the hopes of enhancing academic performance <br>(i.e. “study drugs”) at Andover?',
+        style: {
+          fontWeight: 'bold'
+        }
+    },
+    colors: ['#ee601b'],
+    tooltip: {
+        formatter: function () {
+            return '<b>' + this.x + '</b><br>' +
+                this.series.name + ': <b>' + this.y + '</b><br>' + 'Percentage: <b>' + (this.y/6.78).toFixed(1) + '%</b>';
+        }
+    },
+    xAxis: {
+        categories: ['Yes', 'No']
+    },
+    yAxis: {
+      min: 0,
+      max: 1000,
+      title: {
+        text: 'Responses',
+        verticalAlign: 'center',
+        style: {
+          color: 'black',
+          fontWeight: 'bold'
+        }
+      },
+      labels: {
+        overflow: 'justify'
+      }
+    },
+    legend: {
+      enabled: false
+    },
+    series: [{
+      data: [11, 667],
+      dataLabels: {
+        enabled: false
+      },
+      name: 'Responses'
+    }]
+});
+
+Highcharts.chart('q-study-drugs-yes-drug', {
+    chart: {
+        type: 'column',
+        height: 300,
+        style: {
+          fontFamily: 'Gotham',
+          fontSize: '15px'
+        },
+        backgroundColor: "#ECF0F1"
+    },
+    title: {
+        text: 'Have you ever used pharmaceutical drugs in the hopes of enhancing academic performance <br>(i.e. “study drugs”) at Andover?',
+        style: {
+          fontWeight: 'bold'
+        }
+    },
+    colors: ['#ee601b'],
+    tooltip: {
+        formatter: function () {
+            return '<b>' + this.x + '</b><br>' +
+                this.series.name + ': <b>' + this.y + '</b><br>' + 'Percentage: <b>' + (this.y/3.44).toFixed(1) + '%</b>';
+        }
+    },
+    xAxis: {
+        categories: ['Yes', 'No']
+    },
+    yAxis: {
+      min: 0,
+      max: 1000,
+      title: {
+        text: 'Responses',
+        verticalAlign: 'center',
+        style: {
+          color: 'black',
+          fontWeight: 'bold'
+        }
+      },
+      labels: {
+        overflow: 'justify'
+      }
+    },
+    legend: {
+      enabled: false
+    },
+    series: [{
+      data: [76, 268],
+      dataLabels: {
+        enabled: false
+      },
+      name: 'Responses'
+    }]
+});
+
+var chart = Highcharts.chart('q-drug-setting', {
+  chart: {
+    type: 'pie',
+    height: 450,
+    style: {
+      fontFamily: 'Gotham',
+      fontSize: '15px'
+    },
+    backgroundColor: "#ECF0F1"
+  },
+  title: {
+    text: 'In which of the following settings on campus have you been under the influence of <br>recreational drugs or alcohol? Select all that apply.',
+    style: {
+      fontWeight: 'bold'
+    }
+  },
+  subtitle: {
+    text: '<i>Note: among drug users</i>'
+  },
+  tooltip: {
+    formatter: barTooltipFormatter
+  },
+  plotOptions: {
+    pie: {
+      colors: pieColors,
+      borderWidth: 1,
+      borderColors: 'white',
+      size: 320,
+      showInLegend: true,
+      dataLabels: {
+        enabled: false
+      }
+    }
+  },
+  series: [{
+    name: 'Responses',
+    colorByPoint: true,
+    data: [{
+        name: 'A dorm',
+        y: 310,
+      },
+      {
+        name: 'School-sponsored event',
+        y: 200,
+      },
+      {
+        name: 'Classroom setting',
+        y: 87,
+      },
+      {
+        name: 'Other on-campus setting',
+        y: 175,
+      },
+      {
+        name: 'Not applicable (never on campus)',
+        y: 21,
+      }
+    ]
+  }]
+});
+
+var chart = Highcharts.chart('q-drug-friendship-daily', {
+  chart: {
+      type: 'bar',
+      height: 140,
+      marginTop: 70,
+      marginBottom: 0,
+      style: {
+        fontFamily: 'Gotham',
+        fontSize: '15px'
+      },
+      backgroundColor: "#ECF0F1"
+  },
+  title: {
+    text: 'Do you think that recreational drug or alcohol use significantly influences <br>your friendships at Andover?',
+    style: {
+      fontWeight: 'bold'
+    }
+  },
+  subtitle: {
+    text: 'Drug usage: Daily',
+    style: {
+      fontWeight: 'bold'
+    }
+  },
+  xAxis: {
+      visible: false
+  },
+  yAxis: {
+      visible: false,
+      reversedStacks: false
+  },
+  legend: {
+      enabled: false
+  },
+  tooltip: {
+      formatter: function () {
+          return '<b>' + this.series.name + '</b><br>' + '</b><br>' + 'Percentage: <b>' + this.y + '%</b>';
+      }
+  },
+  plotOptions: {
+      series: {
+          stacking: 'percent',
+          pointWidth: 50
+      }
+  },
+  series: [{
+      name: 'Yes',
+      data: [74.3],
+      color: '#ee601b'
+  }, {
+      name: 'No',
+      data: [25.7],
+      color: '#ffa863'
+  }]
+});
+
+var chart = Highcharts.chart('q-drug-friendship-weekly', {
+  chart: {
+      type: 'bar',
+      height: 120,
+      marginTop: 10,
+      marginBottom: 0,
+      style: {
+        fontFamily: 'Gotham',
+        fontSize: '15px'
+      },
+      backgroundColor: "#ECF0F1"
+  },
+  title: {
+    text: null
+  },
+  subtitle: {
+    text: 'Drug usage: Weekly',
+    style: {
+      fontWeight: 'bold'
+    }
+  },
+  xAxis: {
+      visible: false
+  },
+  yAxis: {
+      visible: false,
+      reversedStacks: false
+  },
+  legend: {
+      enabled: false
+  },
+  tooltip: {
+      formatter: function () {
+          return '<b>' + this.series.name + '</b><br>' + 'Percentage: <b>' + this.y + '%</b>';
+      }
+  },
+  plotOptions: {
+      series: {
+          stacking: 'percent',
+          pointWidth: 50
+      }
+  },
+  series: [{
+      name: 'Yes',
+      data: [44.7],
+      color: '#ee601b'
+  }, {
+      name: 'No',
+      data: [55.3],
+      color: '#ffa863'
+  }]
+});
+
+var chart = Highcharts.chart('q-drug-friendship-month', {
+  chart: {
+      type: 'bar',
+      height: 120,
+      marginTop: 10,
+      marginBottom: 0,
+      style: {
+        fontFamily: 'Gotham',
+        fontSize: '15px'
+      },
+      backgroundColor: "#ECF0F1"
+  },
+  title: {
+    text: null
+  },
+  subtitle: {
+    text: 'Drug usage: About once per month',
+    style: {
+      fontWeight: 'bold'
+    }
+  },
+  xAxis: {
+      visible: false
+  },
+  yAxis: {
+      visible: false,
+      reversedStacks: false
+  },
+  legend: {
+      enabled: false,
+      y: 10
+  },
+  tooltip: {
+      formatter: function () {
+          return '<b>' + this.series.name + '</b><br>' + '</b><br>' + 'Percentage: <b>' + this.y + '%</b>';
+      }
+  },
+  plotOptions: {
+      series: {
+          stacking: 'percent',
+          pointWidth: 50
+      }
+  },
+  series: [{
+      name: 'Yes',
+      data: [43.1],
+      color: '#ee601b'
+  }, {
+      name: 'No',
+      data: [56.9],
+      color: '#ffa863'
+  }]
+});
+
+var chart = Highcharts.chart('q-drug-friendship-term', {
+  chart: {
+      type: 'bar',
+      height: 120,
+      marginTop: 10,
+      marginBottom: 0,
+      style: {
+        fontFamily: 'Gotham',
+        fontSize: '15px'
+      },
+      backgroundColor: "#ECF0F1"
+  },
+  title: {
+    text: null
+  },
+  subtitle: {
+    text: 'Drug usage: About once a term',
+    style: {
+      fontWeight: 'bold'
+    }
+  },
+  xAxis: {
+      visible: false
+  },
+  yAxis: {
+      visible: false,
+      reversedStacks: false
+  },
+  legend: {
+      enabled: false
+  },
+  tooltip: {
+      formatter: function () {
+          return '<b>' + this.series.name + '</b><br>' + '</b><br>' + 'Percentage: <b>' + this.y + '%</b>';
+      }
+  },
+  plotOptions: {
+      series: {
+          stacking: 'percent',
+          pointWidth: 50
+      }
+  },
+  series: [{
+      name: 'Yes',
+      data: [43.2],
+      color: '#ee601b'
+  }, {
+      name: 'No',
+      data: [56.8],
+      color: '#ffa863'
+  }]
+});
+
+var chart = Highcharts.chart('q-drug-friendship-na', {
+  chart: {
+      type: 'bar',
+      height: 140,
+      marginTop: 30,
+      marginBottom: 40,
+      style: {
+        fontFamily: 'Gotham',
+        fontSize: '15px'
+      },
+      backgroundColor: "#ECF0F1"
+  },
+  title: {
+    text: null
+  },
+  subtitle: {
+    text: 'Drug usage: Not applicable',
+    style: {
+      fontWeight: 'bold'
+    }
+  },
+  xAxis: {
+      visible: false
+  },
+  yAxis: {
+      visible: false,
+      reversedStacks: false
+  },
+  legend: {
+      enabled: true
+  },
+  tooltip: {
+      formatter: function () {
+          return '<b>' + this.series.name + '</b><br>' + 'Percentage: <b>' + this.y + '%</b>';
+      }
+  },
+  plotOptions: {
+      series: {
+          stacking: 'percent',
+          pointWidth: 50
+      }
+  },
+  series: [{
+      name: 'Yes',
+      data: [31.5],
+      color: '#ee601b'
+  }, {
+      name: 'No',
+      data: [68.5],
+      color: '#ffa863'
+  }]
+});
+
+Highcharts.chart('q-drug-normalized-overall', {
+    chart: {
+        type: 'column',
+        height: 300,
+        style: {
+          fontFamily: 'Gotham',
+          fontSize: '15px'
+        },
+        backgroundColor: "#ECF0F1"
+    },
+    title: {
+        text: 'Do you think that the use of recreational drugs or alcohol is normalized at Andover?',
+        style: {
+          fontWeight: 'bold'
+        }
+    },
+    colors: ['#ee601b'],
+    tooltip: {
+        formatter: function () {
+            return '<b>' + this.x + '</b><br>' +
+                this.series.name + ': <b>' + this.y + '</b><br>' + 'Percentage: <b>' + (this.y/10.23).toFixed(1) + '%</b>';
+        }
+    },
+    xAxis: {
+        categories: ['Yes', 'No']
+    },
+    yAxis: {
+      min: 0,
+      max: 800,
+      title: {
+        text: 'Responses',
+        verticalAlign: 'center',
+        style: {
+          color: 'black',
+          fontWeight: 'bold'
+        }
+      },
+      labels: {
+        overflow: 'justify'
+      }
+    },
+    legend: {
+      enabled: false
+    },
+    series: [{
+      data: [726, 297],
+      dataLabels: {
+        enabled: false
+      },
+      name: 'Responses'
+    }]
+});
+
+Highcharts.chart('q-drug-normalized-no-drug', {
+    chart: {
+        type: 'column',
+        height: 300,
+        style: {
+          fontFamily: 'Gotham',
+          fontSize: '15px'
+        },
+        backgroundColor: "#ECF0F1"
+    },
+    title: {
+        text: 'Do you think that the use of recreational drugs or alcohol is normalized at Andover?',
+        style: {
+          fontWeight: 'bold'
+        }
+    },
+    colors: ['#ee601b'],
+    tooltip: {
+        formatter: function () {
+            return '<b>' + this.x + '</b><br>' +
+                this.series.name + ': <b>' + this.y + '</b><br>' + 'Percentage: <b>' + (this.y/6.79).toFixed(1) + '%</b>';
+        }
+    },
+    xAxis: {
+        categories: ['Yes', 'No']
+    },
+    yAxis: {
+      min: 0,
+      max: 800,
+      title: {
+        text: 'Responses',
+        verticalAlign: 'center',
+        style: {
+          color: 'black',
+          fontWeight: 'bold'
+        }
+      },
+      labels: {
+        overflow: 'justify'
+      }
+    },
+    legend: {
+      enabled: false
+    },
+    series: [{
+      data: [426, 253],
+      dataLabels: {
+        enabled: false
+      },
+      name: 'Responses'
+    }]
+});
+
+Highcharts.chart('q-drug-normalized-yes-drug', {
+    chart: {
+        type: 'column',
+        height: 300,
+        style: {
+          fontFamily: 'Gotham',
+          fontSize: '15px'
+        },
+        backgroundColor: "#ECF0F1"
+    },
+    title: {
+        text: 'Do you think that the use of recreational drugs or alcohol is normalized at Andover?',
+        style: {
+          fontWeight: 'bold'
+        }
+    },
+    colors: ['#ee601b'],
+    tooltip: {
+        formatter: function () {
+            return '<b>' + this.x + '</b><br>' +
+                this.series.name + ': <b>' + this.y + '</b><br>' + 'Percentage: <b>' + (this.y/3.43).toFixed(1) + '%</b>';
+        }
+    },
+    xAxis: {
+        categories: ['Yes', 'No']
+    },
+    yAxis: {
+      min: 0,
+      max: 800,
+      title: {
+        text: 'Responses',
+        verticalAlign: 'center',
+        style: {
+          color: 'black',
+          fontWeight: 'bold'
+        }
+      },
+      labels: {
+        overflow: 'justify'
+      }
+    },
+    legend: {
+      enabled: false
+    },
+    series: [{
+      data: [299, 44],
+      dataLabels: {
+        enabled: false
+      },
+      name: 'Responses'
+    }]
+});
+
+Highcharts.chart('q-fakeID-overall', {
+    chart: {
+        type: 'column',
+        height: 300,
+        style: {
+          fontFamily: 'Gotham',
+          fontSize: '15px'
+        },
+        backgroundColor: "#ECF0F1"
+    },
+    title: {
+        text: 'Have you ever purchased, or do you own, a fake ID?',
+        style: {
+          fontWeight: 'bold'
+        }
+    },
+    colors: ['#ee601b'],
+    tooltip: {
+        formatter: function () {
+            return '<b>' + this.x + '</b><br>' +
+                this.series.name + ': <b>' + this.y + '</b><br>' + 'Percentage: <b>' + (this.y/10.23).toFixed(1) + '%</b>';
+        }
+    },
+    xAxis: {
+        categories: ['Yes', 'No']
+    },
+    yAxis: {
+      min: 0,
+      max: 1000,
+      title: {
+        text: 'Responses',
+        verticalAlign: 'center',
+        style: {
+          color: 'black',
+          fontWeight: 'bold'
+        }
+      },
+      labels: {
+        overflow: 'justify'
+      }
+    },
+    legend: {
+      enabled: false
+    },
+    series: [{
+      data: [98, 925],
+      dataLabels: {
+        enabled: false
+      },
+      name: 'Responses'
+    }]
+});
+
+Highcharts.chart('q-fakeID-no-drug', {
+    chart: {
+        type: 'column',
+        height: 300,
+        style: {
+          fontFamily: 'Gotham',
+          fontSize: '15px'
+        },
+        backgroundColor: "#ECF0F1"
+    },
+    title: {
+        text: 'Have you ever purchased, or do you own, a fake ID?',
+        style: {
+          fontWeight: 'bold'
+        }
+    },
+    colors: ['#ee601b'],
+    tooltip: {
+        formatter: function () {
+            return '<b>' + this.x + '</b><br>' +
+                this.series.name + ': <b>' + this.y + '</b><br>' + 'Percentage: <b>' + (this.y/6.78).toFixed(1) + '%</b>';
+        }
+    },
+    xAxis: {
+        categories: ['Yes', 'No']
+    },
+    yAxis: {
+      min: 0,
+      max: 1000,
+      title: {
+        text: 'Responses',
+        verticalAlign: 'center',
+        style: {
+          color: 'black',
+          fontWeight: 'bold'
+        }
+      },
+      labels: {
+        overflow: 'justify'
+      }
+    },
+    legend: {
+      enabled: false
+    },
+    series: [{
+      data: [25, 653],
+      dataLabels: {
+        enabled: false
+      },
+      name: 'Responses'
+    }]
+});
+
+Highcharts.chart('q-fakeID-yes-drug', {
+    chart: {
+        type: 'column',
+        height: 300,
+        style: {
+          fontFamily: 'Gotham',
+          fontSize: '15px'
+        },
+        backgroundColor: "#ECF0F1"
+    },
+    title: {
+        text: 'Have you ever purchased, or do you own, a fake ID?',
+        style: {
+          fontWeight: 'bold'
+        }
+    },
+    colors: ['#ee601b'],
+    tooltip: {
+        formatter: function () {
+            return '<b>' + this.x + '</b><br>' +
+                this.series.name + ': <b>' + this.y + '</b><br>' + 'Percentage: <b>' + (this.y/3.43).toFixed(1) + '%</b>';
+        }
+    },
+    xAxis: {
+        categories: ['Yes', 'No']
+    },
+    yAxis: {
+      min: 0,
+      max: 1000,
+      title: {
+        text: 'Responses',
+        verticalAlign: 'center',
+        style: {
+          color: 'black',
+          fontWeight: 'bold'
+        }
+      },
+      labels: {
+        overflow: 'justify'
+      }
+    },
+    legend: {
+      enabled: false
+    },
+    series: [{
+      data: [73, 270],
+      dataLabels: {
+        enabled: false
+      },
+      name: 'Responses'
+    }]
+});
+
+var chart = Highcharts.chart('q-been-sanctuaried', {
+  chart: {
+    type: 'pie',
+    style: {
+      fontFamily: 'Gotham',
+      fontSize: '15px'
+    },
+    backgroundColor: "#ECF0F1"
+  },
+  title: {
+    text: 'Have you ever been sanctuaried?',
+    style: {
+      fontWeight: 'bold'
+    }
+  },
+  tooltip: {
+    formatter: barTooltipFormatter
+  },
+  plotOptions: {
+    pie: {
+      colors: pieColors,
+      borderWidth: 1,
+      borderColors: 'white',
+      size: 320,
+      showInLegend: true,
+      dataLabels: {
+        enabled: false
+      }
+    }
+  },
+  series: [{
+    name: 'Responses',
+    colorByPoint: true,
+    data: [{
+        name: 'Yes',
+        y: 39,
+      },
+      {
+        name: 'No',
+        y: 982,
+      }
+    ]
+  }]
+});
+
+var chart = Highcharts.chart('q-sanctuaried-someone', {
+  chart: {
+    type: 'pie',
+    style: {
+      fontFamily: 'Gotham',
+      fontSize: '15px'
+    },
+    backgroundColor: "#ECF0F1"
+  },
+  title: {
+    text: 'Have you ever sanctuaried someone else? ',
+    style: {
+      fontWeight: 'bold'
+    }
+  },
+  tooltip: {
+    formatter: barTooltipFormatter
+  },
+  plotOptions: {
+    pie: {
+      colors: pieColors,
+      borderWidth: 1,
+      borderColors: 'white',
+      size: 320,
+      showInLegend: true,
+      dataLabels: {
+        enabled: false
+      }
+    }
+  },
+  series: [{
+    name: 'Responses',
+    colorByPoint: true,
+    data: [{
+        name: 'Yes',
+        y: 43,
+      },
+      {
+        name: 'No',
+        y: 980,
+      }
+    ]
+  }]
+});

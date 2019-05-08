@@ -65,7 +65,7 @@
             <h5>1053</h5>
             <p>total number of respondents in this year's survey</p>
             <h5>93.6%</h5>
-            <p>of the student body participated anonymously</p>
+            <p>of the student body participated</p>
           </div><br><br>
           <div id="q-class" class='section-graph'></div>
           <hr class="dotted">
@@ -266,6 +266,52 @@
           <div id="q-marijuana-2015" class="section-graph"></div>
           <hr class="dotted">
           <div id="q-hard-drug" class="section-graph"></div>
+          <hr class="dotted">
+          <div id="q-how-often" class="section-graph"></div>
+          <hr class="dotted">
+          <div id="study-drugs-graph">
+            <div class="tab">
+              <button class="tablinks defaultOpen" onclick="openGraph(event, 'q-study-drugs-overall', 'study-drugs-graph')">Overall</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-study-drugs-no-drug', 'study-drugs-graph')">No drug usage</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-study-drugs-yes-drug', 'study-drugs-graph')">Drug usage</button>
+            </div>
+            <div id="q-study-drugs-overall" class="section-graph tabcontent"></div>
+            <div id="q-study-drugs-no-drug" class="section-graph tabcontent"></div>
+            <div id="q-study-drugs-yes-drug" class="section-graph tabcontent"></div>
+          </div>
+          <hr class="dotted">
+          <div id="q-drug-setting" class="section-graph"></div>
+          <hr class="dotted">
+          <div id="q-drug-friendship-daily" class="section-graph"></div>
+          <div id="q-drug-friendship-weekly" class="section-graph"></div>
+          <div id="q-drug-friendship-month" class="section-graph"></div>
+          <div id="q-drug-friendship-term" class="section-graph"></div>
+          <div id="q-drug-friendship-na" class="section-graph"></div>
+          <hr class="dotted">
+          <div id="drug-normalized-graph">
+            <div class="tab">
+              <button class="tablinks defaultOpen" onclick="openGraph(event, 'q-drug-normalized-overall', 'drug-normalized-graph')">Overall</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-drug-normalized-no-drug', 'drug-normalized-graph')">No drug usage</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-drug-normalized-yes-drug', 'drug-normalized-graph')">Drug usage</button>
+            </div>
+            <div id="q-drug-normalized-overall" class="section-graph tabcontent"></div>
+            <div id="q-drug-normalized-no-drug" class="section-graph tabcontent"></div>
+            <div id="q-drug-normalized-yes-drug" class="section-graph tabcontent"></div>
+          </div>
+          <hr class="dotted">
+          <div id="fakeID-graph">
+            <div class="tab">
+              <button class="tablinks defaultOpen" onclick="openGraph(event, 'q-fakeID-overall', 'fakeID-graph')">Overall</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-fakeID-no-drug', 'fakeID-graph')">No drug usage</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-fakeID-yes-drug', 'fakeID-graph')">Drug usage</button>
+            </div>
+            <div id="q-fakeID-overall" class="section-graph tabcontent"></div>
+            <div id="q-fakeID-no-drug" class="section-graph tabcontent"></div>
+            <div id="q-fakeID-yes-drug" class="section-graph tabcontent"></div>
+          </div>
+          <hr class="dotted">
+          <div id="q-been-sanctuaried" class="section-graph"></div>
+          <div id="q-sanctuaried-someone" class="section-graph"></div>
           <hr>
         </div>
         <div class="section" id="discipline">
