@@ -11,7 +11,7 @@
 - [ ] Wellness graphs
 - [x] Sex section graphs
   - [x] get stats for previous years sex-ed
-- [ ] Drug graphs
+- [x] Drug graphs
 - [x] Discipline graphs
 - [ ] Community & Diversity graphs
 - [x] Base website CSS
