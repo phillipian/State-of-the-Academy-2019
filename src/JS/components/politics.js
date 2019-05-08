@@ -133,21 +133,17 @@ var chart = Highcharts.chart('q-censor-overall', {
     }
   },
   tooltip: {
-    pointFormat: '{series.name}: <b>{point.y}</b>'
+    formatter: barTooltipFormatter
   },
   plotOptions: {
     pie: {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 320,
+      size: 300,
+      showInLegend: true,
       dataLabels: {
-        enabled: true,
-        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-        style: {
-          color: 'black',
-          fontWeight: 'bold'
-        }
+        enabled: false
       }
     }
   },
@@ -182,21 +178,17 @@ var chart = Highcharts.chart('q-censor-conservative', {
     }
   },
   tooltip: {
-    pointFormat: '{series.name}: <b>{point.y}</b>'
+    formatter: barTooltipFormatter
   },
   plotOptions: {
     pie: {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 320,
+      size: 300,
+      showInLegend: true,
       dataLabels: {
-        enabled: true,
-        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-        style: {
-          color: 'black',
-          fontWeight: 'bold'
-        }
+        enabled: false
       }
     }
   },
@@ -231,21 +223,17 @@ var chart = Highcharts.chart('q-censor-independent', {
     }
   },
   tooltip: {
-    pointFormat: '{series.name}: <b>{point.y}</b>'
+    formatter: barTooltipFormatter
   },
   plotOptions: {
     pie: {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 320,
+      size: 300,
+      showInLegend: true,
       dataLabels: {
-        enabled: true,
-        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-        style: {
-          color: 'black',
-          fontWeight: 'bold'
-        }
+        enabled: false
       }
     }
   },
@@ -280,21 +268,17 @@ var chart = Highcharts.chart('q-censor-liberal', {
     }
   },
   tooltip: {
-    pointFormat: '{series.name}: <b>{point.y}</b>'
+    formatter: barTooltipFormatter
   },
   plotOptions: {
     pie: {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 320,
+      size: 300,
+      showInLegend: true,
       dataLabels: {
-        enabled: true,
-        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-        style: {
-          color: 'black',
-          fontWeight: 'bold'
-        }
+        enabled: false
       }
     }
   },
@@ -329,21 +313,17 @@ var chart = Highcharts.chart('q-censor-libertarian', {
     }
   },
   tooltip: {
-    pointFormat: '{series.name}: <b>{point.y}</b>'
+    formatter: barTooltipFormatter
   },
   plotOptions: {
     pie: {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 320,
+      size: 300,
+      showInLegend: true,
       dataLabels: {
-        enabled: true,
-        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-        style: {
-          color: 'black',
-          fontWeight: 'bold'
-        }
+        enabled: false
       }
     }
   },
@@ -378,21 +358,17 @@ var chart = Highcharts.chart('q-censor-other', {
     }
   },
   tooltip: {
-    pointFormat: '{series.name}: <b>{point.y}</b>'
+    formatter: barTooltipFormatter
   },
   plotOptions: {
     pie: {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 320,
+      size: 300,
+      showInLegend: true,
       dataLabels: {
-        enabled: true,
-        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-        style: {
-          color: 'black',
-          fontWeight: 'bold'
-        }
+        enabled: false
       }
     }
   },
@@ -427,21 +403,17 @@ var chart = Highcharts.chart('q-censor-unsure', {
     }
   },
   tooltip: {
-    pointFormat: '{series.name}: <b>{point.y}</b>'
+    formatter: barTooltipFormatter
   },
   plotOptions: {
     pie: {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 320,
+      size: 300,
+      showInLegend: true,
       dataLabels: {
-        enabled: true,
-        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-        style: {
-          color: 'black',
-          fontWeight: 'bold'
-        }
+        enabled: false
       }
     }
   },
@@ -514,6 +486,7 @@ Highcharts.chart('q-informed', {
 var chart = Highcharts.chart('q-affirmative-action', {
   chart: {
     type: 'pie',
+    height: 420,
     style: {
       fontFamily: 'Gotham',
       fontSize: '15px'
@@ -527,21 +500,17 @@ var chart = Highcharts.chart('q-affirmative-action', {
     }
   },
   tooltip: {
-    pointFormat: '{series.name}: <b>{point.y}</b>'
+    formatter: barTooltipFormatter
   },
   plotOptions: {
     pie: {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 320,
+      size: 300,
+      showInLegend: true,
       dataLabels: {
-        enabled: true,
-        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-        style: {
-          color: 'black',
-          fontWeight: 'bold'
-        }
+        enabled: false
       }
     }
   },
@@ -884,21 +853,17 @@ var chart = Highcharts.chart('q-all-gender', {
     }
   },
   tooltip: {
-    pointFormat: '{series.name}: <b>{point.y}</b>'
+    formatter: barTooltipFormatter
   },
   plotOptions: {
     pie: {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 320,
+      size: 300,
+      showInLegend: true,
       dataLabels: {
-        enabled: true,
-        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-        style: {
-          color: 'black',
-          fontWeight: 'bold'
-        }
+        enabled: false
       }
     }
   },
@@ -1029,21 +994,17 @@ var chart = Highcharts.chart('q-black-lives', {
     }
   },
   tooltip: {
-    pointFormat: '{series.name}: <b>{point.y}</b>'
+    formatter: barTooltipFormatter
   },
   plotOptions: {
     pie: {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 320,
+      size: 300,
+      showInLegend: true,
       dataLabels: {
-        enabled: true,
-        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-        style: {
-          color: 'black',
-          fontWeight: 'bold'
-        }
+        enabled: false
       }
     }
   },
@@ -1183,21 +1144,17 @@ var chart = Highcharts.chart('q-gun-control', {
     }
   },
   tooltip: {
-    pointFormat: '{series.name}: <b>{point.y}</b>'
+    formatter: barTooltipFormatter
   },
   plotOptions: {
     pie: {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 320,
+      size: 300,
+      showInLegend: true,
       dataLabels: {
-        enabled: true,
-        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-        style: {
-          color: 'black',
-          fontWeight: 'bold'
-        }
+        enabled: false
       }
     }
   },

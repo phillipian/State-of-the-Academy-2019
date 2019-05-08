@@ -86,21 +86,17 @@ var chart = Highcharts.chart('q-four', {
     text: '<i>According to the Blue Book...</i>'
   },
   tooltip: {
-    pointFormat: '{series.name}: <b>{point.y}</b>'
+    formatter: barTooltipFormatter
   },
   plotOptions: {
     pie: {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 320,
+      size: 300,
+      showInLegend: true,
       dataLabels: {
-        enabled: true,
-        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-        style: {
-          color: 'black',
-          fontWeight: 'bold'
-        }
+        enabled: false
       }
     }
   },
@@ -197,7 +193,7 @@ Highcharts.chart('q-gpaVsHrs', {
     },
     tooltip: {
         formatter: function () {
-            return '<b>' + this.x + '</b><br>' +
+            return '<b>Time spent: ' + this.x + '</b><br>' +
                 this.series.name + ': <b>' + this.y + '</b><br>';
         }
     },
@@ -235,6 +231,64 @@ Highcharts.chart('q-gpaVsHrs', {
     }]
 });
 
+Highcharts.chart('q-gpaVsSleep', {
+    chart: {
+        type: 'area',
+        style: {
+          fontFamily: 'Gotham',
+          fontSize: '15px'
+        },
+        backgroundColor: "#ECF0F1"
+    },
+    title: {
+        text: 'Average GPA by amount of sleep',
+        style: {
+          fontWeight: 'bold'
+        }
+    },
+    legend: {
+        enabled: false
+    },
+    tooltip: {
+        formatter: function () {
+            return '<b>Sleep: ' + this.x + '</b><br>' +
+                this.series.name + ': <b>' + this.y + '</b><br>';
+        }
+    },
+    xAxis: {
+        categories: ['>=10', '9', '8', '7', '6', '5', '4', '3', '2'],
+        title: {
+            text: 'Amount of sleep in hours',
+            style: {
+              color: 'black',
+              fontWeight: 'bold'
+            }
+        }
+    },
+    yAxis: {
+        title: {
+            text: 'Average GPA',
+            style: {
+              color: 'black',
+              fontWeight: 'bold'
+            }
+        }
+    },
+    plotOptions: {
+        area: {
+            fillOpacity: 0.5,
+            color: "#14195c"
+        },
+        dataLabels: {
+          enabled: false
+        }
+    },
+    series: [{
+        name: 'Average',
+        data: [5.60, 5.20, 5.30, 5.28, 5.14, 5.15, 5.12, 4.80, 4.90]
+    }]
+});
+
 var chart = Highcharts.chart('q-pref', {
   chart: {
     type: 'pie',
@@ -251,21 +305,17 @@ var chart = Highcharts.chart('q-pref', {
     }
   },
   tooltip: {
-    pointFormat: '{series.name}: <b>{point.y}</b>'
+    formatter: barTooltipFormatter
   },
   plotOptions: {
     pie: {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 320,
+      size: 300,
+      showInLegend: true,
       dataLabels: {
-        enabled: true,
-        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-        style: {
-          color: 'black',
-          fontWeight: 'bold'
-        }
+        enabled: false
       }
     }
   },
@@ -285,64 +335,6 @@ var chart = Highcharts.chart('q-pref', {
         y: 214,
       }
     ]
-  }]
-});
-
-var chart = Highcharts.chart('q-gpaVsPref', {
-  chart: {
-    style: {
-      fontFamily: 'Gotham',
-      fontSize: '15px'
-    },
-    backgroundColor: "#ECF0F1"
-  },
-  title: {
-    text: 'Average GPA by course preference',
-    style: {
-      fontWeight: 'bold'
-    }
-  },
-  colors: ['#14195c'],
-  xAxis: {
-    categories: ['STEM', 'Humanities', 'No Preference'],
-    title: {
-      text: 'Course Preference',
-      style: {
-        color: 'black',
-        fontWeight: 'bold'
-      }
-    }
-  },
-  yAxis: {
-    min: 0,
-    title: {
-      text: 'GPA',
-      verticalAlign: 'center',
-      style: {
-        color: 'black',
-        fontWeight: 'bold'
-      }
-    },
-    labels: {
-      overflow: 'justify'
-    }
-  },
-  legend: {
-    enabled: false
-  },
-  tooltip: {
-      formatter: function () {
-          return '<b>' + this.x + '</b><br>' +
-              this.series.name + ': <b>' + this.y + '</b><br>';
-      }
-  },
-  series: [{
-    data: [5.26, 5.18, 5.26],
-    type: 'bar',
-    dataLabels: {
-      enabled: false
-    },
-    name: 'Average'
   }]
 });
 
@@ -517,21 +509,17 @@ var chart = Highcharts.chart('q-extracurricular', {
     }
   },
   tooltip: {
-    pointFormat: '{series.name}: <b>{point.y}</b>'
+    formatter: barTooltipFormatter
   },
   plotOptions: {
     pie: {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 320,
+      size: 300,
+      showInLegend: true,
       dataLabels: {
-        enabled: true,
-        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-        style: {
-          color: 'black',
-          fontWeight: 'bold'
-        }
+        enabled: false
       }
     }
   },

@@ -337,9 +337,11 @@ var chart = Highcharts.chart('q-masturbation-frequency', {
     }]
 });
 
-var chart = Highcharts.chart('q-masturbation-comfortable', {
+var chart = Highcharts.chart('q-masturbation-comfortable-man', {
   chart: {
       type: 'bar',
+      height: 140,
+      marginTop: 40,
       style: {
         fontFamily: 'Gotham',
         fontSize: '15px'
@@ -352,43 +354,95 @@ var chart = Highcharts.chart('q-masturbation-comfortable', {
       fontWeight: 'bold'
     }
   },
-  colors: ['#dc308a'],
+  subtitle: {
+    text: 'Man',
+    style: {
+      fontWeight: 'bold'
+    }
+  },
   xAxis: {
-      categories: ['Man', 'Woman']
+      visible: false
   },
   yAxis: {
-      min: 0,
-      title: {
-        text: 'Responses',
-        verticalAlign: 'center',
-        style: {
-          color: 'black',
-          fontWeight: 'bold'
-        }
-      },
-      labels: {
-        overflow: 'justify'
-      }
+      visible: false,
+      reversedStacks: false
   },
   legend: {
       enabled: false
   },
   tooltip: {
       formatter: function () {
-          return '<b>' + this.x + ': ' + this.series.name + '</b><br>' + 'Responses: <b>' + this.y + '</b><br>';
+          return '<b>' + this.series.name + '</b><br>' + '</b><br>' + 'Percentage: <b>' + this.y + '%</b>';
       }
   },
   plotOptions: {
       series: {
-          stacking: 'normal'
+          stacking: 'percent',
+          pointWidth: 50
       }
   },
   series: [{
-      name: 'No',
-      data: [106, 363]
-  }, {
       name: 'Yes',
-      data: [359, 178]
+      data: [77.2],
+      color: '#dc308a'
+  }, {
+      name: 'No',
+      data: [22.8],
+      color: '#ff85df'
+  }]
+});
+
+var chart = Highcharts.chart('q-masturbation-comfortable-woman', {
+  chart: {
+      type: 'bar',
+      height: 140,
+      marginTop: 25,
+      marginBottom: 40,
+      style: {
+        fontFamily: 'Gotham',
+        fontSize: '15px'
+      },
+      backgroundColor: "#ECF0F1"
+  },
+  title: {
+    text: null
+  },
+  subtitle: {
+    text: 'Woman',
+    style: {
+      fontWeight: 'bold'
+    }
+  },
+  xAxis: {
+      visible: false
+  },
+  yAxis: {
+      visible: false,
+      reversedStacks: false
+  },
+  legend: {
+      enabled: true,
+      y: 10
+  },
+  tooltip: {
+      formatter: function () {
+          return '<b>' + this.series.name + '</b><br>' + '</b><br>' + 'Percentage: <b>' + this.y + '%</b>';
+      }
+  },
+  plotOptions: {
+      series: {
+          stacking: 'percent',
+          pointWidth: 50
+      }
+  },
+  series: [{
+      name: 'Yes',
+      data: [32.9],
+      color: '#dc308a'
+  }, {
+      name: 'No',
+      data: [67.1],
+      color: '#ff85df'
   }]
 });
 
@@ -419,21 +473,17 @@ var chart = Highcharts.chart('q-relationship-overall', {
     }
   },
   tooltip: {
-    pointFormat: '{series.name}: <b>{point.y}</b>'
+    formatter: barTooltipFormatter
   },
   plotOptions: {
     pie: {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 320,
+      size: 300,
+      showInLegend: true,
       dataLabels: {
-        enabled: true,
-        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-        style: {
-          color: 'black',
-          fontWeight: 'bold'
-        }
+        enabled: false
       }
     }
   },
@@ -441,15 +491,15 @@ var chart = Highcharts.chart('q-relationship-overall', {
     name: 'Responses',
     colorByPoint: true,
     data: [{
-        name: 'Yes, but I am not currently in a committed relationship',
+        name: 'Yes, but not currently',
         y: 328
       },
       {
-        name: 'Yes, I am currently in a committed relationship',
+        name: 'Yes, currently',
         y: 145
       },
       {
-        name: 'No, I have never been in a committed relationship',
+        name: 'No',
         y: 544
       }
     ]
@@ -472,21 +522,17 @@ var chart = Highcharts.chart('q-relationship-senior', {
     }
   },
   tooltip: {
-    pointFormat: '{series.name}: <b>{point.y}</b>'
+    formatter: barTooltipFormatter
   },
   plotOptions: {
     pie: {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 320,
+      size: 300,
+      showInLegend: true,
       dataLabels: {
-        enabled: true,
-        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-        style: {
-          color: 'black',
-          fontWeight: 'bold'
-        }
+        enabled: false
       }
     }
   },
@@ -494,15 +540,15 @@ var chart = Highcharts.chart('q-relationship-senior', {
     name: 'Responses',
     colorByPoint: true,
     data: [{
-        name: 'Yes, but I am not currently in a committed relationship',
+        name: 'Yes, but not currently',
         y: 89
       },
       {
-        name: 'Yes, I am currently in a committed relationship',
+        name: 'Yes, currently',
         y: 60
       },
       {
-        name: 'No, I have never been in a committed relationship',
+        name: 'No',
         y: 128
       }
     ]
@@ -525,21 +571,17 @@ var chart = Highcharts.chart('q-relationship-upper', {
     }
   },
   tooltip: {
-    pointFormat: '{series.name}: <b>{point.y}</b>'
+    formatter: barTooltipFormatter
   },
   plotOptions: {
     pie: {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 320,
+      size: 300,
+      showInLegend: true,
       dataLabels: {
-        enabled: true,
-        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-        style: {
-          color: 'black',
-          fontWeight: 'bold'
-        }
+        enabled: false
       }
     }
   },
@@ -547,15 +589,15 @@ var chart = Highcharts.chart('q-relationship-upper', {
     name: 'Responses',
     colorByPoint: true,
     data: [{
-        name: 'Yes, but I am not currently in a committed relationship',
+        name: 'Yes, but not currently',
         y: 86
       },
       {
-        name: 'Yes, I am currently in a committed relationship',
+        name: 'Yes, currently',
         y: 48
       },
       {
-        name: 'No, I have never been in a committed relationship',
+        name: 'No',
         y: 132
       }
     ]
@@ -578,21 +620,17 @@ var chart = Highcharts.chart('q-relationship-lower', {
     }
   },
   tooltip: {
-    pointFormat: '{series.name}: <b>{point.y}</b>'
+    formatter: barTooltipFormatter
   },
   plotOptions: {
     pie: {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 320,
+      size: 300,
+      showInLegend: true,
       dataLabels: {
-        enabled: true,
-        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-        style: {
-          color: 'black',
-          fontWeight: 'bold'
-        }
+        enabled: false
       }
     }
   },
@@ -600,15 +638,15 @@ var chart = Highcharts.chart('q-relationship-lower', {
     name: 'Responses',
     colorByPoint: true,
     data: [{
-        name: 'Yes, but I am not currently in a committed relationship',
+        name: 'Yes, but not currently',
         y: 97
       },
       {
-        name: 'Yes, I am currently in a committed relationship',
+        name: 'Yes, currently',
         y: 25
       },
       {
-        name: 'No, I have never been in a committed relationship',
+        name: 'No',
         y: 147
       }
     ]
@@ -631,21 +669,17 @@ var chart = Highcharts.chart('q-relationship-junior', {
     }
   },
   tooltip: {
-    pointFormat: '{series.name}: <b>{point.y}</b>'
+    formatter: barTooltipFormatter
   },
   plotOptions: {
     pie: {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 320,
+      size: 300,
+      showInLegend: true,
       dataLabels: {
-        enabled: true,
-        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-        style: {
-          color: 'black',
-          fontWeight: 'bold'
-        }
+        enabled: false
       }
     }
   },
@@ -653,15 +687,15 @@ var chart = Highcharts.chart('q-relationship-junior', {
     name: 'Responses',
     colorByPoint: true,
     data: [{
-        name: 'Yes, but I am not currently in a committed relationship',
+        name: 'Yes, but not currently',
         y: 56
       },
       {
-        name: 'Yes, I am currently in a committed relationship',
+        name: 'Yes, currently',
         y: 12
       },
       {
-        name: 'No, I have never been in a committed relationship',
+        name: 'No',
         y: 137
       }
     ]
@@ -734,21 +768,17 @@ var chart = Highcharts.chart('q-consent', {
     }
   },
   tooltip: {
-    pointFormat: '{series.name}: <b>{point.y}</b>'
+    formatter: barTooltipFormatter
   },
   plotOptions: {
     pie: {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 320,
+      size: 300,
+      showInLegend: true,
       dataLabels: {
-        enabled: true,
-        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-        style: {
-          color: 'black',
-          fontWeight: 'bold'
-        }
+        enabled: false
       }
     }
   },
@@ -774,6 +804,7 @@ var chart = Highcharts.chart('q-consent', {
 Highcharts.chart('q-protection', {
     chart: {
         type: 'column',
+        height: 350,
         style: {
           fontFamily: 'Gotham',
           fontSize: '15px'
@@ -947,21 +978,17 @@ var chart = Highcharts.chart('q-hookup', {
     text: '<i>In the 2018 survey, 90.9% responded "yes" to this question</i>'
   },
   tooltip: {
-    pointFormat: '{series.name}: <b>{point.y}</b>'
+    formatter: barTooltipFormatter
   },
   plotOptions: {
     pie: {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 320,
+      size: 300,
+      showInLegend: true,
       dataLabels: {
-        enabled: true,
-        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-        style: {
-          color: 'black',
-          fontWeight: 'bold'
-        }
+        enabled: false
       }
     }
   },
@@ -982,6 +1009,7 @@ var chart = Highcharts.chart('q-hookup', {
 var chart = Highcharts.chart('q-sexEd', {
     chart: {
         type: 'column',
+        height: 350,
         style: {
           fontFamily: 'Gotham',
           fontSize: '15px'

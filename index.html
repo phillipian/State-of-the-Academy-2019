@@ -60,10 +60,12 @@
     <div id="data">
       <div id="sections">
         <div class="section" id="general">
-          <h2 class="section-title">General</h2><br>
-          <div class="text_fact">
+          <h2 class="section-title">General</h2>
+          <div class="text_fact fact_left">
             <h5>1053</h5>
             <p>total number of respondents in this year's survey</p>
+          </div>
+          <div class="text_fact">
             <h5>93.6%</h5>
             <p>of the student body participated</p>
           </div><br><br>
@@ -81,8 +83,8 @@
           <hr>
         </div>
         <div class="section" id="school">
-          <h2 class="section-title">School</h2><br>
-          <div class="text_fact">
+          <h2 class="section-title">School</h2>
+          <div class="text_fact fact_left">
             <h5>5.23</h5>
             <p>average school-wide Winter 2018-2019 G.P.A</p>
           </div><br><br>
@@ -90,7 +92,7 @@
           <hr class="dotted">
           <div id="q-four" class="section-graph"></div>
           <hr class="dotted">
-          <div class="text_fact">
+          <div class="text_fact fact_left">
             <h5>3.95</h5>
             <p>average hours spent on coursework outside of class each day</p>
           </div><br><br>
@@ -98,9 +100,17 @@
           <hr class="dotted">
           <div id="q-gpaVsHrs" class="section-graph"></div>
           <hr class="dotted">
-          <div id="q-pref" class="section-graph"></div>
+          <div id="q-gpaVsSleep" class="section-graph"></div>
           <hr class="dotted">
-          <div id="q-gpaVsPref" class="section-graph"></div>
+          <div class="text_fact fact_left">
+            <h5>5.26</h5>
+            <p>average GPA of those who prefer STEM courses</p>
+          </div>
+          <div class="text_fact">
+            <h5>5.18</h5>
+            <p>average GPA of those who prefer Humanities courses</p>
+          </div><br><br>
+          <div id="q-pref" class="section-graph"></div>
           <hr class="dotted">
           <div id="q-fourVsPref" class="section-graph"></div>
           <hr class="dotted">
@@ -117,7 +127,7 @@
           <hr>
         </div>
         <div class="section" id="politics">
-          <h2 class="section-title">Politics &amp; Worldview</h2><br>
+          <h2 class="section-title">Politics &amp; Worldview</h2>
           <div id="q-affiliation" class="section-graph"></div>
           <hr class="dotted">
           <div id="q-affiliation-gender" class="section-graph"></div>
@@ -185,11 +195,84 @@
           <hr>
         </div>
         <div class="section" id="wellness">
-          <h2 class="section-title">Wellness</h2><br>
+          <h2 class="section-title">Wellness</h2>
+          <div class="text_fact fact_left">
+            <h5>6.81</h5>
+            <p>average hours of sleep each night</p>
+          </div><br><br>
+          <div id="sleep-graph">
+            <div class="tab">
+              <button class="tablinks defaultOpen" onclick="openGraph(event, 'q-sleep-overall', 'sleep-graph')">Overall</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-sleep-class', 'sleep-graph')">By class</button>
+            </div>
+            <div id="q-sleep-overall" class="section-graph tabcontent"></div>
+            <div id="q-sleep-class" class="section-graph tabcontent"></div>
+          </div>
+          <hr class="dotted">
+          <div id="q-you-happy" class="section-graph"></div>
+          <div id="q-andover-happy" class="section-graph"></div>
+          <hr class="dotted">
+          <div id="q-counselor" class="section-graph"></div>
+          <hr class="dotted">
+          <div id="q-counseling-sufficient" class="section-graph"></div>
+          <hr class="dotted">
+          <div id="q-support-system" class="section-graph"></div>
+          <hr class="dotted">
+          <div id="q-adequate-support-system" class="section-graph"></div>
+          <hr class="dotted">
+          <div class="text_fact fact_left">
+            <h5>1.92</h5>
+            <p>average hours spent on social media by men</p>
+          </div>
+          <div class="text_fact">
+            <h5>2.02</h5>
+            <p>average hours spent on social media by women</p>
+          </div><br><br>
+          <div id="q-social-media-hrs" class="section-graph"></div>
+          <hr class="dotted">
+          <div id="social-media-graph">
+            <div class="tab">
+              <button class="tablinks defaultOpen" onclick="openGraph(event, 'q-social-media-overall', 'social-media-graph')">Overall</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-social-media-senior', 'social-media-graph')">Senior</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-social-media-upper', 'social-media-graph')">Upper</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-social-media-lower', 'social-media-graph')">Lower</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-social-media-junior', 'social-media-graph')">Junior</button>
+            </div>
+            <div id="q-social-media-overall" class="section-graph tabcontent"></div>
+            <div id="q-social-media-senior" class="section-graph tabcontent"></div>
+            <div id="q-social-media-upper" class="section-graph tabcontent"></div>
+            <div id="q-social-media-lower" class="section-graph tabcontent"></div>
+            <div id="q-social-media-junior" class="section-graph tabcontent"></div>
+          </div>
+          <hr class="dotted">
+          <div id="q-social-media-effect" class="section-graph"></div>
+          <hr class="dotted">
+          <div id="q-self-harm" class="section-graph"></div>
+          <hr class="dotted">
+          <div id="q-eating-disorder" class="section-graph"></div>
+          <hr class="dotted">
+          <div id="q-skip-meal" class="section-graph"></div>
+          <hr class="dotted">
+          <div id="q-depression" class="section-graph"></div>
+          <hr class="dotted">
+          <div id="q-anxiety" class="section-graph"></div>
+          <hr class="dotted">
+          <div id="q-add-adhd" class="section-graph"></div>
+          <hr class="dotted">
+          <div id="physical-insecurity-graph">
+            <div class="tab">
+              <button class="tablinks defaultOpen" onclick="openGraph(event, 'q-physical-insecurity-man', 'physical-insecurity-graph')">Man</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-physical-insecurity-woman', 'physical-insecurity-graph')">Woman</button>
+            </div>
+            <div id="q-physical-insecurity-man" class="section-graph tabcontent"></div>
+            <div id="q-physical-insecurity-woman" class="section-graph tabcontent"></div>
+          </div>
+          <hr class="dotted">
+          <div id="q-academic-insecurity" class="section-graph"></div>
           <hr>
         </div>
         <div class="section" id="sex">
-          <h2 class="section-title">Sex</h2><br>
+          <h2 class="section-title">Sex</h2>
           <div id="sex-graph">
             <div class="tab">
               <button class="tablinks defaultOpen" onclick="openGraph(event, 'q-sex-overall', 'sex-graph')">Overall</button>
@@ -207,7 +290,8 @@
           <hr class="dotted">
           <div id="q-masturbation-frequency" class="section-graph"></div>
           <hr class="dotted">
-          <div id="q-masturbation-comfortable" class="section-graph"></div>
+          <div id="q-masturbation-comfortable-man" class="section-graph"></div>
+          <div id="q-masturbation-comfortable-woman" class="section-graph"></div>
           <hr class="dotted">
           <div id="relationship-graph">
             <div class="tab">
@@ -237,11 +321,10 @@
           <div id="q-hookup" class="section-graph"></div>
           <hr class="dotted">
           <div id="q-sexEd" class="section-graph"></div>
-          <hr class="dotted">
           <hr>
         </div>
         <div class="section" id="drugs">
-          <h2 class="section-title">Drugs</h2><br>
+          <h2 class="section-title">Drugs</h2>
           <div id="drug-use-graph">
             <div class="tab">
               <button class="tablinks defaultOpen" onclick="openGraph(event, 'q-alcohol', 'drug-use-graph')">Alcohol</button>
@@ -315,7 +398,7 @@
           <hr>
         </div>
         <div class="section" id="discipline">
-          <h2 class="section-title">Discipline</h2><br>
+          <h2 class="section-title">Discipline</h2>
           <div id="q-dc" class="section-graph"></div>
           <div id="q-censure-warning" class="section-graph"></div>
           <div id="q-probation" class="section-graph"></div>
@@ -357,7 +440,7 @@
           <hr>
         </div>
         <div class="section" id="community">
-          <h2 class="section-title">Community &amp; Diversity</h2><br>
+          <h2 class="section-title">Community &amp; Diversity</h2>
           <hr>
         </div>
       </div>
