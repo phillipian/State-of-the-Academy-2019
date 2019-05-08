@@ -30,8 +30,6 @@
 
 ## CSS/JS Notes
 - [x] Description is one column
-- Header banner can be shorter
-- With smaller graphs, 2 columns with masonry
 - Mobile responsive
 - Top navbar transitions: 
   - [x] color fade
