@@ -242,6 +242,30 @@
         </div>
         <div class="section" id="drugs">
           <h2 class="section-title">Drugs</h2><br>
+          <div id="drug-use-graph">
+            <div class="tab">
+              <button class="tablinks defaultOpen" onclick="openGraph(event, 'q-alcohol', 'drug-use-graph')">Alcohol</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-tobacco', 'drug-use-graph')">Tobacco</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-juul', 'drug-use-graph')">Juul</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-marijuana', 'drug-use-graph')">Marijuana</button>
+            </div>
+            <div id="q-alcohol" class="section-graph tabcontent"></div>
+            <div id="q-tobacco" class="section-graph tabcontent"></div>
+            <div id="q-juul" class="section-graph tabcontent"></div>
+            <div id="q-marijuana" class="section-graph tabcontent"></div>
+          </div>
+          <hr class="dotted">
+          <div id="q-juul-2019" class="section-graph"></div>
+          <div id="q-juul-2018" class="section-graph"></div>
+          <div id="q-juul-2017" class="section-graph"></div>
+          <hr class="dotted">
+          <div id="q-marijuana-2019" class="section-graph"></div>
+          <div id="q-marijuana-2018" class="section-graph"></div>
+          <div id="q-marijuana-2017" class="section-graph"></div>
+          <div id="q-marijuana-2016" class="section-graph"></div>
+          <div id="q-marijuana-2015" class="section-graph"></div>
+          <hr class="dotted">
+          <div id="q-hard-drug" class="section-graph"></div>
           <hr>
         </div>
         <div class="section" id="discipline">
@@ -272,11 +296,11 @@
           <hr class="dotted">
           <div id="q-search-dorm" class="section-graph"></div>
           <hr class="dotted">
-          <div id="room-visit">
+          <div id="room-visit-graph">
             <div class="tab">
-              <button class="tablinks defaultOpen" onclick="openGraph(event, 'q-room-visit-overall', 'room-visit')">Overall</button>
-              <button class="tablinks" onclick="openGraph(event, 'q-room-visit-no-sexual', 'room-visit')">No sexual activity</button>
-              <button class="tablinks" onclick="openGraph(event, 'q-room-visit-yes-sexual', 'room-visit')">Sexual activity</button>
+              <button class="tablinks defaultOpen" onclick="openGraph(event, 'q-room-visit-overall', 'room-visit-graph')">Overall</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-room-visit-no-sexual', 'room-visit-graph')">No sexual activity</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-room-visit-yes-sexual', 'room-visit-graph')">Sexual activity</button>
             </div>
             <div id="q-room-visit-overall" class="section-graph tabcontent"></div>
             <div id="q-room-visit-no-sexual" class="section-graph tabcontent"></div>
@@ -306,6 +330,7 @@
   <script src="https://code.jquery.com/jquery-2.1.3.js"></script>
   <script src = "https://code.highcharts.com/highcharts.js"></script>
   <script src="src/JS/script.js"></script>
+  <script src="src/JS/formatters.js"></script>
   <script src="src/JS/components/general.js"></script>
   <script src="src/JS/components/school.js"></script>
   <script src="src/JS/components/politics.js"></script>

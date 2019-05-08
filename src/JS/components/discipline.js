@@ -805,7 +805,15 @@ Highcharts.chart('q-dc-overtime', {
         }
     },
     xAxis: {
-        categories: ['2019', '2018', '2017', '2016', '2015', '2014']
+        categories: ['2019', '2018', '2017', '2016', '2015', '2014'],
+        title: {
+          text: 'Years',
+          verticalAlign: 'center',
+          style: {
+            color: 'black',
+            fontWeight: 'bold'
+          }
+        },
     },
     yAxis: {
       min: 0,
