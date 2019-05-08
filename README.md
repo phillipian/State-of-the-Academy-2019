@@ -8,7 +8,7 @@
 - [x] General section graphs
 - [x] School section graphs
 - [x] Politics & Worldview graphs
-- [ ] Wellness graphs
+- [x] Wellness graphs
 - [x] Sex section graphs
   - [x] get stats for previous years sex-ed
 - [x] Drug graphs
@@ -17,10 +17,12 @@
 - [x] Base website CSS
 - [ ] For categorized graphs (by gender, class, preference,etc.), make out of 100 and display percentage
   - [ ] percentage bar graph
+    - [ ] make spacing uniform for all percentage bar graphs
 - [ ] For grouped graphs, change color of each sub-group
 - [ ] Add back legends as necessary
 - [ ] Format tooltips to be uniform using formatters.js
   - [ ] percent decimals to 1 digit
+- [ ] make spacing, styling, type of graphs uniform
 
 ## Low Priority
 - [ ] Get background photo for header section
