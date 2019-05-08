@@ -6,13 +6,6 @@
 
 ## High Priority
 - [x] General section graphs
-  - [x] Percent respondents (add in description blurb)
-  - [x] Class numbers
-  - [x] Regions (bar/map)
-  - [x] Ethnicity (note about selecting more than one)
-  - [x] Boarding vs day
-  - [x] Financial aid
-  - [x] Parents in college
 - [x] School section graphs
 - [x] Politics & Worldview graphs
 - [ ] Wellness graphs
@@ -23,13 +16,15 @@
 - [ ] Community & Diversity graphs
 - [x] Base website CSS
 - [ ] For categorized graphs (by gender, class, preference,etc.), make out of 100 and display percentage
+  - [ ] percentage bar graph
 - [ ] For grouped graphs, change color of each sub-group
 - [ ] Add back legends as necessary
+- [ ] Format tooltips to be uniform using formatters.js
+  - [ ] percent decimals to 1 digit
 
 ## Low Priority
 - [ ] Get background photo for header section
 - [ ] Get description of SOTA for header section
-- [ ] Format tooltips
 
 ## CSS/JS Notes
 - [x] Description is one column
