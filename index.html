@@ -441,7 +441,60 @@
         </div>
         <div class="section" id="community">
           <h2 class="section-title">Community &amp; Diversity</h2>
-          <hr>
+          <div id="q-faculty-diversity" class="section-graph"></div>
+          <hr class="dotted">
+          <div id="q-social-divide" class="section-graph"></div>
+          <hr class="dotted">
+          <div id="identity-comfortable-graph">
+            <div class="tab">
+              <button class="tablinks defaultOpen" onclick="openGraph(event, 'q-identity-comfortable-overall', 'identity-comfortable-graph')">Overall</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-identity-comfortable-gender', 'identity-comfortable-graph')">Gender</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-identity-comfortable-race', 'identity-comfortable-graph')">Race</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-identity-comfortable-sexual-orientation', 'identity-comfortable-graph')">Sexual orientation</button>
+            </div>
+            <div id="q-identity-comfortable-overall" class="section-graph tabcontent"></div>
+            <div id="q-identity-comfortable-gender" class="section-graph tabcontent"></div>
+            <div id="q-identity-comfortable-race" class="section-graph tabcontent"></div>
+            <div id="q-identity-comfortable-sexual-orientation" class="section-graph tabcontent"></div>
+          </div>
+          <hr class="dotted">
+          <div id="discriminated-graph">
+            <div class="tab">
+              <button class="tablinks defaultOpen" onclick="openGraph(event, 'q-discriminated-overall', 'discriminated-graph')">Overall</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-discriminated-gender', 'discriminated-graph')">Gender</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-discriminated-ethnicity', 'discriminated-graph')">Ethnicity</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-discriminated-sexual-orientation', 'discriminated-graph')">Sexual orientation</button>
+            </div>
+            <div id="q-discriminated-overall" class="section-graph tabcontent"></div>
+            <div id="q-discriminated-gender" class="section-graph tabcontent"></div>
+            <div id="q-discriminated-ethnicity" class="section-graph tabcontent"></div>
+            <div id="q-discriminated-sexual-orientation" class="section-graph tabcontent"></div>
+          </div>
+          <hr class="dotted">
+          <div id="day-student-graph">
+            <div class="tab">
+              <button class="tablinks defaultOpen" onclick="openGraph(event, 'q-day-student-overall', 'day-student-graph')">Overall</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-day-student-man', 'day-student-graph')">Man</button>
+              <button class="tablinks" onclick="openGraph(event, 'q-day-student-woman', 'day-student-graph')">Woman</button>
+            </div>
+            <div id="q-day-student-overall" class="section-graph tabcontent"></div>
+            <div id="q-day-student-man" class="section-graph tabcontent"></div>
+            <div id="q-day-student-woman" class="section-graph tabcontent"></div>
+          </div>
+          <hr class="dotted">
+          <div id="q-bullied-hazed" class="section-graph"></div>
+          <hr class="dotted">
+          <div id="q-andover-character" class="section-graph"></div>
+          <hr class="dotted">
+          <div id="q-andover-family-relationship" class="section-graph"></div>
+          <hr class="dotted">
+          <div id="q-considered-leaving" class="section-graph"></div>
+          <hr class="dotted">
+          <div id="q-teacher-care" class="section-graph"></div>
+          <hr class="dotted">
+          <div id="q-retrospect-come" class="section-graph"></div>
+          <hr class="dotted">
+          <div id="q-child-andover" class="section-graph"></div>
         </div>
       </div>
     </div>
@@ -467,6 +520,7 @@
   <script src="src/JS/components/sex.js"></script>
   <script src="src/JS/components/drugs.js"></script>
   <script src="src/JS/components/discipline.js"></script>
+  <script src="src/JS/components/community.js"></script>
 </body>
 
 </html>
