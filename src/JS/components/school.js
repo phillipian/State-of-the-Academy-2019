@@ -550,7 +550,8 @@ var chart = Highcharts.chart('q-extracurricular', {
 var chart = Highcharts.chart('q-andover-college-senior', {
   chart: {
       type: 'bar',
-      height: 150,
+      height: 140,
+      marginTop: 40,
       style: {
         fontFamily: 'Gotham',
         fontSize: '15px'
@@ -608,7 +609,9 @@ var chart = Highcharts.chart('q-andover-college-senior', {
 var chart = Highcharts.chart('q-andover-college-upper', {
   chart: {
       type: 'bar',
-      height: 150,
+      height: 120,
+      marginTop: 10,
+      marginBottom: 0,
       style: {
         fontFamily: 'Gotham',
         fontSize: '15px'
@@ -663,7 +666,9 @@ var chart = Highcharts.chart('q-andover-college-upper', {
 var chart = Highcharts.chart('q-andover-college-lower', {
   chart: {
       type: 'bar',
-      height: 150,
+      height: 120,
+      marginTop: 10,
+      marginBottom: 0,
       style: {
         fontFamily: 'Gotham',
         fontSize: '15px'
@@ -718,7 +723,9 @@ var chart = Highcharts.chart('q-andover-college-lower', {
 var chart = Highcharts.chart('q-andover-college-junior', {
   chart: {
       type: 'bar',
-      height: 200,
+      height: 140,
+      marginTop: 30,
+      marginBottom: 40,
       style: {
         fontFamily: 'Gotham',
         fontSize: '15px'

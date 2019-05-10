@@ -1024,7 +1024,8 @@ var chart = Highcharts.chart('q-black-lives', {
 var chart = Highcharts.chart('q-black-lives-feminist', {
   chart: {
       type: 'bar',
-      height: 200,
+      height: 140,
+      marginTop: 40,
       style: {
         fontFamily: 'Gotham',
         fontSize: '15px'
@@ -1078,7 +1079,9 @@ var chart = Highcharts.chart('q-black-lives-feminist', {
 var chart = Highcharts.chart('q-black-lives-not-feminist', {
   chart: {
       type: 'bar',
-      height: 200,
+      height: 140,
+      marginTop: 30,
+      marginBottom: 40,
       style: {
         fontFamily: 'Gotham',
         fontSize: '15px'
@@ -1178,7 +1181,8 @@ var chart = Highcharts.chart('q-gun-control', {
 var chart = Highcharts.chart('q-legal-immigration', {
   chart: {
       type: 'bar',
-      height: 200,
+      height: 140,
+      marginTop: 40,
       style: {
         fontFamily: 'Gotham',
         fontSize: '15px'
@@ -1230,7 +1234,8 @@ var chart = Highcharts.chart('q-legal-immigration', {
 var chart = Highcharts.chart('q-border-security', {
   chart: {
       type: 'bar',
-      height: 200,
+      height: 140,
+      marginTop: 40,
       style: {
         fontFamily: 'Gotham',
         fontSize: '15px'
