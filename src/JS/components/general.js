@@ -43,7 +43,7 @@ var chart = Highcharts.chart('q-class', {
   tooltip: {
       formatter: function () {
           return '<b>' + this.x + '</b><br>' +
-              this.series.name + ': <b>' + this.y + '</b><br>';
+              this.series.name + ': <b>' + this.y + '</b><br>' + 'Percentage: <b>' + (this.y/10.46).toFixed(1) + '%</b>';
       }
   },
   series: [{

@@ -1,4 +1,4 @@
-Highcharts.chart('q-gpa', {
+var chart = Highcharts.chart('q-gpa', {
     chart: {
         type: 'area',
         style: {
@@ -135,7 +135,7 @@ Highcharts.chart('q-avghrs', {
     tooltip: {
         formatter: function () {
             return '<b>' + this.x + '</b><br>' +
-                this.series.name + ': <b>' + this.y + '</b><br>';
+                this.series.name + ': <b>' + this.y + '</b><br>' + 'Percentage: <b>' + (this.y/10.20).toFixed(1) + '%</b>';
         }
     },
     xAxis: {
@@ -227,7 +227,7 @@ Highcharts.chart('q-gpaVsHrs', {
         }
     },
     series: [{
-        name: 'Average',
+        name: 'Average GPA',
         data: [5.54, 4.96, 5.34, 5.30, 5.35, 5.29, 5.27, 5.17, 5.14, 4.93]
     }]
 });
@@ -285,7 +285,7 @@ Highcharts.chart('q-gpaVsSleep', {
         }
     },
     series: [{
-        name: 'Average',
+        name: 'Average GPA',
         data: [5.60, 5.20, 5.30, 5.28, 5.14, 5.15, 5.12, 4.80, 4.90]
     }]
 });
@@ -357,7 +357,7 @@ var chart = Highcharts.chart('q-fourVsPref', {
     legend: {
         enabled: false
     },
-    colors: ['#14195c'],
+    colors: pieColors,
     xAxis: {
         categories: ['STEM', 'Humanities', 'No Preference'],
         title: {
@@ -373,7 +373,7 @@ var chart = Highcharts.chart('q-fourVsPref', {
         min: 0,
         max: 100,
         title: {
-          text: 'Percentage by category',
+          text: 'Responses in percentage',
           style: {
             color: 'black',
             fontWeight: 'bold'
@@ -388,10 +388,10 @@ var chart = Highcharts.chart('q-fourVsPref', {
     },
     series: [{
         name: 'Yes',
-        data: [17.65, 22.56, 25.23],
+        data: [17.7, 22.6, 25.2],
     }, {
         name: 'No',
-        data: [82.35, 77.44, 74.77],
+        data: [82.3, 77.4, 74.8],
     }]
 });
 
@@ -485,11 +485,11 @@ var chart = Highcharts.chart('q-switch-teacher', {
   },
   series: [{
       name: 'Yes',
-      data: [42.55],
+      data: [42.6],
       color: '#14195c'
   }, {
       name: 'No',
-      data: [57.45],
+      data: [57.4],
       color: '#53589b'
   }]
 });
@@ -593,15 +593,15 @@ var chart = Highcharts.chart('q-andover-college-senior', {
   },
   series: [{
       name: 'Yes, positively',
-      data: [50.72],
+      data: [50.7],
       color: '#14195c'
   }, {
       name: 'Yes, negatively',
-      data: [43.84],
+      data: [43.8],
       color: '#53589b'
   }, {
       name: 'No',
-      data: [5.43],
+      data: [5.4],
       color: '#9398db'
   }]
 });
@@ -650,15 +650,15 @@ var chart = Highcharts.chart('q-andover-college-upper', {
   },
   series: [{
       name: 'Yes, positively',
-      data: [45.32],
+      data: [45.3],
       color: '#14195c'
   }, {
       name: 'Yes, negatively',
-      data: [48.31],
+      data: [48.3],
       color: '#53589b'
   }, {
       name: 'No',
-      data: [6.37],
+      data: [6.4],
       color: '#9398db'
   }]
 });
@@ -707,7 +707,7 @@ var chart = Highcharts.chart('q-andover-college-lower', {
   },
   series: [{
       name: 'Yes, positively',
-      data: [61.36],
+      data: [61.4],
       color: '#14195c'
   }, {
       name: 'Yes, negatively',
@@ -715,7 +715,7 @@ var chart = Highcharts.chart('q-andover-college-lower', {
       color: '#53589b'
   }, {
       name: 'No',
-      data: [6.44],
+      data: [6.4],
       color: '#9398db'
   }]
 });
@@ -764,15 +764,15 @@ var chart = Highcharts.chart('q-andover-college-junior', {
   },
   series: [{
       name: 'Yes, positively',
-      data: [64.36],
+      data: [64.4],
       color: '#14195c'
   }, {
       name: 'Yes, negatively',
-      data: [28.71],
+      data: [28.7],
       color: '#53589b'
   }, {
       name: 'No',
-      data: [6.93],
+      data: [6.9],
       color: '#9398db'
   }]
 });

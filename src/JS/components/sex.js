@@ -1,3 +1,14 @@
+var pieColors = (function() {
+  var colors = [],
+    base = '#dc308a',
+    i;
+
+  for (i = 0; i < 10; i += 1) {
+    colors.push(Highcharts.Color(base).brighten((i) / 8).get());
+  }
+  return colors;
+}());
+
 var chart = Highcharts.chart('q-sex-overall', {
     chart: {
         type: 'column',
@@ -296,7 +307,7 @@ var chart = Highcharts.chart('q-masturbation-frequency', {
     legend: {
         enabled: false
     },
-    colors: ['#dc308a'],
+    colors: pieColors,
     xAxis: {
         categories: ['Man', 'Woman']
     },
@@ -372,7 +383,7 @@ var chart = Highcharts.chart('q-masturbation-comfortable-man', {
   },
   tooltip: {
       formatter: function () {
-          return '<b>' + this.series.name + '</b><br>' + '</b><br>' + 'Percentage: <b>' + this.y + '%</b>';
+          return '<b>' + this.series.name + '</b><br>' + 'Responses: <b>' + (this.y/100*465).toFixed(0) + '</b><br>' + 'Percentage: <b>' + this.y + '%</b>';
       }
   },
   plotOptions: {
@@ -426,7 +437,7 @@ var chart = Highcharts.chart('q-masturbation-comfortable-woman', {
   },
   tooltip: {
       formatter: function () {
-          return '<b>' + this.series.name + '</b><br>' + '</b><br>' + 'Percentage: <b>' + this.y + '%</b>';
+          return '<b>' + this.series.name + '</b><br>' + 'Responses: <b>' + (this.y/100*541).toFixed(0) + '</b><br>' + 'Percentage: <b>' + this.y + '%</b>';
       }
   },
   plotOptions: {
@@ -720,7 +731,7 @@ var chart = Highcharts.chart('q-sex-pressure', {
     legend: {
         enabled: false
     },
-    colors: ['#dc308a'],
+    colors: pieColors,
     xAxis: {
         categories: ['Man', 'Woman']
     },
@@ -853,6 +864,17 @@ Highcharts.chart('q-protection', {
     }]
 });
 
+var pieColors2 = (function() {
+  var colors = [],
+    base = '#dc308a',
+    i;
+
+  for (i = 0; i < 10; i += 1) {
+    colors.push(Highcharts.Color(base).brighten((i) / 8).get());
+  }
+  return colors;
+}());
+
 var chart = Highcharts.chart('q-sexual-harass', {
     chart: {
         type: 'bar',
@@ -871,7 +893,7 @@ var chart = Highcharts.chart('q-sexual-harass', {
     legend: {
         enabled: false
     },
-    colors: ['#dc308a'],
+    colors: pieColors2,
     xAxis: {
         categories: ['Man', 'Woman']
     },
@@ -924,7 +946,7 @@ var chart = Highcharts.chart('q-sexual-assault', {
     legend: {
         enabled: false
     },
-    colors: ['#dc308a'],
+    colors: pieColors2,
     xAxis: {
         categories: ['Man', 'Woman']
     },
@@ -1025,7 +1047,7 @@ var chart = Highcharts.chart('q-sexEd', {
     legend: {
         enabled: false
     },
-    colors: ['#dc308a'],
+    colors: pieColors,
     xAxis: {
         categories: ['2019', '2018', '2017', '2016'],
         title: {
@@ -1054,9 +1076,9 @@ var chart = Highcharts.chart('q-sexEd', {
     },
     series: [{
         name: 'Yes',
-        data: [73.75, 66, 62, 53],
+        data: [73.8, 66.0, 62.0, 53.0],
     }, {
         name: 'No',
-        data: [26.25, 34, 38, 47],
+        data: [26.2, 34.0, 38.0, 47.0],
     }]
 });

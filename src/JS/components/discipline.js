@@ -39,11 +39,11 @@ var chart = Highcharts.chart('q-dc', {
   },
   series: [{
       name: 'Yes',
-      data: [6.53],
+      data: [6.5],
       color: '#da5251'
   }, {
       name: 'No',
-      data: [93.47],
+      data: [93.5],
       color: '#f97170'
   }]
 });
@@ -89,11 +89,11 @@ var chart = Highcharts.chart('q-censure-warning', {
   },
   series: [{
       name: 'Yes',
-      data: [11.99],
+      data: [12.00],
       color: '#da5251'
   }, {
       name: 'No',
-      data: [88.01],
+      data: [88.0],
       color: '#f97170'
   }]
 });
@@ -140,11 +140,11 @@ var chart = Highcharts.chart('q-probation', {
   },
   series: [{
       name: 'Yes',
-      data: [4.15],
+      data: [4.2],
       color: '#da5251'
   }, {
       name: 'No',
-      data: [95.85],
+      data: [95.8],
       color: '#f97170'
   }]
 });
@@ -392,15 +392,15 @@ var chart = Highcharts.chart('q-dc-overall', {
   },
   series: [{
       name: 'Yes',
-      data: [46.18],
+      data: [46.2],
       color: '#da5251'
   }, {
       name: 'No, discipline should be harsher',
-      data: [16.68],
+      data: [16.7],
       color: '#f97170'
   }, {
       name: 'No, discipline should be more lenient',
-      data: [37.14],
+      data: [37.1],
       color: '#ff9190'
   }]
 });
@@ -446,15 +446,15 @@ var chart = Highcharts.chart('q-dc-censure', {
   },
   series: [{
       name: 'Yes',
-      data: [33.06],
+      data: [33.1],
       color: '#da5251'
   }, {
       name: 'No, discipline should be harsher',
-      data: [8.26],
+      data: [8.3],
       color: '#f97170'
   }, {
       name: 'No, discipline should be more lenient',
-      data: [58.68],
+      data: [58.6],
       color: '#ff9190'
   }]
 });
@@ -500,15 +500,15 @@ var chart = Highcharts.chart('q-dc-probation', {
   },
   series: [{
       name: 'Yes',
-      data: [16.67],
+      data: [16.7],
       color: '#da5251'
   }, {
       name: 'No, discipline should be harsher',
-      data: [2.38],
+      data: [2.4],
       color: '#f97170'
   }, {
       name: 'No, discipline should be more lenient',
-      data: [80.95],
+      data: [80.9],
       color: '#ff9190'
   }]
 });

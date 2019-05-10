@@ -1155,7 +1155,7 @@ Highcharts.chart('q-how-often', {
     tooltip: {
         formatter: function () {
             return '<b>' + this.x + '</b><br>' +
-                this.series.name + ': <b>' + this.y + '</b><br>';
+                this.series.name + ': <b>' + this.y + '</b><br>' + 'Percentage: <b>' + (this.y/10.23).toFixed(1) + '%</b>';
         }
     },
     xAxis: {

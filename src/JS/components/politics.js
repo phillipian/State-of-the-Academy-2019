@@ -1,3 +1,14 @@
+var pieColors = (function() {
+  var colors = [],
+    base = '#521a7e',
+    i;
+
+  for (i = 0; i < 10; i += 1) {
+    colors.push(Highcharts.Color(base).brighten((i) / 5).get());
+  }
+  return colors;
+}());
+
 var chart = Highcharts.chart('q-affiliation', {
     chart: {
         type: 'column',
@@ -71,7 +82,7 @@ var chart = Highcharts.chart('q-affiliation-gender', {
     legend: {
         enabled: false
     },
-    colors: ['#521a7e'],
+    colors: pieColors,
     xAxis: {
         categories: ['Conservative', 'Independent', 'Liberal', 'Libertarian', 'Other', 'Unsure'],
         title: {
@@ -105,17 +116,6 @@ var chart = Highcharts.chart('q-affiliation-gender', {
         data: [58, 56, 275, 5, 5, 147],
     }]
 });
-
-var pieColors = (function() {
-  var colors = [],
-    base = '#521a7e',
-    i;
-
-  for (i = 0; i < 10; i += 1) {
-    colors.push(Highcharts.Color(base).brighten((i) / 5).get());
-  }
-  return colors;
-}());
 
 var chart = Highcharts.chart('q-censor-overall', {
   chart: {
@@ -568,11 +568,11 @@ var chart = Highcharts.chart('q-reverse-racism-overall', {
   },
   series: [{
       name: 'Yes',
-      data: [41.28],
+      data: [41.3],
       color: '#521a7e'
   }, {
       name: 'No',
-      data: [58.72],
+      data: [58.7],
       color: '#854db1'
   }]
 });
@@ -601,7 +601,7 @@ var chart = Highcharts.chart('q-reverse-racism-gender', {
     legend: {
         enabled: false
     },
-    colors: ['#521a7e'],
+    colors: pieColors,
     xAxis: {
         categories: ['Man', 'Woman', 'Other*']
     },
@@ -647,7 +647,7 @@ var chart = Highcharts.chart('q-reverse-racism-class', {
     legend: {
         enabled: false
     },
-    colors: ['#521a7e'],
+    colors: pieColors,
     xAxis: {
         categories: ['2019', '2020', '2021', '2022'],
         title: {
@@ -754,7 +754,7 @@ var chart = Highcharts.chart('q-rape-culture-gender', {
     legend: {
         enabled: false
     },
-    colors: ['#521a7e'],
+    colors: pieColors,
     xAxis: {
         categories: ['Man', 'Woman', 'Other*']
     },
@@ -800,7 +800,7 @@ var chart = Highcharts.chart('q-rape-culture-class', {
     legend: {
         enabled: false
     },
-    colors: ['#521a7e'],
+    colors: pieColors,
     xAxis: {
         categories: ['2019', '2020', '2021', '2022'],
         title: {
@@ -902,7 +902,7 @@ var chart = Highcharts.chart('q-feminism', {
     legend: {
         enabled: false
     },
-    colors: ['#521a7e'],
+    colors: pieColors,
     xAxis: {
         categories: ['In support', 'Feminist'],
     },
@@ -948,7 +948,7 @@ var chart = Highcharts.chart('q-feminism-class', {
     legend: {
         enabled: false
     },
-    colors: ['#521a7e'],
+    colors: pieColors,
     xAxis: {
         categories: ['2019', '2020', '2021', '2022'],
     },
@@ -1067,11 +1067,11 @@ var chart = Highcharts.chart('q-black-lives-feminist', {
   },
   series: [{
       name: 'Yes',
-      data: [96.16],
+      data: [96.2],
       color: '#521a7e'
   }, {
       name: 'No',
-      data: [3.84],
+      data: [3.8],
       color: '#854db1'
   }]
 });
@@ -1120,11 +1120,11 @@ var chart = Highcharts.chart('q-black-lives-not-feminist', {
   },
   series: [{
       name: 'Yes',
-      data: [64.56],
+      data: [64.6],
       color: '#521a7e'
   }, {
       name: 'No',
-      data: [35.44],
+      data: [35.4],
       color: '#854db1'
   }]
 });
@@ -1218,15 +1218,15 @@ var chart = Highcharts.chart('q-legal-immigration', {
   },
   series: [{
       name: 'Yes, it should be easier',
-      data: [67.60],
+      data: [67.6],
       color: '#521a7e'
   }, {
       name: 'No, it should remain the same',
-      data: [27.88],
+      data: [27.9],
       color: '#854db1'
   }, {
       name: 'No, it should be more difficult',
-      data: [4.52],
+      data: [4.5],
       color: '#b880e4'
   }]
 });
@@ -1271,15 +1271,15 @@ var chart = Highcharts.chart('q-border-security', {
   },
   series: [{
       name: 'Yes, it should increase',
-      data: [33.01],
+      data: [33.0],
       color: '#521a7e'
   }, {
       name: 'No, it should remain the same',
-      data: [48.46],
+      data: [48.5],
       color: '#854db1'
   }, {
       name: 'No, it should decrease',
-      data: [18.53],
+      data: [18.5],
       color: '#b880e4'
   }]
 });

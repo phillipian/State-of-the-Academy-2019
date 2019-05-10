@@ -1132,11 +1132,11 @@ var chart = Highcharts.chart('q-teacher-care', {
   },
   series: [{
       name: 'Yes',
-      data: [78.84],
+      data: [78.8],
       color: '#089181'
   }, {
       name: 'No',
-      data: [21.16],
+      data: [21.2],
       color: '#3bc4b4'
   }]
 });
