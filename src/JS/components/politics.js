@@ -140,7 +140,7 @@ var chart = Highcharts.chart('q-censor-overall', {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 300,
+      size: '100%',
       showInLegend: true,
       dataLabels: {
         enabled: false
@@ -185,7 +185,7 @@ var chart = Highcharts.chart('q-censor-conservative', {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 300,
+      size: '100%',
       showInLegend: true,
       dataLabels: {
         enabled: false
@@ -230,7 +230,7 @@ var chart = Highcharts.chart('q-censor-independent', {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 300,
+      size: '100%',
       showInLegend: true,
       dataLabels: {
         enabled: false
@@ -275,7 +275,7 @@ var chart = Highcharts.chart('q-censor-liberal', {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 300,
+      size: '100%',
       showInLegend: true,
       dataLabels: {
         enabled: false
@@ -320,7 +320,7 @@ var chart = Highcharts.chart('q-censor-libertarian', {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 300,
+      size: '100%',
       showInLegend: true,
       dataLabels: {
         enabled: false
@@ -365,7 +365,7 @@ var chart = Highcharts.chart('q-censor-other', {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 300,
+      size: '100%',
       showInLegend: true,
       dataLabels: {
         enabled: false
@@ -410,7 +410,7 @@ var chart = Highcharts.chart('q-censor-unsure', {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 300,
+      size: '100%',
       showInLegend: true,
       dataLabels: {
         enabled: false
@@ -507,7 +507,7 @@ var chart = Highcharts.chart('q-affirmative-action', {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 300,
+      size: '100%',
       showInLegend: true,
       dataLabels: {
         enabled: false
@@ -858,7 +858,7 @@ var chart = Highcharts.chart('q-all-gender', {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 300,
+      size: '100%',
       showInLegend: true,
       dataLabels: {
         enabled: false
@@ -999,7 +999,7 @@ var chart = Highcharts.chart('q-black-lives', {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 300,
+      size: '100%',
       showInLegend: true,
       dataLabels: {
         enabled: false
@@ -1152,7 +1152,7 @@ var chart = Highcharts.chart('q-gun-control', {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 300,
+      size: '100%',
       showInLegend: true,
       dataLabels: {
         enabled: false

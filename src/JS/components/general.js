@@ -90,7 +90,7 @@ var chart = Highcharts.chart('q-boarding', {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 300,
+      size: '100%',
       showInLegend: true,
       dataLabels: {
         enabled: false
@@ -242,7 +242,7 @@ var chart = Highcharts.chart('q-community', {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 300,
+      size: '100%',
       showInLegend: true,
       dataLabels: {
         enabled: false
@@ -346,7 +346,7 @@ var chart = Highcharts.chart('q-financial', {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 300,
+      size: '100%',
       showInLegend: true,
       dataLabels: {
         enabled: false
@@ -395,7 +395,7 @@ var chart = Highcharts.chart('q-parentsCollege', {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 300,
+      size: '100%',
       showInLegend: true,
       dataLabels: {
         enabled: false
@@ -615,7 +615,7 @@ var chart = Highcharts.chart('q-sex', {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 300,
+      size: '100%',
       showInLegend: true,
       dataLabels: {
         enabled: false
@@ -798,7 +798,7 @@ var chart = Highcharts.chart('q-varsity', {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 300,
+      size: '100%',
       showInLegend: true,
       dataLabels: {
         enabled: false

@@ -601,7 +601,7 @@ var chart = Highcharts.chart('q-day-student-overall', {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 300,
+      size: '100%',
       showInLegend: true,
       dataLabels: {
         enabled: false
@@ -646,7 +646,7 @@ var chart = Highcharts.chart('q-day-student-man', {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 300,
+      size: '100%',
       showInLegend: true,
       dataLabels: {
         enabled: false
@@ -691,7 +691,7 @@ var chart = Highcharts.chart('q-day-student-woman', {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 300,
+      size: '100%',
       showInLegend: true,
       dataLabels: {
         enabled: false
@@ -895,7 +895,7 @@ var chart = Highcharts.chart('q-considered-leaving', {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 300,
+      size: '100%',
       showInLegend: true,
       dataLabels: {
         enabled: false
@@ -940,7 +940,7 @@ var chart = Highcharts.chart('q-retrospect-come', {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 300,
+      size: '100%',
       showInLegend: true,
       dataLabels: {
         enabled: false

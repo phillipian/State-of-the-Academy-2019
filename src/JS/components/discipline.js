@@ -187,7 +187,7 @@ var chart = Highcharts.chart('q-major-offense', {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 300,
+      size: '100%',
       showInLegend: true,
       dataLabels: {
         enabled: false
@@ -232,7 +232,7 @@ var chart = Highcharts.chart('q-cheating', {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 300,
+      size: '100%',
       showInLegend: true,
       dataLabels: {
         enabled: false
@@ -277,7 +277,7 @@ var chart = Highcharts.chart('q-plagiarism', {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 300,
+      size: '100%',
       showInLegend: true,
       dataLabels: {
         enabled: false
@@ -536,7 +536,7 @@ var chart = Highcharts.chart('q-dc-privilege', {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 300,
+      size: '100%',
       showInLegend: true,
       dataLabels: {
         enabled: false
@@ -581,7 +581,7 @@ var chart = Highcharts.chart('q-search-dorm', {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 300,
+      size: '100%',
       showInLegend: true,
       dataLabels: {
         enabled: false

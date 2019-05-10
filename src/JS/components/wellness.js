@@ -1482,7 +1482,7 @@ var chart = Highcharts.chart('q-academic-insecurity', {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 300,
+      size: '100%',
       showInLegend: true,
       dataLabels: {
         enabled: false
