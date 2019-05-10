@@ -7,38 +7,5 @@ This year, *The Phillipian* received a record-high participation rate of 93.5% o
 *Editor’s note: When the survey was initially sent out, the class of 2022 was not an answer choice for the question, “What class are you in?” The error was corrected within six minutes after the survey’s release. Responses submitted before that time were discounted, and those respondents were notified that they would need to retake the survey.*
 
 # To Do
-
-## High Priority
-- [x] General section graphs
-- [x] School section graphs
-- [x] Politics & Worldview graphs
-- [x] Wellness graphs
-- [x] Sex section graphs
-  - [x] get stats for previous years sex-ed
-- [x] Drug graphs
-- [x] Discipline graphs
-- [x] Community & Diversity graphs
-- [x] Base website CSS
-- [ ] For categorized graphs (by gender, class, preference,etc.), make out of 100 and display percentage
-  - [ ] percentage bar graph
-    - [ ] make spacing uniform for all percentage bar graphs
-- [ ] For grouped graphs, change color of each sub-group
-- [ ] Add back legends as necessary
-- [ ] Format tooltips to be uniform using formatters.js
-  - [ ] percent decimals to 1 digit
-- [x] make spacing, styling, type of graphs uniform
-
-## Low Priority
-- [ ] Get background photo for header section
-- [ ] Get description of SOTA for header section
-
-## CSS/JS Notes
-- [x] Description is one column
-- Mobile responsive
-- Top navbar transitions: 
-  - [x] color fade
-  - [ ] "State of the Academy" &rarr; "SOTA" for mobile screens
-
-## Future Ideas
-- [x] Templatize website for future SOTA projects
-- Find correlation with past data
+- Fix cover photo
+- Make mobile responsive
