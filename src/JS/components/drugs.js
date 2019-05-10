@@ -1373,7 +1373,7 @@ var chart = Highcharts.chart('q-drug-setting', {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 320,
+      size: 300,
       showInLegend: true,
       dataLabels: {
         enabled: false
@@ -2017,7 +2017,7 @@ var chart = Highcharts.chart('q-been-sanctuaried', {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 320,
+      size: 300,
       showInLegend: true,
       dataLabels: {
         enabled: false
@@ -2062,7 +2062,7 @@ var chart = Highcharts.chart('q-sanctuaried-someone', {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 320,
+      size: 300,
       showInLegend: true,
       dataLabels: {
         enabled: false

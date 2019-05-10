@@ -163,6 +163,7 @@ var pieColors = (function() {
 var chart = Highcharts.chart('q-major-offense', {
   chart: {
     type: 'pie',
+    height: 430,
     style: {
       fontFamily: 'Gotham',
       fontSize: '15px'
@@ -179,21 +180,17 @@ var chart = Highcharts.chart('q-major-offense', {
     text: '<i>Major offenses include, but are not limited to: </i><br><i>academic dishonesty, drugs and alcohol, cruising, gambling, and downloading/sharing sexually explicit content</i>'
   },
   tooltip: {
-    pointFormat: '{series.name}: <b>{point.y}</b>'
+    formatter: barTooltipFormatter
   },
   plotOptions: {
     pie: {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 320,
+      size: 300,
+      showInLegend: true,
       dataLabels: {
-        enabled: true,
-        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-        style: {
-          color: 'black',
-          fontWeight: 'bold'
-        }
+        enabled: false
       }
     }
   },
@@ -228,21 +225,17 @@ var chart = Highcharts.chart('q-cheating', {
     }
   },
   tooltip: {
-    pointFormat: '{series.name}: <b>{point.y}</b>'
+    formatter: barTooltipFormatter
   },
   plotOptions: {
     pie: {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 320,
+      size: 300,
+      showInLegend: true,
       dataLabels: {
-        enabled: true,
-        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-        style: {
-          color: 'black',
-          fontWeight: 'bold'
-        }
+        enabled: false
       }
     }
   },
@@ -277,21 +270,17 @@ var chart = Highcharts.chart('q-plagiarism', {
     }
   },
   tooltip: {
-    pointFormat: '{series.name}: <b>{point.y}</b>'
+    formatter: barTooltipFormatter
   },
   plotOptions: {
     pie: {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 320,
+      size: 300,
+      showInLegend: true,
       dataLabels: {
-        enabled: true,
-        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-        style: {
-          color: 'black',
-          fontWeight: 'bold'
-        }
+        enabled: false
       }
     }
   },
@@ -540,21 +529,17 @@ var chart = Highcharts.chart('q-dc-privilege', {
     }
   },
   tooltip: {
-    pointFormat: '{series.name}: <b>{point.y}</b>'
+    formatter: barTooltipFormatter
   },
   plotOptions: {
     pie: {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 320,
+      size: 300,
+      showInLegend: true,
       dataLabels: {
-        enabled: true,
-        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-        style: {
-          color: 'black',
-          fontWeight: 'bold'
-        }
+        enabled: false
       }
     }
   },
@@ -589,21 +574,17 @@ var chart = Highcharts.chart('q-search-dorm', {
     }
   },
   tooltip: {
-    pointFormat: '{series.name}: <b>{point.y}</b>'
+    formatter: barTooltipFormatter
   },
   plotOptions: {
     pie: {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 320,
+      size: 300,
+      showInLegend: true,
       dataLabels: {
-        enabled: true,
-        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-        style: {
-          color: 'black',
-          fontWeight: 'bold'
-        }
+        enabled: false
       }
     }
   },

@@ -531,11 +531,13 @@ var chart = Highcharts.chart('q-affirmative-action', {
 
 var chart = Highcharts.chart('q-reverse-racism-overall', {
   chart: {
-    style: {
-      fontFamily: 'Gotham',
-      fontSize: '15px'
-    },
-    backgroundColor: "#ECF0F1"
+      type: 'bar',
+      height: 200,
+      style: {
+        fontFamily: 'Gotham',
+        fontSize: '15px'
+      },
+      backgroundColor: "#ECF0F1"
   },
   title: {
     text: 'Do you believe that reverse racism – “prejudice, discrimination, or antagonism on the basis of race directed against a member of a dominant or privileged racial group” (Oxford Dictionaries) – exists?',
@@ -543,38 +545,35 @@ var chart = Highcharts.chart('q-reverse-racism-overall', {
       fontWeight: 'bold'
     }
   },
-  colors: ['#521a7e'],
   xAxis: {
-    categories: ['Yes', 'No']
+      visible: false
   },
   yAxis: {
-    min: 0,
-    title: {
-      text: 'Responses',
-      verticalAlign: 'center',
-      style: {
-        color: 'black',
-        fontWeight: 'bold'
-      }
-    },
-    labels: {
-      overflow: 'justify'
-    }
+      visible: false,
+      reversedStacks: false
   },
   legend: {
-    enabled: false
+      enabled: true
   },
   tooltip: {
-    formatter: function () {
-        return '<b>' + this.x + '<br>Response: <b>' + this.y + '</b><br>';
-    }
+      formatter: function () {
+          return '<b>' + this.series.name + '</b><br>' + 'Responses: <b>' + (this.y/100*1032).toFixed(0) + '</b><br>' + 'Percentage: <b>' + this.y + '%</b>';
+      }
+  },
+  plotOptions: {
+      series: {
+          stacking: 'percent',
+          pointWidth: 50
+      }
   },
   series: [{
-    data: [426, 606],
-    type: 'bar',
-    dataLabels: {
-      enabled: false
-    }
+      name: 'Yes',
+      data: [41.28],
+      color: '#521a7e'
+  }, {
+      name: 'No',
+      data: [58.72],
+      color: '#854db1'
   }]
 });
 
@@ -685,11 +684,13 @@ var chart = Highcharts.chart('q-reverse-racism-class', {
 
 var chart = Highcharts.chart('q-rape-culture-overall', {
   chart: {
-    style: {
-      fontFamily: 'Gotham',
-      fontSize: '15px'
-    },
-    backgroundColor: "#ECF0F1"
+      type: 'bar',
+      height: 200,
+      style: {
+        fontFamily: 'Gotham',
+        fontSize: '15px'
+      },
+      backgroundColor: "#ECF0F1"
   },
   title: {
     text: 'Do you believe there is rape culture –  “a society or environment <br>whose prevailing social attitudes have the effect of normalizing or trivializing <br>sexual assault and abuse” (Oxford Dictionaries) – at Andover?',
@@ -697,38 +698,35 @@ var chart = Highcharts.chart('q-rape-culture-overall', {
       fontWeight: 'bold'
     }
   },
-  colors: ['#521a7e'],
   xAxis: {
-    categories: ['Yes', 'No']
+      visible: false
   },
   yAxis: {
-    min: 0,
-    title: {
-      text: 'Responses',
-      verticalAlign: 'center',
-      style: {
-        color: 'black',
-        fontWeight: 'bold'
-      }
-    },
-    labels: {
-      overflow: 'justify'
-    }
+      visible: false,
+      reversedStacks: false
   },
   legend: {
-    enabled: false
+      enabled: true
   },
   tooltip: {
-    formatter: function () {
-        return '<b>' + this.x + '<br>Response: <b>' + this.y + '</b><br>';
-    }
+      formatter: function () {
+          return '<b>' + this.series.name + '</b><br>' + 'Responses: <b>' + (this.y/100*1035).toFixed(0) + '</b><br>' + 'Percentage: <b>' + this.y + '%</b>';
+      }
+  },
+  plotOptions: {
+      series: {
+          stacking: 'percent',
+          pointWidth: 50
+      }
   },
   series: [{
-    data: [473, 562],
-    type: 'bar',
-    dataLabels: {
-      enabled: false
-    }
+      name: 'Yes',
+      data: [45.7],
+      color: '#521a7e'
+  }, {
+      name: 'No',
+      data: [54.3],
+      color: '#854db1'
   }]
 });
 

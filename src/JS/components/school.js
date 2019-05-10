@@ -22,7 +22,7 @@ Highcharts.chart('q-gpa', {
     tooltip: {
         formatter: function () {
             return '<b>' + this.x + '</b><br>' +
-                this.series.name + ': <b>' + this.y + '</b><br>';
+                this.series.name + ': <b>' + this.y + '</b><br>'  + 'Percentage: <b>' + (this.y/10.09).toFixed(1) + '%</b>';
         }
     },
     xAxis: {
@@ -52,7 +52,7 @@ Highcharts.chart('q-gpa', {
     },
     series: [{
         name: 'Responses',
-        data: [29, 42, 69, 72, 71, 57, 46, 36, 12, 8, 11, 5, 1, 3, 0, 0, 0, 0, 0, 0, 2]
+        data: [65, 119, 141, 184, 158, 119, 93, 58, 26, 12, 14, 7, 4, 4, 2, 0, 1, 0, 0, 0, 2]
     }]
 });
 
@@ -118,6 +118,7 @@ var chart = Highcharts.chart('q-four', {
 Highcharts.chart('q-avghrs', {
     chart: {
         type: 'column',
+        height: 300,
         style: {
           fontFamily: 'Gotham',
           fontSize: '15px'

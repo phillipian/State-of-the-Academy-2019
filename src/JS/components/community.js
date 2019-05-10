@@ -12,7 +12,7 @@ var chart = Highcharts.chart('q-faculty-diversity', {
       fontWeight: 'bold'
     }
   },
-  colors: ['#ffffff'],
+  colors: ['#089181'],
   xAxis: {
     categories: ['Not applicable', 'Ability', 'Ethnicity', 'Gender', 'Political belief', 'Race', 'Religion', 'Sexual orientation', 'Socioeconomic status']
   },
@@ -64,7 +64,7 @@ var chart = Highcharts.chart('q-social-divide', {
       fontWeight: 'bold'
     }
   },
-  colors: ['#ffffff'],
+  colors: ['#089181'],
   xAxis: {
     categories: ['Not applicable', 'Ability', 'Ethnicity', 'Gender', 'Political belief', 'Race', 'Religion', 'Sexual orientation', 'Socioeconomic status']
   },
@@ -117,7 +117,7 @@ var chart = Highcharts.chart('q-identity-comfortable-overall', {
       fontWeight: 'bold'
     }
   },
-  colors: ['#ffffff'],
+  colors: ['#089181'],
   xAxis: {
     categories: ['Not applicable', 'Ability', 'Ethnicity', 'Gender', 'Political belief', 'Race', 'Religion', 'Sexual orientation', 'Socioeconomic status']
   },
@@ -171,7 +171,7 @@ Highcharts.chart('q-identity-comfortable-gender', {
           fontWeight: 'bold'
         }
     },
-    colors: ['#ffffff'],
+    colors: ['#089181'],
     tooltip: {
         formatter: function () {
             return '<b>' + this.x + '</b><br>' +
@@ -231,7 +231,7 @@ Highcharts.chart('q-identity-comfortable-race', {
           fontWeight: 'bold'
         }
     },
-    colors: ['#ffffff'],
+    colors: ['#089181'],
     tooltip: {
         formatter: function () {
             return '<b>' + this.x + '</b><br>' +
@@ -291,7 +291,7 @@ Highcharts.chart('q-identity-comfortable-sexual-orientation', {
           fontWeight: 'bold'
         }
     },
-    colors: ['#ffffff'],
+    colors: ['#089181'],
     tooltip: {
         formatter: function () {
             return '<b>' + this.x + '</b><br>' +
@@ -349,7 +349,7 @@ var chart = Highcharts.chart('q-discriminated-overall', {
       fontWeight: 'bold'
     }
   },
-  colors: ['#ffffff'],
+  colors: ['#089181'],
   xAxis: {
     categories: ['Not applicable', 'Ability', 'Ethnicity', 'Gender', 'Political belief', 'Race', 'Religion', 'Sexual orientation', 'Socioeconomic status']
   },
@@ -403,7 +403,7 @@ Highcharts.chart('q-discriminated-gender', {
           fontWeight: 'bold'
         }
     },
-    colors: ['#ffffff'],
+    colors: ['#089181'],
     tooltip: {
         formatter: function () {
             return '<b>' + this.x + '</b><br>' +
@@ -463,7 +463,7 @@ Highcharts.chart('q-discriminated-ethnicity', {
           fontWeight: 'bold'
         }
     },
-    colors: ['#ffffff'],
+    colors: ['#089181'],
     tooltip: {
         formatter: function () {
             return '<b>' + this.x + '</b><br>' +
@@ -523,7 +523,7 @@ Highcharts.chart('q-discriminated-sexual-orientation', {
           fontWeight: 'bold'
         }
     },
-    colors: ['#ffffff'],
+    colors: ['#089181'],
     tooltip: {
         formatter: function () {
             return '<b>' + this.x + '</b><br>' +
@@ -569,11 +569,11 @@ Highcharts.chart('q-discriminated-sexual-orientation', {
 
 var pieColors = (function() {
   var colors = [],
-    base = '#eeeeee',
+    base = '#089181',
     i;
 
   for (i = 0; i < 10; i += 1) {
-    colors.push(Highcharts.Color(base).brighten((i) / 8).get());
+    colors.push(Highcharts.Color(base).brighten((i) / 5).get());
   }
   return colors;
 }());
@@ -728,7 +728,7 @@ var chart = Highcharts.chart('q-bullied-hazed', {
       fontWeight: 'bold'
     }
   },
-  colors: ['#ffffff'],
+  colors: ['#089181'],
   xAxis: {
     categories: ['Yes, bullied', 'Yes, hazed', 'Yes, bullied and hazed', 'No']
   },
@@ -781,7 +781,7 @@ var chart = Highcharts.chart('q-andover-character', {
       fontWeight: 'bold'
     }
   },
-  colors: ['#ffffff'],
+  colors: ['#089181'],
   xAxis: {
     categories: ['Yes, positively', 'Yes, negatively', 'No']
   },
@@ -834,7 +834,7 @@ var chart = Highcharts.chart('q-andover-family-relationship', {
       fontWeight: 'bold'
     }
   },
-  colors: ['#ffffff'],
+  colors: ['#089181'],
   xAxis: {
     categories: ['Yes, positively', 'Yes, negatively', 'No']
   },
@@ -1133,10 +1133,10 @@ var chart = Highcharts.chart('q-teacher-care', {
   series: [{
       name: 'Yes',
       data: [78.84],
-      color: '#eeeeee'
+      color: '#089181'
   }, {
       name: 'No',
       data: [21.16],
-      color: '#ffffff'
+      color: '#3bc4b4'
   }]
 });

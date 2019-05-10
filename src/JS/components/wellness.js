@@ -1,5 +1,3 @@
-//#6abf8f
-
 Highcharts.chart('q-sleep-overall', {
     chart: {
         type: 'area',
@@ -89,7 +87,7 @@ var chart = Highcharts.chart('q-sleep-class', {
   yAxis: {
     min: 0,
     title: {
-      text: 'Responses',
+      text: 'Amount of sleep in hours',
       verticalAlign: 'center',
       style: {
         color: 'black',
@@ -111,7 +109,7 @@ var chart = Highcharts.chart('q-sleep-class', {
   },
   series: [{
     data: [6.7, 6.8, 6.9, 7.0],
-    type: 'bar',
+    type: 'column',
     dataLabels: {
       enabled: false
     },
@@ -149,7 +147,7 @@ var chart = Highcharts.chart('q-you-happy', {
   },
   tooltip: {
       formatter: function () {
-          return '<b>' + this.series.name + '</b><br>' + '</b><br>' + 'Percentage: <b>' + this.y + '%</b>';
+          return '<b>' + this.series.name + '</b><br>' + 'Responses: <b>' + (this.y/100*1036).toFixed(0) + '</b><br>' + 'Percentage: <b>' + this.y + '%</b>';
       }
   },
   plotOptions: {
@@ -160,11 +158,11 @@ var chart = Highcharts.chart('q-you-happy', {
   },
   series: [{
       name: 'Yes',
-      data: [853],
+      data: [82.3],
       color: '#6abf8f'
   }, {
       name: 'No',
-      data: [183],
+      data: [17.7],
       color: '#8ee3b3'
   }]
 });
@@ -199,7 +197,7 @@ var chart = Highcharts.chart('q-andover-happy', {
   },
   tooltip: {
       formatter: function () {
-          return '<b>' + this.series.name + '</b><br>' + '</b><br>' + 'Percentage: <b>' + this.y + '%</b>';
+          return '<b>' + this.series.name + '</b><br>'  + 'Responses: <b>' + (this.y/100*1033).toFixed(0) + '</b><br>' + 'Percentage: <b>' + this.y + '%</b>';
       }
   },
   plotOptions: {
@@ -210,11 +208,11 @@ var chart = Highcharts.chart('q-andover-happy', {
   },
   series: [{
       name: 'Yes',
-      data: [689],
+      data: [66.7],
       color: '#6abf8f'
   }, {
       name: 'No',
-      data: [344],
+      data: [33.3],
       color: '#8ee3b3'
   }]
 });

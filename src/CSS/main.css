@@ -21,7 +21,7 @@ body{
 }
 
 footer, #topbar{
-  padding: 0 24px;
+  padding: 0 20px;
   width: 100%;
   box-sizing: border-box;
   display: flex;
@@ -31,6 +31,13 @@ footer, #topbar{
 
 footer{
   background-color: #fff;
+}
+
+footer .left p {
+  text-align: left;
+  font-family: georgia;
+  font-size: 17px;
+  margin-bottom: 0;
 }
 
 .phillipian-name{
@@ -75,18 +82,28 @@ header{
 
 .page-container p{
   font-family: 'Mercury Text G1';
-  max-width: 800px;
+  max-width: 1100px;
   margin: 0 auto;
   margin-bottom: 10px;
   line-height: 1.5;
-  font-size: 20px;
+  font-size: 17px;
+}
+
+p.blurb {
+  font-family: 'Gotham';
+  max-width: 1100px;
+  margin: 0;
+  padding: 0;
+  padding-left: 175px;
+  font-size: 14px;
 }
 
 .img-head{
   width: 100%;
   top: 0;
   height: 544px;
-  background-image: url("http://sota.phillipian.net/assets/graphics/samphil-saturation.jpg");
+  background-image: url("/assets/graphics/bell-tower.JPG");
+  /* transform: rotate(-90deg); */
   background-size: cover;
   background-position: center center;
   margin-bottom: 5px;

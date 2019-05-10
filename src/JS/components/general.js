@@ -83,21 +83,17 @@ var chart = Highcharts.chart('q-boarding', {
     }
   },
   tooltip: {
-    pointFormat: '{series.name}: <b>{point.y}</b>'
+    formatter: barTooltipFormatter
   },
   plotOptions: {
     pie: {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 320,
+      size: 300,
+      showInLegend: true,
       dataLabels: {
-        enabled: true,
-        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-        style: {
-          color: 'black',
-          fontWeight: 'bold'
-        }
+        enabled: false
       }
     }
   },
@@ -116,9 +112,10 @@ var chart = Highcharts.chart('q-boarding', {
   }]
 });
 
-Highcharts.chart('q-origin', {
+Highcharts.chart('q-region', {
     chart: {
         type: 'column',
+        height: 300,
         style: {
           fontFamily: 'Gotham',
           fontSize: '15px'
@@ -162,7 +159,7 @@ Highcharts.chart('q-origin', {
     tooltip: {
         formatter: function () {
             return '<b>' + this.x + '</b><br>' +
-                this.series.name + ': <b>' + this.y + '</b><br>';
+                this.series.name + ': <b>' + this.y + '</b><br>' + 'Percentage: <b>' + (this.y/10.49).toFixed(1) + '%</b>';
         }
     },
     series: [{
@@ -222,8 +219,58 @@ Highcharts.chart('q-origin', {
 //   });
 // });
 
+var chart = Highcharts.chart('q-community', {
+  chart: {
+    type: 'pie',
+    style: {
+      fontFamily: 'Gotham',
+      fontSize: '15px'
+    },
+    backgroundColor: "#ECF0F1"
+  },
+  title: {
+    text: 'What type of community do you currently live in?',
+    style: {
+      fontWeight: 'bold'
+    }
+  },
+  tooltip: {
+    formatter: barTooltipFormatter
+  },
+  plotOptions: {
+    pie: {
+      colors: pieColors,
+      borderWidth: 1,
+      borderColors: 'white',
+      size: 300,
+      showInLegend: true,
+      dataLabels: {
+        enabled: false
+      }
+    }
+  },
+  series: [{
+    name: 'Responses',
+    colorByPoint: true,
+    data: [{
+        name: 'Urban',
+        y: 327,
+      },
+      {
+        name: 'Suburban',
+        y: 660,
+      },
+      {
+        name: 'Rural',
+        y: 62
+      }
+    ]
+  }]
+});
+
 var chart = Highcharts.chart('q-ethnicity', {
   chart: {
+    height: 450,
     style: {
       fontFamily: 'Gotham',
       fontSize: '15px'
@@ -263,11 +310,11 @@ var chart = Highcharts.chart('q-ethnicity', {
   tooltip: {
       formatter: function () {
           return '<b>' + this.x + '</b><br>' +
-              this.series.name + ': <b>' + this.y + '</b><br>';
+              this.series.name + ': <b>' + this.y + '</b><br>' + 'Percentage: <b>' + (this.y/10.50).toFixed(1) + '%</b>';
       }
   },
   series: [{
-    data: [25, 67, 292, 143, 58, 53, 56, 33, 14, 6, 53, 53, 20, 551, 34, 12],
+    data: [25, 67, 202, 143, 58, 53, 56, 33, 14, 6, 53, 54, 20, 552, 34, 12],
     type: 'bar',
     dataLabels: {
       enabled: false
@@ -292,21 +339,17 @@ var chart = Highcharts.chart('q-financial', {
     }
   },
   tooltip: {
-    pointFormat: '{series.name}: <b>{point.y}</b>'
+    formatter: barTooltipFormatter
   },
   plotOptions: {
     pie: {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 320,
+      size: 300,
+      showInLegend: true,
       dataLabels: {
-        enabled: true,
-        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-        style: {
-          color: 'black',
-          fontWeight: 'bold'
-        }
+        enabled: false
       }
     }
   },
@@ -323,7 +366,7 @@ var chart = Highcharts.chart('q-financial', {
       },
       {
         name: 'No',
-        y: 536
+        y: 537
       }
     ]
   }]
@@ -345,21 +388,17 @@ var chart = Highcharts.chart('q-parentsCollege', {
     }
   },
   tooltip: {
-    pointFormat: '{series.name}: <b>{point.y}</b>'
+    formatter: barTooltipFormatter
   },
   plotOptions: {
     pie: {
       colors: pieColors,
       borderWidth: 1,
       borderColors: 'white',
-      size: 320,
+      size: 300,
+      showInLegend: true,
       dataLabels: {
-        enabled: true,
-        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-        style: {
-          color: 'black',
-          fontWeight: 'bold'
-        }
+        enabled: false
       }
     }
   },
@@ -377,6 +416,405 @@ var chart = Highcharts.chart('q-parentsCollege', {
       {
         name: 'None',
         y: 38
+      }
+    ]
+  }]
+});
+
+Highcharts.chart('q-sexual-orientation', {
+    chart: {
+        type: 'column',
+        height: 350,
+        style: {
+          fontFamily: 'Gotham',
+          fontSize: '15px'
+        },
+        backgroundColor: "#ECF0F1"
+    },
+    title: {
+        text: 'What is your sexual orientation – “a person\'s sexual identity in relation to the gender to which they are attracted\” (Oxford Dictionaries)?',
+        style: {
+          fontWeight: 'bold'
+        }
+    },
+    colors: ['#0c3d8b'],
+    xAxis: {
+        categories: ['Asexual', 'Bisexual','Demisexual','Heterosexual','Homosexual','Pansexual', 'Other', 'Unsure'],
+        title: {
+          text: 'Category*',
+          verticalAlign: 'center',
+          style: {
+            color: 'black',
+            fontWeight: 'bold'
+          }
+        }
+    },
+    yAxis: {
+      min: 0,
+      title: {
+        text: 'Responses',
+        verticalAlign: 'center',
+        style: {
+          color: 'black',
+          fontWeight: 'bold'
+        }
+      },
+      labels: {
+        overflow: 'justify'
+      }
+    },
+    legend: {
+      enabled: false
+    },
+    tooltip: {
+        formatter: function () {
+            return '<b>' + this.x + '</b><br>' +
+                this.series.name + ': <b>' + this.y + '</b><br>' + 'Percentage: <b>' + (this.y/10.50).toFixed(1) + '%</b>';
+        }
+    },
+    series: [{
+      data: [15, 100, 12, 832, 23, 23, 2, 43],
+      dataLabels: {
+        enabled: false
+      },
+      name: 'Responses'
+    }]
+});
+
+Highcharts.chart('q-romantic-orientation', {
+    chart: {
+        type: 'column',
+        height: 350,
+        style: {
+          fontFamily: 'Gotham',
+          fontSize: '15px'
+        },
+        backgroundColor: "#ECF0F1"
+    },
+    title: {
+        text: 'What is your romantic orientation – “an individual\'s pattern of romantic attraction based on a person\'s gender\” (AVENwiki)?',
+        style: {
+          fontWeight: 'bold'
+        }
+    },
+    colors: ['#0c3d8b'],
+    xAxis: {
+        categories: ['Aromantic', 'Biromantic', 'Demiromantic', 'Heteroromantic', 'Homoromantic', 'Panromantic', 'Other', 'Unsure'],
+        title: {
+          text: 'Category*',
+          verticalAlign: 'center',
+          style: {
+            color: 'black',
+            fontWeight: 'bold'
+          }
+        }
+    },
+    yAxis: {
+      min: 0,
+      title: {
+        text: 'Responses',
+        verticalAlign: 'center',
+        style: {
+          color: 'black',
+          fontWeight: 'bold'
+        }
+      },
+      labels: {
+        overflow: 'justify'
+      }
+    },
+    legend: {
+      enabled: false
+    },
+    tooltip: {
+        formatter: function () {
+            return '<b>' + this.x + '</b><br>' +
+                this.series.name + ': <b>' + this.y + '</b><br>' + 'Percentage: <b>' + (this.y/10.50).toFixed(1) + '%</b>';
+        }
+    },
+    series: [{
+      data: [8, 81, 16, 852, 24, 26, 2, 41],
+      dataLabels: {
+        enabled: false
+      },
+      name: 'Responses'
+    }]
+});
+
+var chart = Highcharts.chart('q-pgp', {
+  chart: {
+    style: {
+      fontFamily: 'Gotham',
+      fontSize: '15px'
+    },
+    backgroundColor: "#ECF0F1"
+  },
+  title: {
+    text: 'What are your preferred gender pronouns (PGPs)?',
+    style: {
+      fontWeight: 'bold'
+    }
+  },
+  colors: ['#0c3d8b'],
+  xAxis: {
+    categories: ['He/him/his', 'She/her/hers', 'They/them/their(s)', 'Ze/hir/hirs', 'Unsure', 'Other']
+  },
+  yAxis: {
+    min: 0,
+    title: {
+      text: 'Responses',
+      verticalAlign: 'center',
+      style: {
+        color: 'black',
+        fontWeight: 'bold'
+      }
+    },
+    labels: {
+      overflow: 'justify'
+    }
+  },
+  legend: {
+    enabled: false
+  },
+  tooltip: {
+      formatter: function () {
+          return '<b>' + this.x + '</b><br>' +
+              this.series.name + ': <b>' + this.y + '</b><br>' + 'Percentage: <b>' + (this.y/10.51).toFixed(1) + '%</b>';
+      }
+  },
+  series: [{
+    data: [488, 553, 3, 2, 3, 2],
+    type: 'bar',
+    dataLabels: {
+      enabled: false
+    },
+    name: 'Responses'
+  }]
+});
+
+var chart = Highcharts.chart('q-sex', {
+  chart: {
+    type: 'pie',
+    style: {
+      fontFamily: 'Gotham',
+      fontSize: '15px'
+    },
+    backgroundColor: "#ECF0F1"
+  },
+  title: {
+    text: 'What is your sex?',
+    style: {
+      fontWeight: 'bold'
+    }
+  },
+  tooltip: {
+    formatter: barTooltipFormatter
+  },
+  plotOptions: {
+    pie: {
+      colors: pieColors,
+      borderWidth: 1,
+      borderColors: 'white',
+      size: 300,
+      showInLegend: true,
+      dataLabels: {
+        enabled: false
+      }
+    }
+  },
+  series: [{
+    name: 'Responses',
+    colorByPoint: true,
+    data: [{
+        name: 'Female',
+        y: 559,
+      },
+      {
+        name: 'Male',
+        y: 488
+      },
+      {
+        name: 'Intersex',
+        y: 2
+      }
+    ]
+  }]
+});
+
+var chart = Highcharts.chart('q-family-income', {
+  chart: {
+    style: {
+      fontFamily: 'Gotham',
+      fontSize: '15px'
+    },
+    backgroundColor: "#ECF0F1"
+  },
+  title: {
+    text: 'What is your net family income?',
+    style: {
+      fontWeight: 'bold'
+    }
+  },
+  colors: ['#0c3d8b'],
+  xAxis: {
+    categories: ['$500,000 or more', '$250,000 to $499,999', '$150,000 to $249,999', '$100,000 to $149,999', '$60,000 to $99,999', '$35,000 to $59,999', '$34,999 or less', 'Unsure'],
+    title: {
+      text: 'Net family income',
+      verticalAlign: 'center',
+      style: {
+        color: 'black',
+        fontWeight: 'bold'
+      }
+    }
+  },
+  yAxis: {
+    min: 0,
+    title: {
+      text: 'Responses',
+      verticalAlign: 'center',
+      style: {
+        color: 'black',
+        fontWeight: 'bold'
+      }
+    },
+    labels: {
+      overflow: 'justify'
+    }
+  },
+  legend: {
+    enabled: false
+  },
+  tooltip: {
+      formatter: function () {
+          return '<b>' + this.x + '</b><br>' +
+              this.series.name + ': <b>' + this.y + '</b><br>' + 'Percentage: <b>' + (this.y/10.44).toFixed(1) + '%</b>';
+      }
+  },
+  series: [{
+    data: [246, 160, 131, 121, 60, 40, 33, 253],
+    type: 'bar',
+    dataLabels: {
+      enabled: false
+    },
+    name: 'Responses'
+  }]
+});
+
+var chart = Highcharts.chart('q-family-income-perceived-class', {
+  chart: {
+      type: 'bar',
+      style: {
+        fontFamily: 'Gotham',
+        fontSize: '15px'
+      },
+      backgroundColor: "#ECF0F1"
+  },
+  title: {
+    text: 'Perceived socioeconomic class by annual net family income',
+    style: {
+      fontWeight: 'bold'
+    }
+  },
+  xAxis: {
+      categories: ['$500,000 or more', '$250,000 to $499,999', '$150,000 to $249,999', '$100,000 to $149,999', '$60,000 to $99,999', '$35,000 to $59,999', '$34,999 or less', 'Unsure'],
+      title: {
+        text: 'Net family income',
+        verticalAlign: 'center',
+        style: {
+          color: 'black',
+          fontWeight: 'bold'
+        }
+      }
+  },
+  yAxis: {
+      min: 0,
+      max: 100,
+      title: {
+        text: 'Responses in percentage',
+        verticalAlign: 'center',
+        style: {
+          color: 'black',
+          fontWeight: 'bold'
+        }
+      },
+      reversedStacks: false
+  },
+  legend: {
+      enabled: true
+  },
+  tooltip: {
+      formatter: function () {
+          return '<b>' + this.x + ": " + this.series.name + '</b><br>' + 'Percentage: <b>' + this.y + '%</b>';
+      }
+  },
+  plotOptions: {
+      series: {
+          stacking: 'percent'
+      }
+  },
+  series: [{
+      name: 'Upper class',
+      data: [71.7, 25.6, 9.16, 1.7, 0.0, 2.5, 0.0, 13.1],
+      color: '#0c3d8b'
+  }, {
+      name: 'Upper-middle class',
+      data: [26.2, 66.9, 64.9, 46.3, 23.3, 2.5, 3.0, 50.8],
+      color: '#0b88c0'
+  }, {
+      name: 'Middle class',
+      data: [1.6, 6.3, 25.2, 43.8, 45.0, 22.5, 15.2, 30.2],
+      color: '#55a5cf'
+  }, {
+      name: 'Lower-middle class',
+      data: [0.0, 1.3, 0.76, 7.4, 30.0, 47.5, 27.3, 4.8],
+      color: '#87c6e3'
+  }, {
+      name: 'Lower class',
+      data: [0.4, 0.0, 0.0, 0.8, 1.7, 25.0, 54.6, 1.2],
+      color: '#b5dbea'
+  }]
+});
+
+var chart = Highcharts.chart('q-varsity', {
+  chart: {
+    type: 'pie',
+    style: {
+      fontFamily: 'Gotham',
+      fontSize: '15px'
+    },
+    backgroundColor: "#ECF0F1"
+  },
+  title: {
+    text: 'Are you a varsity athlete?',
+    style: {
+      fontWeight: 'bold'
+    }
+  },
+  tooltip: {
+    formatter: barTooltipFormatter
+  },
+  plotOptions: {
+    pie: {
+      colors: pieColors,
+      borderWidth: 1,
+      borderColors: 'white',
+      size: 300,
+      showInLegend: true,
+      dataLabels: {
+        enabled: false
+      }
+    }
+  },
+  series: [{
+    name: 'Responses',
+    colorByPoint: true,
+    data: [{
+        name: 'Yes',
+        y: 497,
+      },
+      {
+        name: 'No',
+        y: 551
       }
     ]
   }]
