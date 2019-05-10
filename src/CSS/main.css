@@ -135,6 +135,12 @@ footer .right{
   margin-left: auto;
 }
 
+footer #sota {
+  font-family: 'Gotham';
+  margin-top: 0;
+  font-size: 18px;
+}
+
 footer .button {
   font-weight: bold;
   text-decoration: none;
