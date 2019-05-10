@@ -1,6 +1,10 @@
 # State of the Academy 2019
 
-*The Phillipian* conducts an annual survey of the student body to gain a better understanding of life at Andover. Results are published in an issue called "State of the Academy” (SOTA) and online. This repository hosts code for the online platform displaying curated results of SOTA 2019, Vol. CXLII.
+On March 29th, *The Phillipian*, vol. CXLII, sent out the 2019 “State of Academy” survey to all Andover students in the hopes of obtaining valuable information about the school community.
+
+This year, *The Phillipian* received a record-high participation rate of 93.5% of the student body— 1,052 participants— surpassing the previous record of 92% set in 2017. The anonymous survey asked a comprehensive set of 122 questions, comprised of eight sections: General, Politics & Worldview, School, Wellness, Community & Diversity, Drugs & Alcohol, Sex, and Discipline. This year’s State of the Academy issue includes eight sections of data graphics and information. The 2019 issue is the first time that the Community & Diversity section has been allotted its own page within the paper. *The Phillipian* will also publish more extensive results from the entire survey in a State of the Academy website (sota.phillipian.net,) to be viewed in tandem with the printed copy. We sincerely thank members of the student body for their willingness to share information and personal experiences for this special issue of *The Phillipian*, and we hope that the State of the Academy will serve to inform, enlighten, and create a more holistic narrative of the students at Andover.
+
+*Editor’s note: When the survey was initially sent out, the class of 2022 was not an answer choice for the question, “What class are you in?” The error was corrected within six minutes after the survey’s release. Responses submitted before that time were discounted, and those respondents were notified that they would need to retake the survey.*
 
 # To Do
 
@@ -22,7 +26,7 @@
 - [ ] Add back legends as necessary
 - [ ] Format tooltips to be uniform using formatters.js
   - [ ] percent decimals to 1 digit
-- [ ] make spacing, styling, type of graphs uniform
+- [x] make spacing, styling, type of graphs uniform
 
 ## Low Priority
 - [ ] Get background photo for header section
