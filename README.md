@@ -6,6 +6,10 @@ This year, *The Phillipian* received a record-high participation rate of 93.5% o
 
 *Editor’s note: When the survey was initially sent out, the class of 2022 was not an answer choice for the question, “What class are you in?” The error was corrected within six minutes after the survey’s release. Responses submitted before that time were discounted, and those respondents were notified that they would need to retake the survey.*
 
+### License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more info.
+
 # To Do
 - Fix cover photo
 - Make mobile responsive
